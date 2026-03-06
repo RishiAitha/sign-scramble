@@ -123,16 +123,16 @@ public class ConnectionManager : MonoBehaviour
             // Display appropriate status message based on connection type
             if (NetworkManager.Singleton.IsHost)
             {
-                statusText.text = $"Connected as Host\nJoin Code: {hostCode}\nPlayers {playerCount}/3";
+                statusText.text = $"Connected as Host\nJoin Code: {hostCode}\nPlayers {playerCount}/2";
             }
             else if (NetworkManager.Singleton.IsClient && NetworkManager.Singleton.IsConnectedClient)
             {
                 statusText.text = $"Connected as Client";
             }
 
-            // Start game once three players have connected
+            // Start game once two players have connected
             // Only start if we're on the connection UI (not during disconnect or game over)
-            if (playerCount == 3 && !gameStarted && !isDisconnecting && connectionUI.activeSelf)
+            if (playerCount == 2 && !gameStarted && !isDisconnecting && connectionUI.activeSelf)
             {
                 gameStarted = true;
                 StartGame();

@@ -13,6 +13,9 @@ public class GameManager : NetworkBehaviour
     
     public NetworkVariable<bool> networkSetupComplete = new(false);
 
+    // Game timer
+    private Coroutine gameTimerCoroutine;
+
     // Game over / restart state
     public NetworkVariable<int> playAgainVotes = new(0);
     public NetworkVariable<bool> gameIsOver = new(false);
@@ -53,6 +56,13 @@ public class GameManager : NetworkBehaviour
 
             // update our UI to reflect server state
             UpdateLocalUI();
+
+            // Start the game timer on server
+            if (IsServer)
+            {
+                // Start the 60-second game timer
+                gameTimerCoroutine = StartCoroutine(GameTimer());
+            }
         }
     }
 
@@ -243,5 +253,45 @@ public class GameManager : NetworkBehaviour
         var ids = new List<ulong>(NetworkManager.Singleton.ConnectedClientsIds);
         ids.Sort();
         return (idx >= 0 && idx < ids.Count) ? ids[idx] : 0;
+    }
+
+    // Coroutine: Game timer (60 seconds)
+    private IEnumerator GameTimer()
+    {
+        Debug.Log("Game started! 60 second timer begins...");
+        
+        // Wait for 60 seconds
+        yield return new WaitForSeconds(60f);
+        
+        Debug.Log("Time's up! Player 1 wins by default.");
+        
+        // Game over: Player 1 (index 0) wins by default
+        // Get player 0's client ID
+        ulong player0ClientId = GetClientIdAtIndex(0);
+        
+        // Send win to player 0
+        if (player0ClientId != 0)
+        {
+            ShowGameOverClientRpc(true, new ClientRpcParams
+            {
+                Send = new ClientRpcSendParams
+                {
+                    TargetClientIds = new ulong[] { player0ClientId }
+                }
+            });
+        }
+        
+        // Send lose to all other players (player 1)
+        ulong player1ClientId = GetClientIdAtIndex(1);
+        if (player1ClientId != 0)
+        {
+            ShowGameOverClientRpc(false, new ClientRpcParams
+            {
+                Send = new ClientRpcSendParams
+                {
+                    TargetClientIds = new ulong[] { player1ClientId }
+                }
+            });
+        }
     }
 }
