@@ -10,8 +10,10 @@ using Unity.Collections;
 public class GameManager : NetworkBehaviour
 {
     [SerializeField] private TextMeshProUGUI playerDisplay;
+    [SerializeField] private TextMeshProUGUI timeDisplay;
     
     public NetworkVariable<bool> networkSetupComplete = new(false);
+    public NetworkVariable<int> timeRemaining = new(60);
 
     // Game timer
     private Coroutine gameTimerCoroutine;
@@ -28,13 +30,20 @@ public class GameManager : NetworkBehaviour
 
     public void StartGame()
     {
-        networkSetupComplete.OnValueChanged += NetworkSetupComplete;
         if (IsServer)
         {
             // reset game over state
             gameIsOver.Value = false;
             playAgainVotes.Value = 0;
             votedPlayers.Clear();
+            timeRemaining.Value = 60;
+
+            // Stop any existing timer
+            if (gameTimerCoroutine != null)
+            {
+                StopCoroutine(gameTimerCoroutine);
+                gameTimerCoroutine = null;
+            }
 
             // signal clients that server setup is complete
             networkSetupComplete.Value = true;
@@ -44,6 +53,9 @@ public class GameManager : NetworkBehaviour
 
             // Subscribe to disconnect events
             NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDisconnected;
+
+            // Start the game timer
+            gameTimerCoroutine = StartCoroutine(GameTimer());
         }
     }
 
@@ -56,13 +68,6 @@ public class GameManager : NetworkBehaviour
 
             // update our UI to reflect server state
             UpdateLocalUI();
-
-            // Start the game timer on server
-            if (IsServer)
-            {
-                // Start the 60-second game timer
-                gameTimerCoroutine = StartCoroutine(GameTimer());
-            }
         }
     }
 
@@ -71,11 +76,13 @@ public class GameManager : NetworkBehaviour
         // subscribe to changes so clients update UI
         playAgainVotes.OnValueChanged += (oldV, newV) => UpdatePlayAgainUI();
         networkSetupComplete.OnValueChanged += NetworkSetupComplete;
+        timeRemaining.OnValueChanged += (oldV, newV) => UpdateTimeDisplay();
 
         connectionManagerRef = FindObjectsByType<ConnectionManager>(FindObjectsSortMode.None)[0];
 
         // initial UI refresh
         UpdateLocalUI();
+        UpdateTimeDisplay();
     }
 
     public override void OnNetworkDespawn()
@@ -83,6 +90,7 @@ public class GameManager : NetworkBehaviour
         // best-effort cleanup
         try { playAgainVotes.OnValueChanged -= (oldV, newV) => UpdatePlayAgainUI(); } catch { }
         try { networkSetupComplete.OnValueChanged -= NetworkSetupComplete; } catch { }
+        try { timeRemaining.OnValueChanged -= (oldV, newV) => UpdateTimeDisplay(); } catch { }
 
         if (IsServer && NetworkManager.Singleton != null)
         {
@@ -123,8 +131,6 @@ public class GameManager : NetworkBehaviour
     [ClientRpc]
     public void ShowGameOverClientRpc(bool win, ClientRpcParams rpcParams = default)
     {
-        if (IsServer) gameIsOver.Value = true;
-
         var cm = connectionManagerRef != null ? connectionManagerRef : FindObjectsByType<ConnectionManager>(FindObjectsSortMode.None)[0];
         if (cm != null) cm.ShowGameOver(win);
     }
@@ -182,6 +188,15 @@ public class GameManager : NetworkBehaviour
         if (playerDisplay != null)
         {
             playerDisplay.text = (myPlayerNumber + 1).ToString();
+        }
+    }
+
+    // Update the time display
+    private void UpdateTimeDisplay()
+    {
+        if (timeDisplay != null)
+        {
+            timeDisplay.text = timeRemaining.Value.ToString();
         }
     }
 
@@ -260,38 +275,44 @@ public class GameManager : NetworkBehaviour
     {
         Debug.Log("Game started! 60 second timer begins...");
         
-        // Wait for 60 seconds
-        yield return new WaitForSeconds(60f);
+        // Reset and count down from 60
+        timeRemaining.Value = 60;
+        
+        while (timeRemaining.Value > 0)
+        {
+            yield return new WaitForSeconds(1f);
+            timeRemaining.Value--;
+        }
         
         Debug.Log("Time's up! Player 1 wins by default.");
         
+        // Set game over state on server first
+        gameIsOver.Value = true;
+        
         // Game over: Player 1 (index 0) wins by default
-        // Get player 0's client ID
+        // Get both player client IDs
         ulong player0ClientId = GetClientIdAtIndex(0);
+        ulong player1ClientId = GetClientIdAtIndex(1);
         
         // Send win to player 0
-        if (player0ClientId != 0)
+        ShowGameOverClientRpc(true, new ClientRpcParams
         {
-            ShowGameOverClientRpc(true, new ClientRpcParams
+            Send = new ClientRpcSendParams
             {
-                Send = new ClientRpcSendParams
-                {
-                    TargetClientIds = new ulong[] { player0ClientId }
-                }
-            });
-        }
+                TargetClientIds = new ulong[] { player0ClientId }
+            }
+        });
         
-        // Send lose to all other players (player 1)
-        ulong player1ClientId = GetClientIdAtIndex(1);
-        if (player1ClientId != 0)
+        // Send lose to player 1
+        ShowGameOverClientRpc(false, new ClientRpcParams
         {
-            ShowGameOverClientRpc(false, new ClientRpcParams
+            Send = new ClientRpcSendParams
             {
-                Send = new ClientRpcSendParams
-                {
-                    TargetClientIds = new ulong[] { player1ClientId }
-                }
-            });
-        }
+                TargetClientIds = new ulong[] { player1ClientId }
+            }
+        });
+
+        // Clear the coroutine reference
+        gameTimerCoroutine = null;
     }
 }
