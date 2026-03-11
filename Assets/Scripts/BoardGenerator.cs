@@ -11,10 +11,12 @@ public class BoardGenerator : MonoBehaviour
     [SerializeField] bool usingTest;
 
     private char[,] boardArray;
+    private Letter[,] letterObjects; // Store references to Letter components
 
     void Start()
     {
         boardArray = new char[4,4];
+        letterObjects = new Letter[4,4];
 
         char[] test = {'I', 'S', 'P', 'L', 'G', 'T', 'E', 'L', 'N', 'R', 'T', 'O', 'D', 'C', 'O', 'W'};
 
@@ -23,16 +25,20 @@ public class BoardGenerator : MonoBehaviour
             GameObject letter = Instantiate(letterPrefab);
             letter.transform.SetParent(gameObject.transform);
 
+            int row = i / 4;
+            int col = i % 4;
+            letterObjects[row, col] = letter.GetComponent<Letter>();
+
             if (usingTest)
             {
                 letter.GetComponent<Letter>().changeLetter(test[i]);
-                boardArray[i / 4, i % 4] = test[i];
+                boardArray[row, col] = test[i];
             }
             else
             {
                 // This will be updated
                 letter.GetComponent<Letter>().changeLetter('A');
-                boardArray[i / 4, i % 4] = 'A';
+                boardArray[row, col] = 'A';
             }
         }
     }
@@ -40,5 +46,14 @@ public class BoardGenerator : MonoBehaviour
     public char[,] GetBoardArray()
     {
         return boardArray;
+    }
+
+    public Letter GetLetterAt(int row, int col)
+    {
+        if (row >= 0 && row < 4 && col >= 0 && col < 4)
+        {
+            return letterObjects[row, col];
+        }
+        return null;
     }
 }

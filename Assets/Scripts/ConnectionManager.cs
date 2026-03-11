@@ -29,6 +29,12 @@ public class ConnectionManager : MonoBehaviour
     [SerializeField] private Button quickPlayButton;
     [SerializeField] private Button playAgainButton;
     [SerializeField] private TMP_InputField codeInput;
+    
+    // Game Over Score Display
+    [SerializeField] private TextMeshProUGUI player1ScoreText;
+    [SerializeField] private TextMeshProUGUI player2ScoreText;
+    [SerializeField] private TextMeshProUGUI player1WordsText;
+    [SerializeField] private TextMeshProUGUI player2WordsText;
 
     // UI Sections
     [SerializeField] private GameObject connectionUI;
@@ -472,20 +478,42 @@ public class ConnectionManager : MonoBehaviour
     }
 
     // Show the game over UI and message. Called by GameManager when game ends.
-    public void ShowGameOver(bool win)
+    public void ShowGameOver(bool win, int player0Score, int player1Score, string player0Words, string player1Words)
     {
         connectionUI.SetActive(false);
         gameUI.SetActive(false);
         gameOverUI.SetActive(true);
         
+        // Determine winner text
+        int winnerPlayerNumber = (player0Score >= player1Score) ? 1 : 2;
         if (gameOverText != null)
         {
-            gameOverText.text = win ? "You Win!" : "You Lose";
+            gameOverText.text = $"Player {winnerPlayerNumber} Victory";
+        }
+        
+        // Display scores
+        if (player1ScoreText != null)
+        {
+            player1ScoreText.text = player0Score.ToString();
+        }
+        if (player2ScoreText != null)
+        {
+            player2ScoreText.text = player1Score.ToString();
+        }
+        
+        // Display word lists
+        if (player1WordsText != null)
+        {
+            player1WordsText.text = string.IsNullOrEmpty(player0Words) ? "No words" : player0Words;
+        }
+        if (player2WordsText != null)
+        {
+            player2WordsText.text = string.IsNullOrEmpty(player1Words) ? "No words" : player1Words;
         }
         
         if (playAgainText != null)
         {
-            playAgainText.text = "Play Again? 0/3";
+            playAgainText.text = "0/2 Accepted";
         }
         
         // Re-enable the play again button
@@ -493,8 +521,6 @@ public class ConnectionManager : MonoBehaviour
         {
             playAgainButton.interactable = true;
         }
-        
-        Debug.Log(win ? "ShowGameOver: win" : "ShowGameOver: lose");
     }
 
     // Update the play-again vote counter text
@@ -502,7 +528,7 @@ public class ConnectionManager : MonoBehaviour
     {
         if (playAgainText != null)
         {
-            playAgainText.text = $"Play Again? {votes}/{total}";
+            playAgainText.text = $"{votes}/2 Accepted";
         }
     }
 

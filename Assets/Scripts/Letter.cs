@@ -9,6 +9,8 @@ public class Letter : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI letterText;
 
+    public GameObject[] arrows;
+
     public char letter;
 
     void Start()

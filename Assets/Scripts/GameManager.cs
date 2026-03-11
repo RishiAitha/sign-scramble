@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.Video;
 using Unity.Netcode;
 using Unity.Collections;
+using System.Linq;
 
 public class GameManager : NetworkBehaviour
 {
@@ -18,15 +19,25 @@ public class GameManager : NetworkBehaviour
     // Game timer
     private Coroutine gameTimerCoroutine;
 
+    // References to other managers (set in Inspector)
+    [SerializeField] private ConnectionManager connectionManager;
+    [SerializeField] private WordFinder wordFinder;
+    
     // Game over / restart state
     public NetworkVariable<int> playAgainVotes = new(0);
     public NetworkVariable<bool> gameIsOver = new(false);
     private HashSet<ulong> votedPlayers = new HashSet<ulong>();
-    private ConnectionManager connectionManagerRef;
 
     // Player assignments (clientId -> player number 0-2)
     private Dictionary<ulong, int> playerNumbers = new Dictionary<ulong, int>();
     private int myPlayerNumber = 0;
+
+    // Scores and word lists for each player
+    public NetworkVariable<int> player0Score = new(0);
+    public NetworkVariable<int> player1Score = new(0);
+    private NetworkVariable<FixedString4096Bytes> player0Words = new(new FixedString4096Bytes(""));
+    private NetworkVariable<FixedString4096Bytes> player1Words = new(new FixedString4096Bytes(""));
+    private List<string> myCompletedWords = new List<string>();
 
     public void StartGame()
     {
@@ -37,6 +48,12 @@ public class GameManager : NetworkBehaviour
             playAgainVotes.Value = 0;
             votedPlayers.Clear();
             timeRemaining.Value = 60;
+            
+            // Reset scores and word lists
+            player0Score.Value = 0;
+            player1Score.Value = 0;
+            player0Words.Value = new FixedString4096Bytes("");
+            player1Words.Value = new FixedString4096Bytes("");
 
             // Stop any existing timer
             if (gameTimerCoroutine != null)
@@ -53,6 +70,9 @@ public class GameManager : NetworkBehaviour
 
             // Subscribe to disconnect events
             NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDisconnected;
+            
+            // Tell all clients to reset their local state
+            ResetClientStateClientRpc();
 
             // Start the game timer
             gameTimerCoroutine = StartCoroutine(GameTimer());
@@ -63,8 +83,8 @@ public class GameManager : NetworkBehaviour
     {
         if (networkSetupComplete.Value)
         {
-            // find connection manager reference for showing game-over UI later
-            connectionManagerRef = FindObjectsByType<ConnectionManager>(FindObjectsSortMode.None)[0];
+            // Clear local word list when game starts
+            myCompletedWords.Clear();
 
             // update our UI to reflect server state
             UpdateLocalUI();
@@ -77,8 +97,6 @@ public class GameManager : NetworkBehaviour
         playAgainVotes.OnValueChanged += (oldV, newV) => UpdatePlayAgainUI();
         networkSetupComplete.OnValueChanged += NetworkSetupComplete;
         timeRemaining.OnValueChanged += (oldV, newV) => UpdateTimeDisplay();
-
-        connectionManagerRef = FindObjectsByType<ConnectionManager>(FindObjectsSortMode.None)[0];
 
         // initial UI refresh
         UpdateLocalUI();
@@ -127,24 +145,41 @@ public class GameManager : NetworkBehaviour
         UpdateLocalUI();
     }
 
-    // ClientRpc: instruct clients to show game over UI (win/lose)
+    // ClientRpc: instruct clients to show game over UI with all game data
     [ClientRpc]
-    public void ShowGameOverClientRpc(bool win, ClientRpcParams rpcParams = default)
+    public void ShowGameOverClientRpc(int winnerPlayer, int p0Score, int p1Score, FixedString4096Bytes p0Words, FixedString4096Bytes p1Words, ClientRpcParams rpcParams = default)
     {
-        var cm = connectionManagerRef != null ? connectionManagerRef : FindObjectsByType<ConnectionManager>(FindObjectsSortMode.None)[0];
-        if (cm != null) cm.ShowGameOver(win);
+        bool iWon = (winnerPlayer == myPlayerNumber);
+        connectionManager.ShowGameOver(iWon, p0Score, p1Score, p0Words.ToString(), p1Words.ToString());
+    }
+    
+    // ClientRpc: reset all client-side state when game starts/restarts
+    [ClientRpc]
+    private void ResetClientStateClientRpc(ClientRpcParams rpcParams = default)
+    {
+        // Clear local word list
+        myCompletedWords.Clear();
+        
+        // Reset WordFinder state
+        wordFinder.ResetState();
     }
 
     private void OnClientDisconnected(ulong clientId)
     {
         if (!IsServer) return;
 
-        // If game is over and someone disconnects, abort the vote and return everyone to menu
-        if (gameIsOver.Value)
+        Debug.Log($"Client {clientId} disconnected.");
+        
+        // When someone disconnects, everyone should return to menu
+        // Check if NetworkManager is still active before sending RPCs
+        if (NetworkManager.Singleton != null && NetworkManager.Singleton.IsListening)
         {
-            Debug.Log($"Client {clientId} disconnected during game over. Returning all to menu.");
+            // Send RPC to remaining connected clients
             ReturnToMenuClientRpc();
         }
+        
+        // Host also needs to clean up locally
+        connectionManager.ReturnToMainMenu();
     }
 
     // Public method: client votes to play again
@@ -203,11 +238,10 @@ public class GameManager : NetworkBehaviour
     // Update the play-again UI counter
     private void UpdatePlayAgainUI()
     {
-        var cm = connectionManagerRef != null ? connectionManagerRef : FindObjectsByType<ConnectionManager>(FindObjectsSortMode.None)[0];
-        if (cm != null && NetworkManager.Singleton != null)
+        if (NetworkManager.Singleton != null)
         {
             int total = NetworkManager.Singleton.ConnectedClientsIds.Count;
-            cm.UpdatePlayAgainText(playAgainVotes.Value, total);
+            connectionManager.UpdatePlayAgainText(playAgainVotes.Value, total);
         }
     }
 
@@ -235,24 +269,16 @@ public class GameManager : NetworkBehaviour
     private void ReturnToMenuClientRpc(ClientRpcParams rpcParams = default)
     {
         Debug.Log("ReturnToMenuClientRpc called");
-        var cm = connectionManagerRef != null ? connectionManagerRef : FindObjectsByType<ConnectionManager>(FindObjectsSortMode.None)[0];
-        if (cm != null)
-        {
-            cm.ReturnToMainMenu();
-        }
+        connectionManager.ReturnToMainMenu();
     }
 
     // ClientRpc: switch UI back to game mode when restarting
     [ClientRpc]
     private void RestartGameClientRpc(ClientRpcParams rpcParams = default)
     {
-        var cm = connectionManagerRef != null ? connectionManagerRef : FindObjectsByType<ConnectionManager>(FindObjectsSortMode.None)[0];
-        if (cm != null)
-        {
-            cm.RestartGame();
-        }
+        connectionManager.RestartGame();
     }
-
+    
     // helper: map a player-index to the currently-connected client id (best-effort)
     private ulong GetClientIdAtIndex(int idx)
     {
@@ -284,35 +310,85 @@ public class GameManager : NetworkBehaviour
             timeRemaining.Value--;
         }
         
-        Debug.Log("Time's up! Player 1 wins by default.");
+        Debug.Log("Time's up! Determining winner...");
         
         // Set game over state on server first
         gameIsOver.Value = true;
         
-        // Game over: Player 1 (index 0) wins by default
-        // Get both player client IDs
-        ulong player0ClientId = GetClientIdAtIndex(0);
-        ulong player1ClientId = GetClientIdAtIndex(1);
+        // Determine winner based on scores
+        int winnerPlayer = (player0Score.Value >= player1Score.Value) ? 0 : 1;
         
-        // Send win to player 0
-        ShowGameOverClientRpc(true, new ClientRpcParams
-        {
-            Send = new ClientRpcSendParams
-            {
-                TargetClientIds = new ulong[] { player0ClientId }
-            }
-        });
+        Debug.Log($"Player {winnerPlayer + 1} wins with {(winnerPlayer == 0 ? player0Score.Value : player1Score.Value)} points!");
         
-        // Send lose to player 1
-        ShowGameOverClientRpc(false, new ClientRpcParams
-        {
-            Send = new ClientRpcSendParams
-            {
-                TargetClientIds = new ulong[] { player1ClientId }
-            }
-        });
+        // Send game over info to all clients
+        ShowGameOverClientRpc(winnerPlayer, player0Score.Value, player1Score.Value, player0Words.Value, player1Words.Value);
 
         // Clear the coroutine reference
         gameTimerCoroutine = null;
+    }
+    
+    // Public method: Get player number for external scripts
+    public int GetMyPlayerNumber()
+    {
+        return myPlayerNumber;
+    }
+    
+    // Public method: Add score for current player
+    public void AddScore(int points)
+    {
+        AddScoreServerRpc(points);
+    }
+    
+    // ServerRpc: Update score on server
+    [Rpc(SendTo.Server)]
+    private void AddScoreServerRpc(int points, RpcParams rpcParams = default)
+    {
+        if (!IsServer) return;
+        
+        ulong clientId = rpcParams.Receive.SenderClientId;
+        int playerNum = playerNumbers.ContainsKey(clientId) ? playerNumbers[clientId] : 0;
+        
+        if (playerNum == 0)
+        {
+            player0Score.Value += points;
+        }
+        else
+        {
+            player1Score.Value += points;
+        }
+    }
+    
+    // Public method: Add completed word for current player
+    public void AddCompletedWord(string word)
+    {
+        myCompletedWords.Add(word.ToUpper());
+        
+        // Sort: longest to shortest, then alphabetically
+        var sortedWords = myCompletedWords.OrderByDescending(w => w.Length).ThenBy(w => w).ToList();
+        myCompletedWords = sortedWords;
+        
+        // Create formatted string with line breaks
+        string wordList = string.Join("\n", sortedWords);
+        
+        AddCompletedWordServerRpc(wordList);
+    }
+    
+    // ServerRpc: Update word list on server
+    [Rpc(SendTo.Server)]
+    private void AddCompletedWordServerRpc(string wordList, RpcParams rpcParams = default)
+    {
+        if (!IsServer) return;
+        
+        ulong clientId = rpcParams.Receive.SenderClientId;
+        int playerNum = playerNumbers.ContainsKey(clientId) ? playerNumbers[clientId] : 0;
+        
+        if (playerNum == 0)
+        {
+            player0Words.Value = new FixedString4096Bytes(wordList);
+        }
+        else
+        {
+            player1Words.Value = new FixedString4096Bytes(wordList);
+        }
     }
 }
