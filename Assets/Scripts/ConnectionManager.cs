@@ -86,14 +86,8 @@ public class ConnectionManager : MonoBehaviour
 
             #else
 
-            // Built version, create new player ID
-            if (!PlayerPrefs.HasKey("UniqueInstanceID"))
-            {
-                string shortId = System.Guid.NewGuid().ToString("N").Substring(0, 12);
-                PlayerPrefs.SetString("UniqueInstanceID", shortId);
-                PlayerPrefs.Save();
-            }
-            profileName = PlayerPrefs.GetString("UniqueInstanceID");
+            // Built version: use a per-process profile so two local builds can sign in separately.
+            profileName = BuildRuntimeProfileName();
 
             #endif
 
@@ -153,7 +147,7 @@ public class ConnectionManager : MonoBehaviour
     {
         try
         {
-            hostCode = await StartHostWithRelay(2, "dtls");
+            hostCode = await StartHostWithRelay(1, "dtls");
         }
         catch (Exception e)
         {
@@ -171,7 +165,7 @@ public class ConnectionManager : MonoBehaviour
         try
         {
             // Get relay code
-            hostCode = await StartHostWithRelay(2, "dtls");
+            hostCode = await StartHostWithRelay(1, "dtls");
 
             // Share relay codes in lobby
             var updateOptions = new UpdateLobbyOptions
@@ -433,7 +427,7 @@ public class ConnectionManager : MonoBehaviour
             currentLobby = await LobbyService.Instance.CreateOrJoinLobbyAsync(
                 lobbyId: matchId,
                 lobbyName: $"Hangman_{matchId.Substring(0, 8)}",
-                maxPlayers: 3,
+                maxPlayers: 2,
                 options: createOptions
             );
 
@@ -459,6 +453,23 @@ public class ConnectionManager : MonoBehaviour
         }
     }
 
+    private string BuildRuntimeProfileName()
+    {
+        // Optional override for testing multiple local builds: -profile YourName
+        string[] args = Environment.GetCommandLineArgs();
+        int profileArgIndex = Array.IndexOf(args, "-profile");
+        if (profileArgIndex >= 0 && profileArgIndex + 1 < args.Length)
+        {
+            string explicitProfile = args[profileArgIndex + 1];
+            if (!string.IsNullOrWhiteSpace(explicitProfile))
+            {
+                return explicitProfile.Trim();
+            }
+        }
+
+        return $"Build_{System.Diagnostics.Process.GetCurrentProcess().Id}_{Guid.NewGuid().ToString("N").Substring(0, 6)}";
+    }
+
     // Ensures lobby stays active with heartbeat
     private IEnumerator LobbyHeartbeat()
     {
@@ -478,17 +489,22 @@ public class ConnectionManager : MonoBehaviour
     }
 
     // Show the game over UI and message. Called by GameManager when game ends.
-    public void ShowGameOver(bool win, int player0Score, int player1Score, string player0Words, string player1Words)
+    public void ShowGameOver(int winnerPlayer, int player0Score, int player1Score, string player0Words, string player1Words)
     {
         connectionUI.SetActive(false);
         gameUI.SetActive(false);
         gameOverUI.SetActive(true);
         
-        // Determine winner text
-        int winnerPlayerNumber = (player0Score >= player1Score) ? 1 : 2;
         if (gameOverText != null)
         {
-            gameOverText.text = $"Player {winnerPlayerNumber} Victory";
+            if (winnerPlayer != -1)
+            {
+                gameOverText.text = $"Player {winnerPlayer + 1} Victory";
+            }
+            else
+            {
+                gameOverText.text = "It's a Tie";
+            }
         }
         
         // Display scores

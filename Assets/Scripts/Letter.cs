@@ -21,6 +21,7 @@ public class Letter : MonoBehaviour
         }
 
         letterText.text = letter.ToString();
+        transform.localScale = Vector2.one;
     }
 
     public void changeLetter(char newLetter)

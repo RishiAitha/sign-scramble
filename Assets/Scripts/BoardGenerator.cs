@@ -59,24 +59,41 @@ public class BoardGenerator : MonoBehaviour
 
     private void InitializeBoardObjects()
     {
-        if (isInitialized) return;
-
-        boardArray = new char[4, 4];
-        letterObjects = new Letter[4, 4];
-
-        for (int i = 0; i < 16; i++)
+        if (isInitialized)
         {
-            int row = i / 4;
-            int col = i % 4;
-            boardArray[row, col] = 'A';
-
-            GameObject letterObject = Instantiate(letterPrefab);
-            letterObject.transform.SetParent(gameObject.transform);
-            letterObjects[row, col] = letterObject.GetComponent<Letter>();
-            letterObjects[row, col].changeLetter('A');
+            for (int i = 0; i < 16; i++)
+            {
+                int row = i / 4;
+                int col = i % 4;
+                foreach (GameObject arrow in letterObjects[row,col].arrows)
+                {
+                    arrow.SetActive(false);
+                }
+            }
         }
+        else
+        {
+            boardArray = new char[4, 4];
+            letterObjects = new Letter[4, 4];
 
-        isInitialized = true;
+            for (int i = 0; i < 16; i++)
+            {
+                int row = i / 4;
+                int col = i % 4;
+                boardArray[row, col] = 'A';
+
+                GameObject letterObject = Instantiate(letterPrefab);
+                letterObject.transform.SetParent(gameObject.transform);
+                letterObjects[row, col] = letterObject.GetComponent<Letter>();
+                letterObjects[row, col].changeLetter('A');
+                foreach (GameObject arrow in letterObjects[row, col].arrows)
+                {
+                    arrow.SetActive(false);
+                }
+            }
+
+            isInitialized = true;
+        }
     }
 
     private int GetRandomLetter(float[] weights)

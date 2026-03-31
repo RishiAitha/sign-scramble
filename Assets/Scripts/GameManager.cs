@@ -158,8 +158,7 @@ public class GameManager : NetworkBehaviour
     [ClientRpc]
     public void ShowGameOverClientRpc(int winnerPlayer, int p0Score, int p1Score, FixedString4096Bytes p0Words, FixedString4096Bytes p1Words, ClientRpcParams rpcParams = default)
     {
-        bool iWon = (winnerPlayer == myPlayerNumber);
-        connectionManager.ShowGameOver(iWon, p0Score, p1Score, p0Words.ToString(), p1Words.ToString());
+        connectionManager.ShowGameOver(winnerPlayer, p0Score, p1Score, p0Words.ToString(), p1Words.ToString());
     }
     
     // ClientRpc: reset all client-side state when game starts/restarts
@@ -332,9 +331,15 @@ public class GameManager : NetworkBehaviour
         gameIsOver.Value = true;
         
         // Determine winner based on scores
-        int winnerPlayer = (player0Score.Value >= player1Score.Value) ? 0 : 1;
-        
-        Debug.Log($"Player {winnerPlayer + 1} wins with {(winnerPlayer == 0 ? player0Score.Value : player1Score.Value)} points!");
+        int winnerPlayer = -1;
+        if (player0Score.Value > player1Score.Value)
+        {
+            winnerPlayer = 0;
+        }
+        else if (player0Score.Value < player1Score.Value)
+        {
+            winnerPlayer = 1;
+        }
         
         // Send game over info to all clients
         ShowGameOverClientRpc(winnerPlayer, player0Score.Value, player1Score.Value, player0Words.Value, player1Words.Value);
