@@ -5399,7 +5399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letterPrefab: {fileID: 8921706606356339701, guid: e4e8bba676dd55044ad99454c3221841, type: 3}
-  usingTest: 1
+  usingTest: 0
 --- !u!114 &1470627562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7110,6 +7110,7 @@ MonoBehaviour:
     m_InternalValue: 60
   connectionManager: {fileID: 1105444762}
   wordFinder: {fileID: 1470627560}
+  boardGenerator: {fileID: 1470627561}
   playAgainVotes:
     m_InternalValue: 0
   gameIsOver:

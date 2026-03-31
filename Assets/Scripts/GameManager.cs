@@ -22,6 +22,7 @@ public class GameManager : NetworkBehaviour
     // References to other managers (set in Inspector)
     [SerializeField] private ConnectionManager connectionManager;
     [SerializeField] private WordFinder wordFinder;
+    [SerializeField] private BoardGenerator boardGenerator;
     
     // Game over / restart state
     public NetworkVariable<int> playAgainVotes = new(0);
@@ -70,6 +71,14 @@ public class GameManager : NetworkBehaviour
 
             // Subscribe to disconnect events
             NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDisconnected;
+
+            // Host generates one board and sends it to everyone.
+            if (boardGenerator != null)
+            {
+                string boardString = boardGenerator.GenerateBoardString();
+                boardGenerator.SetBoardFromString(boardString);
+                SyncBoardClientRpc(new FixedString32Bytes(boardString));
+            }
             
             // Tell all clients to reset their local state
             ResetClientStateClientRpc();
@@ -162,6 +171,13 @@ public class GameManager : NetworkBehaviour
         
         // Reset WordFinder state
         wordFinder.ResetState();
+    }
+
+    [ClientRpc]
+    private void SyncBoardClientRpc(FixedString32Bytes boardString, ClientRpcParams rpcParams = default)
+    {
+        if (boardGenerator == null) return;
+        boardGenerator.SetBoardFromString(boardString.ToString());
     }
 
     private void OnClientDisconnected(ulong clientId)
