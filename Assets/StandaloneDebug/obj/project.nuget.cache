@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qhId2tZ5JCg=",
+  "dgSpecHash": "qscB5sSAytw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\rishi\\Documents\\dev\\UnityProjects\\SignScramble\\Assets\\standalonedebug\\SignScramble.DebugRunner.csproj",
+  "projectFilePath": "C:\\Users\\rishi\\Documents\\dev\\UnityProjects\\SignScramble\\Assets\\StandaloneDebug\\SignScramble.DebugRunner.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rishi\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.20\\microsoft.netcore.app.ref.8.0.20.nupkg.sha512",
     "C:\\Users\\rishi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.20\\microsoft.windowsdesktop.app.ref.8.0.20.nupkg.sha512",

@@ -719,6 +719,8 @@ public class BoardGenerator
 
                     if (string.Equals(candidateWord, word, StringComparison.OrdinalIgnoreCase)) continue;
 
+                    if (candidateWord.Length != word.Length) continue;
+
                     bool matchesDisplayed = true;
                     foreach (int idx in displayedIndices)
                     {
