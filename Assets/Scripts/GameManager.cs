@@ -75,9 +75,9 @@ public class GameManager : NetworkBehaviour
             // Host generates one board and sends it to everyone.
             if (boardGenerator != null)
             {
-                string boardString = boardGenerator.GenerateBoardString();
-                boardGenerator.SetBoardFromString(boardString);
-                SyncBoardClientRpc(new FixedString32Bytes(boardString));
+                BoardGenerator.Board board = boardGenerator.GenerateRandomWeightedBoard();
+                boardGenerator.SetBoard(board);
+                SyncBoardClientRpc(new FixedString32Bytes(board.ToString()));
             }
             
             // Tell all clients to reset their local state
@@ -176,7 +176,7 @@ public class GameManager : NetworkBehaviour
     private void SyncBoardClientRpc(FixedString32Bytes boardString, ClientRpcParams rpcParams = default)
     {
         if (boardGenerator == null) return;
-        boardGenerator.SetBoardFromString(boardString.ToString());
+        boardGenerator.SetBoard(new BoardGenerator.Board(boardString.ToString()));
     }
 
     private void OnClientDisconnected(ulong clientId)

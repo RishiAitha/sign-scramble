@@ -91,141 +91,15 @@ public class WordFinder : MonoBehaviour
             return;
         }
         
-        char[,] boardArray = GetComponent<BoardGenerator>().GetBoardArray();
-
-        if (currentGuess.Length > 0)
+        BoardGenerator boardGenerator = GetComponent<BoardGenerator>();
+        if (currentGuess.Length > 0 && boardGenerator != null)
         {
-            Queue queue = new Queue();
-            for (int i = 0; i < boardArray.GetLength(0); i++)
+            List<Tuple<int, int>> path;
+            if (boardGenerator.GetBoard().TryFindWordPath(currentGuess, out path))
             {
-                for (int j = 0; j < boardArray.GetLength(1); j++)
-                {
-                    if (boardArray[i, j] == currentGuess[0])
-                    {
-                        int[,] usedArray = new int[boardArray.GetLength(0), boardArray.GetLength(1)];
-                        usedArray[i, j] = 1;
-                        List<Tuple<int, int>> path = new List<Tuple<int, int>>();
-                        path.Add(Tuple.Create(i, j));
-                        queue.Enqueue(Tuple.Create(i, j, 0, usedArray, path));
-                    }
-                }
-            }
-
-            while (queue.Count != 0)
-            {
-                Tuple<int, int, int, int[,], List<Tuple<int, int>>> tuple = (Tuple<int, int, int, int[,], List<Tuple<int, int>>>) queue.Dequeue();
-
-                int i = tuple.Item1;
-                int j = tuple.Item2;
-                int guessIndex = tuple.Item3;
-                int[,] usedArray = tuple.Item4;
-                List<Tuple<int, int>> path = tuple.Item5;
-
-                if (guessIndex == currentGuess.Length - 1)
-                {
-                    Debug.Log("Word Found!");
-                    wordFound = true;
-                    currentPath = path;
-                    break;
-                }
-                else
-                {
-                    if (i > 0)
-                    {
-                        if (usedArray[i - 1, j] != 1 && boardArray[i - 1, j] == currentGuess[guessIndex + 1])
-                        {
-                            int[,] newUsedArray = (int[,]) usedArray.Clone();
-                            newUsedArray[i - 1, j] = 1;
-                            List<Tuple<int, int>> newPath = new List<Tuple<int, int>>(path);
-                            newPath.Add(Tuple.Create(i - 1, j));
-                            queue.Enqueue(Tuple.Create(i - 1, j, guessIndex + 1, newUsedArray, newPath));
-                        } 
-
-                        if (j > 0)
-                        {
-                            if (usedArray[i - 1, j - 1] != 1 && boardArray[i - 1, j - 1] == currentGuess[guessIndex + 1])
-                            {
-                                int[,] newUsedArray = (int[,]) usedArray.Clone();
-                                newUsedArray[i - 1, j - 1] = 1;
-                                List<Tuple<int, int>> newPath = new List<Tuple<int, int>>(path);
-                                newPath.Add(Tuple.Create(i - 1, j - 1));
-                                queue.Enqueue(Tuple.Create(i - 1, j - 1, guessIndex + 1, newUsedArray, newPath));
-                            }
-                        }
-
-                        if (j < boardArray.GetLength(1) - 1)
-                        {
-                            if (usedArray[i - 1, j + 1] != 1 && boardArray[i - 1, j + 1] == currentGuess[guessIndex + 1])
-                            {
-                                int[,] newUsedArray = (int[,]) usedArray.Clone();
-                                newUsedArray[i - 1, j + 1] = 1;
-                                List<Tuple<int, int>> newPath = new List<Tuple<int, int>>(path);
-                                newPath.Add(Tuple.Create(i - 1, j + 1));
-                                queue.Enqueue(Tuple.Create(i - 1, j + 1, guessIndex + 1, newUsedArray, newPath));
-                            }
-                        }
-                    }
-
-                    if (i < boardArray.GetLength(0) - 1)
-                    {
-                        if (usedArray[i + 1, j] != 1 && boardArray[i + 1, j] == currentGuess[guessIndex + 1])
-                        {
-                            int[,] newUsedArray = (int[,]) usedArray.Clone();
-                            newUsedArray[i + 1, j] = 1;
-                            List<Tuple<int, int>> newPath = new List<Tuple<int, int>>(path);
-                            newPath.Add(Tuple.Create(i + 1, j));
-                            queue.Enqueue(Tuple.Create(i + 1, j, guessIndex + 1, newUsedArray, newPath));
-                        }
-
-                        if (j > 0)
-                        {
-                            if (usedArray[i + 1, j - 1] != 1 && boardArray[i + 1, j - 1] == currentGuess[guessIndex + 1])
-                            {
-                                int[,] newUsedArray = (int[,]) usedArray.Clone();
-                                newUsedArray[i + 1, j - 1] = 1;
-                                List<Tuple<int, int>> newPath = new List<Tuple<int, int>>(path);
-                                newPath.Add(Tuple.Create(i + 1, j - 1));
-                                queue.Enqueue(Tuple.Create(i + 1, j - 1, guessIndex + 1, newUsedArray, newPath));
-                            }
-                        }
-
-                        if (j < boardArray.GetLength(1) - 1)
-                        {
-                            if (usedArray[i + 1, j + 1] != 1 && boardArray[i + 1, j + 1] == currentGuess[guessIndex + 1])
-                            {
-                                int[,] newUsedArray = (int[,]) usedArray.Clone();
-                                newUsedArray[i + 1, j + 1] = 1;
-                                List<Tuple<int, int>> newPath = new List<Tuple<int, int>>(path);
-                                newPath.Add(Tuple.Create(i + 1, j + 1));
-                                queue.Enqueue(Tuple.Create(i + 1, j + 1, guessIndex + 1, newUsedArray, newPath));
-                            }
-                        }
-                    }
-
-                    if (j > 0)
-                    {
-                        if (usedArray[i, j - 1] != 1 && boardArray[i, j - 1] == currentGuess[guessIndex + 1])
-                        {
-                            int[,] newUsedArray = (int[,]) usedArray.Clone();
-                            newUsedArray[i, j - 1] = 1;
-                            List<Tuple<int, int>> newPath = new List<Tuple<int, int>>(path);
-                            newPath.Add(Tuple.Create(i, j - 1));
-                            queue.Enqueue(Tuple.Create(i, j - 1, guessIndex + 1, newUsedArray, newPath));
-                        }
-                    }
-
-                    if (j < boardArray.GetLength(1) - 1)
-                    {
-                        if (usedArray[i, j + 1] != 1 && boardArray[i, j + 1] == currentGuess[guessIndex + 1])
-                        {
-                            int[,] newUsedArray = (int[,]) usedArray.Clone();
-                            newUsedArray[i, j + 1] = 1;
-                            List<Tuple<int, int>> newPath = new List<Tuple<int, int>>(path);
-                            newPath.Add(Tuple.Create(i, j + 1));
-                            queue.Enqueue(Tuple.Create(i, j + 1, guessIndex + 1, newUsedArray, newPath));
-                        }
-                    }
-                }
+                Debug.Log("Word Found!");
+                wordFound = true;
+                currentPath = path;
             }
         }
         // Start the word display animation
@@ -296,13 +170,8 @@ public class WordFinder : MonoBehaviour
         // Wait before clearing
         yield return new WaitForSeconds(0.5f);
 
-        // If valid, play inverse animation and score points
         if (isValid && wordDisplayText != null && currentPath != null)
         {
-            // Remove letters right to left with scoring
-            // Scoring based on Boggle system, scaled up for engagement:
-            // 3-letter: 9,000 | 4-letter: 20,000 | 5-letter: 40,000
-            // 6-letter: 78,000 | 7-letter: 140,000 | 8+: 280,000+
             int totalWordScore = CalculateWordScore(word.Length);
             int pointsPerLetter = totalWordScore / word.Length;
             
