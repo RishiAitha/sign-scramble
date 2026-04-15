@@ -106,7 +106,10 @@ public class BoardGenerator
 
         while (completeBoards.Count > 0)
         {
-            var result = TrainingStep2(completeBoards.Pop(), words, displayedPositionsPerWord);
+            var b = completeBoards.Pop();
+            // compute static protection mask from training step 1 (complete paths on this board)
+            var protectedFromStep1 = GetProtectedCellsFromBestPaths(b, words);
+            var result = TrainingStep2(b, words, displayedPositionsPerWord, protectedFromStep1);
             if (result != null && result.Item1 != null)
             {
                 optimizedBoards.Add(result.Item1);
@@ -139,6 +142,12 @@ public class BoardGenerator
         int previousFound = 0;
         Board previousBoard = new Board(board.ToString());
         Board currentBoard = new Board(board.ToString());
+        // start with protection discovered from previousBoard's complete paths
+        bool[,] cumulativeProtected = GetProtectedCellsFromBestPaths(previousBoard, words);
+        bool[] previousFoundFlags = new bool[words.Length];
+        for (int i = 0; i < words.Length; i++) previousFoundFlags[i] = previousBoard.TryFindWordPath(words[i], out _);
+        previousScore = ScoreBoardOnWordsAndProtect(previousBoard, words, cumulativeProtected, previousFoundFlags);
+        previousFound = previousFoundFlags.Count(f => f);
         int targetScore = 0;
         foreach (string word in words) {
             targetScore += word.Length;
@@ -146,13 +155,11 @@ public class BoardGenerator
 
         while (limit > 0)
         {
-            float currentScore = ScoreBoardOnWords(currentBoard, words);
-
-            int currentFound = 0;
-            foreach (string w in words)
-            {
-                if (currentBoard.TryFindWordPath(w, out _)) currentFound += 1;
-            }
+            // score and collect protected cells for current board in a single pass
+            bool[] currentFoundFlags = new bool[words.Length];
+            bool[,] tempProtected = new bool[4,4];
+            float currentScore = ScoreBoardOnWordsAndProtect(currentBoard, words, tempProtected, currentFoundFlags);
+            int currentFound = currentFoundFlags.Count(f => f);
 
             int iter = initialLimit - limit;
             if (iter - lastLogIter >= 250 || currentFound > previousFound)
@@ -179,9 +186,12 @@ public class BoardGenerator
                 previousBoard = currentBoard;
                 previousScore = currentScore;
                 previousFound = currentFound;
+                // union protected cells from newly accepted best (best paths)
+                UnionProtected(cumulativeProtected, tempProtected);
             }
 
-            currentBoard = boardToMutate.Mutate();
+            // mutate while avoiding any cumulatively protected cells
+            currentBoard = boardToMutate.Mutate(cumulativeProtected);
 
             limit -= 1;
         }
@@ -190,7 +200,7 @@ public class BoardGenerator
         return null;
     }
 
-    public Tuple<Board, bool[][]>? TrainingStep2(Board board, string[] words, List<bool[]> displayedLetters)
+    public Tuple<Board, bool[][]>? TrainingStep2(Board board, string[] words, List<bool[]> displayedLetters, bool[,]? protectedFromStep1 = null)
     {
         int initialPerDisplaySetLimit = Math.Max(100, 150 * words.Length);
         int perDisplaySetLimit = initialPerDisplaySetLimit;
@@ -210,6 +220,7 @@ public class BoardGenerator
 
         int currentWordToDisplayMore = 0;
 
+        // simple strict loop: compute alternatives only, require zero alternatives for success
         while (perDisplaySetLimit > 0)
         {
             float currentScore = ScoreBoardOnAlternatives(currentBoard, words, currentDisplayedLetters);
@@ -238,9 +249,11 @@ public class BoardGenerator
                 boardToMutate = new Board(currentBoard.ToString());
                 previousBoard = currentBoard;
                 previousScore = currentScore;
+                // note: do not modify `protectedFromStep1` here (static filter only).
             }
-
-            Board mutated = new Board(boardToMutate.ToString()).Mutate();
+            // mutate while avoiding statically protected cells from step1
+            Board mutated = new Board(boardToMutate.ToString()).Mutate(protectedFromStep1);
+            // verify mutated preserves coverage (all words found)
             if (ScoreBoardOnWords(mutated, words) >= wordTargetScore)
             {
                 currentBoard = mutated;
@@ -467,6 +480,95 @@ public class BoardGenerator
         return string.Join(" | ", masks.Select(m => new string(m.Select(b => b ? '1' : '0').ToArray())));
     }
 
+    // Collect cells used by the complete paths for each word (used after TrainingStep1)
+    // This checks for full paths (uses TryFindWordPath) so protected cells are truly part of complete solutions.
+    private static bool[,] GetProtectedCellsFromBestPaths(Board board, string[] words)
+    {
+        bool[,] prot = new bool[4,4];
+        if (board == null || words == null) return prot;
+        foreach (string w in words)
+        {
+            if (board.TryFindWordPath(w, out var path) && path != null)
+            {
+                foreach (var t in path)
+                {
+                    int r = t.Item1, c = t.Item2;
+                    if (r >= 0 && r < 4 && c >= 0 && c < 4) prot[r,c] = true;
+                }
+            }
+        }
+        return prot;
+    }
+
+    // NOTE: removed redundant complete-path collector; GetProtectedCellsFromBestPaths handles full-path detection.
+
+    private static void UnionProtected(bool[,] target, bool[,] source)
+    {
+        if (target == null || source == null) return;
+        for (int r = 0; r < 4; r++) for (int c = 0; c < 4; c++) target[r,c] = target[r,c] || source[r,c];
+    }
+
+    private static void AddPathToProtected(bool[,] prot, List<Tuple<int,int>> path)
+    {
+        if (prot == null || path == null) return;
+        foreach (var t in path)
+        {
+            int r = t.Item1, c = t.Item2;
+            if (r >= 0 && r < 4 && c >= 0 && c < 4) prot[r,c] = true;
+        }
+    }
+
+    // Score words while also marking protected cells for successfully found complete paths.
+    private static float ScoreBoardOnWordsAndProtect(Board board, string[] words, bool[,] protectedCells, bool[]? foundFlags)
+    {
+        int score = 0;
+        if (board == null || words == null) return score;
+        for (int i = 0; i < words.Length; i++)
+        {
+            if (foundFlags != null && foundFlags[i])
+            {
+                score += words[i].Length;
+                continue;
+            }
+
+            if (board.TryFindWordPath(words[i], out var path) && path != null && path.Count > 0)
+            {
+                if (foundFlags != null) foundFlags[i] = true;
+                if (protectedCells != null) AddPathToProtected(protectedCells, path);
+                score += Math.Min(path.Count, words[i].Length);
+            }
+        }
+
+        return score;
+    }
+
+    // Score alternatives while also marking protected cells for any successfully found complete paths.
+    private static float ScoreBoardOnAlternativesAndProtect(Board board, string[] words, List<bool[]> displayed, bool[,]? protectedCells, bool[]? foundFlags)
+    {
+        int score = 0;
+        if (board == null || words == null || displayed == null) return score;
+        for (int i = 0; i < words.Length; i++)
+        {
+            if (foundFlags != null && foundFlags[i])
+            {
+                // word already known to have a complete path, skip alternative calculation
+                continue;
+            }
+
+            if (board.TryFindWordPath(words[i], out var path) && path != null && path.Count > 0)
+            {
+                if (foundFlags != null) foundFlags[i] = true;
+                if (protectedCells != null) AddPathToProtected(protectedCells, path);
+                continue;
+            }
+
+            int alternatives = board.FindAlternateWordsFromPosition(words[i], displayed[i]);
+            score += alternatives;
+        }
+
+        return score;
+    }
+
     public class Board
     {
         private readonly char[,] boardArray;
@@ -474,8 +576,6 @@ public class BoardGenerator
         private static readonly int TotalLetterCount = LetterCounts.Sum();
         public static readonly float[] Weights = LetterCounts.Select(count => count / (float)TotalLetterCount).ToArray();
 
-        // linear view of board (index = row*4 + col) for faster access
-        private char[] flatBoard;
         // precomputed neighbor indices for each linear cell
         private static readonly int[][] NeighborIndices;
 
@@ -581,7 +681,8 @@ public class BoardGenerator
 
             for (int linear = 0; linear < 16; linear++)
             {
-                if (flatBoard[linear] == word[seedDisplayIndex])
+                int rr = linear / 4, rc = linear % 4;
+                if (boardArray[rr, rc] == word[seedDisplayIndex])
                 {
                     int usedMask = 1 << linear;
                     List<int> candidatePath = new List<int> { linear };
@@ -609,7 +710,11 @@ public class BoardGenerator
                 if (curLeft <= 0 && curRight <= 0)
                 {
                     char[] buf = new char[candidatePath.Count];
-                    for (int pi = 0; pi < candidatePath.Count; pi++) buf[pi] = flatBoard[candidatePath[pi]];
+                    for (int pi = 0; pi < candidatePath.Count; pi++)
+                    {
+                        int idx = candidatePath[pi];
+                        buf[pi] = boardArray[idx/4, idx%4];
+                    }
                     string candidateWord = new string(buf);
 
                     if (string.Equals(candidateWord, word, StringComparison.OrdinalIgnoreCase)) continue;
@@ -667,7 +772,8 @@ public class BoardGenerator
             Queue<Tuple<int, int, int, List<int>>> queue = new(); // curLinear, guessIndex, usedMask, pathIndices
             for (int linear = 0; linear < 16; linear++)
             {
-                if (flatBoard[linear] == word[0])
+                int rr = linear / 4, rc = linear % 4;
+                if (boardArray[rr, rc] == word[0])
                 {
                     int usedMask = 1 << linear;
                     queue.Enqueue(Tuple.Create(linear, 0, usedMask, new List<int> { linear }));
@@ -699,7 +805,8 @@ public class BoardGenerator
                 foreach (int n in NeighborIndices[curLinear])
                 {
                     if ((usedMask & (1 << n)) != 0) continue;
-                    if (flatBoard[n] != word[nextCharIdx]) continue;
+                    int nr = n / 4, nc = n % 4;
+                    if (boardArray[nr, nc] != word[nextCharIdx]) continue;
                     int newMask = usedMask | (1 << n);
                     List<int> newPath = new List<int>(pathIndices) { n };
                     queue.Enqueue(Tuple.Create(n, nextCharIdx, newMask, newPath));
@@ -722,7 +829,8 @@ public class BoardGenerator
             Queue<Tuple<int, int, int, List<int>>> queue = new();
             for (int linear = 0; linear < 16; linear++)
             {
-                if (flatBoard[linear] == word[0]) queue.Enqueue(Tuple.Create(linear, 0, 1 << linear, new List<int> { linear }));
+                int rr = linear / 4, rc = linear % 4;
+                if (boardArray[rr, rc] == word[0]) queue.Enqueue(Tuple.Create(linear, 0, 1 << linear, new List<int> { linear }));
             }
 
             while (queue.Count != 0)
@@ -743,7 +851,8 @@ public class BoardGenerator
                 foreach (int n in NeighborIndices[curLinear])
                 {
                     if ((usedMask & (1 << n)) != 0) continue;
-                    if (flatBoard[n] != word[nextIndex]) continue;
+                    int nr = n / 4, nc = n % 4;
+                    if (boardArray[nr, nc] != word[nextIndex]) continue;
                     int newMask = usedMask | (1 << n);
                     List<int> newPath = new List<int>(pathIndices) { n };
                     queue.Enqueue(Tuple.Create(n, nextIndex, newMask, newPath));
@@ -753,16 +862,53 @@ public class BoardGenerator
             return false;
         }
 
-        public Board Mutate() // TODO: improve mutation
+        public Board Mutate(bool[,]? protectedCells = null) // TODO: improve mutation
         {
-            int index = Random.Next(16);
-            int row = index / 4;
-            int col = index % 4;
-            boardArray[row, col] = GetRandomWeightedLetter();
+            // try a number of random picks avoiding protected cells
+            for (int attempt = 0; attempt < 64; attempt++)
+            {
+                int index = Random.Next(16);
+                int row = index / 4;
+                int col = index % 4;
+                if (protectedCells != null)
+                {
+                    try
+                    {
+                        if (protectedCells[row, col]) continue;
+                    }
+                    catch { /* out-of-range: ignore protection */ }
+                }
+                boardArray[row, col] = GetRandomWeightedLetter();
+                return this;
+            }
 
-            // keep flatBoard in sync
-            if (flatBoard != null && index >= 0 && index < flatBoard.Length) flatBoard[index] = boardArray[row, col];
+            // if random attempts failed (maybe many protected), pick any unprotected by scanning
+            List<int> candidates = new List<int>(16);
+            for (int i = 0; i < 16; i++)
+            {
+                int r = i / 4, c = i % 4;
+                if (protectedCells != null)
+                {
+                    try
+                    {
+                        if (protectedCells[r, c]) continue;
+                    }
+                    catch { }
+                }
+                candidates.Add(i);
+            }
 
+            if (candidates.Count > 0)
+            {
+                int pick = candidates[Random.Next(candidates.Count)];
+                int rr = pick / 4, cc = pick % 4;
+                boardArray[rr, cc] = GetRandomWeightedLetter();
+                return this;
+            }
+
+            // last resort: everything protected, mutate a random tile anyway
+            int fallback = Random.Next(16);
+            boardArray[fallback / 4, fallback % 4] = GetRandomWeightedLetter();
             return this;
         }
 
@@ -799,8 +945,7 @@ public class BoardGenerator
                 int col = i % 4;
                 boardArray[row, col] = letterSet[Random.Next(letterSet.Length)];
             }
-            flatBoard = new char[16];
-            for (int i = 0; i < 16; i++) flatBoard[i] = boardArray[i/4, i%4];
+            // no linear cache
         }
 
         public Board(string board)
@@ -812,8 +957,7 @@ public class BoardGenerator
                 int col = i % 4;
                 boardArray[row, col] = i < board.Length ? char.ToUpperInvariant(board[i]) : 'A';
             }
-            flatBoard = new char[16];
-            for (int i = 0; i < 16; i++) flatBoard[i] = boardArray[i/4, i%4];
+            // no linear cache
         }
 
         public Board() : this("AAAAAAAAAAAAAAAA")

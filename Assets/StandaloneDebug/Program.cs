@@ -16,7 +16,7 @@ Console.WriteLine();
 Stopwatch stopwatch = Stopwatch.StartNew();
 try
 {
-    var result = generator.GenerateBoards(words, 5);
+    var result = generator.GenerateBoards(words, 10);
     stopwatch.Stop();
 
     string[] generatedBoards = result.Item1;
