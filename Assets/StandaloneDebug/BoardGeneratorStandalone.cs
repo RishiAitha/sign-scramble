@@ -44,9 +44,9 @@ public class BoardGenerator
         }
     }
 
-    public Tuple<string[], Tuple<char, int>[][]> GenerateBoards(string[] words, int numberOfBoards)
+    public Tuple<string[], bool[][][]> GenerateBoards(string[] words, int numberOfBoards)
     {
-        if (!usingTest) throw new Exception("Need to use test for now."); // TODO: allow word sets
+        if (!usingTest) throw new Exception("Need to use test for now.");
         if (!ValidateWordSet(words))
         {
             throw new Exception("Invalid word set.");
@@ -65,13 +65,16 @@ public class BoardGenerator
         Random.Shuffle(shuffledLetterSet);
         letterSet = new string(shuffledLetterSet);
 
-        int training1Limit = 2000;
+        // adaptive training1 limit: scale with number of target words to balance
+        // quality vs runtime. For small sets (5 words) this yields ~2000 iterations;
+        // for larger sets it scales up linearly.
+        int training1Limit = Math.Max(500, 400 * words.Length);
 
         while (completeBoards.Count < numberOfBoards)
         {
             Board newBoard = new Board(letterSet.ToCharArray());
 
-            Board trainedBoard = TrainingStep1(newBoard, words);
+            Board? trainedBoard = TrainingStep1(newBoard, words);
 
             if (trainedBoard != null)
             {
@@ -85,41 +88,34 @@ public class BoardGenerator
             }
         }
 
-        List<Tuple<char, int>> displayedLetters = new List<Tuple<char, int>>(words.Length);
-
+        // For each word create a boolean mask (per-index) indicating which letters are displayed.
+        List<bool[]> displayedPositionsPerWord = new List<bool[]>(words.Length);
         for (int i = 0; i < words.Length; i++)
         {
-            float lowestWeight = float.MaxValue;
-            char rarestLetter = words[i].Length > 0 ? words[i][0] : 'A';
-            int letterIndex = 0;
-            for (int j = 0; j < words[i].Length; j++) {
-                char letter = words[i][j];
-                float w = Board.Weights[letter - 'A'];
-                if (w < lowestWeight)
-                {
-                    lowestWeight = w;
-                    rarestLetter = letter;
-                    letterIndex = j;
-                }
-            }
-            displayedLetters.Add(Tuple.Create(rarestLetter, letterIndex));
+            // choose the rarest letter index as the initially revealed letter
+            int rarestLetterIndex = Board.FindKthRarestLetter(words[i], 1);
+
+            bool[] mask = new bool[words[i].Length];
+            if (mask.Length > 0 && rarestLetterIndex >= 0 && rarestLetterIndex < mask.Length) mask[rarestLetterIndex] = true;
+            displayedPositionsPerWord.Add(mask);
         }
 
         List<Board> optimizedBoards = new List<Board>(numberOfBoards);
+        List<bool[][]> perBoardDisplayedMasks = new List<bool[][]>(numberOfBoards);
 
         while (completeBoards.Count > 0)
         {
-            Board optimizedBoard = TrainingStep2(completeBoards.Pop(), words, displayedLetters);
-
-            optimizedBoards.Add(optimizedBoard);
+            var result = TrainingStep2(completeBoards.Pop(), words, displayedPositionsPerWord);
+            if (result != null && result.Item1 != null)
+            {
+                optimizedBoards.Add(result.Item1);
+                perBoardDisplayedMasks.Add(result.Item2);
+            }
         }
 
         string[] boardStrings = optimizedBoards.Select(board => board.ToString()).ToArray();
 
-        Tuple<char, int>[] displayedArray = displayedLetters.ToArray();
-        Tuple<char, int>[][] perBoardDisplayed = Enumerable.Range(0, boardStrings.Length)
-            .Select(_ => displayedArray)
-            .ToArray();
+        bool[][][] perBoardDisplayed = perBoardDisplayedMasks.Select(maskSet => maskSet.Select(m => m.ToArray()).ToArray()).ToArray();
 
         return Tuple.Create(boardStrings, perBoardDisplayed);
     }
@@ -140,20 +136,17 @@ public class BoardGenerator
         {
             float currentScore = ScoreBoardOnWords(currentBoard, words);
 
-            // compute how many distinct target words are currently present
             int currentFound = 0;
             foreach (string w in words)
             {
                 if (currentBoard.TryFindWordPath(w, out _)) currentFound += 1;
             }
 
-            // primary objective: coverage of all words
             if (currentFound == words.Length)
             {
                 return currentBoard;
             }
 
-            // prefer mutations that increase distinct-word coverage; break ties using the length-based score
             Board boardToMutate;
 
             if (currentFound < previousFound || (currentFound == previousFound && (currentScore < previousScore || (currentScore == previousScore && Random.Next(2) == 0))))
@@ -176,9 +169,10 @@ public class BoardGenerator
         return null;
     }
 
-    public Board? TrainingStep2(Board board, string[] words, List<Tuple<char, int>> displayedLetters)
+    public Tuple<Board, bool[][]>? TrainingStep2(Board board, string[] words, List<bool[]> displayedLetters)
     {
-        int limit = 500;
+        int initialPerDisplaySetLimit = Math.Max(100, 150 * words.Length);
+        int perDisplaySetLimit = initialPerDisplaySetLimit;
         float previousScore = float.MaxValue;
         Board previousBoard = new Board(board.ToString());
         Board currentBoard = new Board(board.ToString());
@@ -186,18 +180,21 @@ public class BoardGenerator
         // ensure we preserve word coverage: compute target word coverage score (sum of word lengths)
         int wordTargetScore = 0;
         foreach (string w in words) wordTargetScore += w.Length;
+        
+        // clone the displayed-positions masks so we can modify locally if needed
+        List<bool[]> currentDisplayedLetters = displayedLetters.Select(mask => mask.ToArray()).ToList();
 
-        while (limit > 0)
+        int currentWordToDisplayMore = 0;
+
+        while (perDisplaySetLimit > 0)
         {
-            float currentScore = ScoreBoardOnAlternatives(currentBoard, words, displayedLetters);
+            float currentScore = ScoreBoardOnAlternatives(currentBoard, words, currentDisplayedLetters);
             if (currentScore <= targetScore)
             {
-                return currentBoard;
+                // return the board plus the final displayed masks
+                bool[][] finalMasks = currentDisplayedLetters.Select(m => m.ToArray()).ToArray();
+                return Tuple.Create(currentBoard, finalMasks);
             }
-
-            // TODO: improve mutation
-
-            // TODO: if stuck, add more displayed letters
 
             Board boardToMutate;
 
@@ -222,9 +219,56 @@ public class BoardGenerator
                 currentBoard = boardToMutate;
             }
 
-            limit -= 1;
-            if (limit <= 0) {
-                throw new Exception("Training step 2 failed. Need to change displayed letters probably.");
+            perDisplaySetLimit -= 1;
+            if (perDisplaySetLimit <= 0)
+            {
+                // reveal one more letter (the next-rarest undisplayed) for the next eligible word
+                bool displayedAll = true;
+                for (int wi = 0; wi < currentDisplayedLetters.Count; wi++)
+                {
+                    if (currentDisplayedLetters[wi].Any(b => !b))
+                    {
+                        displayedAll = false;
+                        break;
+                    }
+                }
+
+                if (displayedAll)
+                {
+                    throw new Exception("Training step 2 timed out after all letters displayed.");
+                }
+
+                // find next word (starting from currentWordToDisplayMore) that still has undisplayed letters
+                int foundWord = -1;
+                for (int offset = 0; offset < words.Length; offset++)
+                {
+                    int idx = (currentWordToDisplayMore + offset) % words.Length;
+                    int displayedCount = currentDisplayedLetters[idx].Count(b => b);
+                    if (displayedCount < words[idx].Length)
+                    {
+                        foundWord = idx;
+                        break;
+                    }
+                }
+
+                if (foundWord == -1)
+                {
+                    perDisplaySetLimit = initialPerDisplaySetLimit;
+                    throw new Exception("Training step 2 failed.");
+                }
+
+                int currentlyShown = currentDisplayedLetters[foundWord].Count(b => b);
+                int nextK = currentlyShown + 1;
+                int revealIndex = Board.FindKthRarestLetter(words[foundWord], nextK);
+                if (revealIndex >= 0 && revealIndex < currentDisplayedLetters[foundWord].Length)
+                {
+                    currentDisplayedLetters[foundWord][revealIndex] = true;
+                }
+
+                // advance pointer for next time
+                currentWordToDisplayMore = (foundWord + 1) % words.Length;
+
+                perDisplaySetLimit = initialPerDisplaySetLimit;
             }
         }
 
@@ -247,7 +291,7 @@ public class BoardGenerator
         return score;
     }
 
-    public float ScoreBoardOnAlternatives(Board board, string[] words, List<Tuple<char, int>> displayed)
+    public float ScoreBoardOnAlternatives(Board board, string[] words, List<bool[]> displayed)
     {
         int score = 0;
         for (int i = 0; i < words.Length; i++)
@@ -368,6 +412,19 @@ public class BoardGenerator
         return null;
     }
 
+    // Helper: returns the list of characters from `word` that are marked as displayed by `displayedMask`.
+    public static List<char> GetDisplayedCharactersFromMask(string word, bool[] displayedMask)
+    {
+        List<char> displayed = new List<char>();
+        if (string.IsNullOrEmpty(word) || displayedMask == null) return displayed;
+        int len = Math.Min(word.Length, displayedMask.Length);
+        for (int i = 0; i < len; i++)
+        {
+            if (displayedMask[i]) displayed.Add(word[i]);
+        }
+        return displayed;
+    }
+
     public class Board
     {
         private readonly char[,] boardArray;
@@ -410,38 +467,71 @@ public class BoardGenerator
         private static readonly SignScramble.StandaloneDebug.DictionaryManager dictionaryManager =
             new SignScramble.StandaloneDebug.DictionaryManager("dictionary.txt");
 
-        public int FindAlternateWordsFromPosition(string word, Tuple<char, int> displayed)
+        public int FindAlternateWordsFromPosition(string word, bool[] displayedPositions)
         {
-            if (string.IsNullOrEmpty(word) || displayed == null)
+            if (string.IsNullOrEmpty(word) || displayedPositions == null)
             {
                 throw new Exception("Illegal argument in find alternate words from position.");
+            }
+
+            List<char> displayedChars = BoardGenerator.GetDisplayedCharactersFromMask(word, displayedPositions);
+            if (displayedChars.Count == 0)
+            {
+                // nothing displayed -> no anchored alternates
+                return 0;
             }
 
             int alternateWordCount = 0;
             HashSet<string> seenWords = new(StringComparer.OrdinalIgnoreCase);
 
-            int leftLength = displayed.Item2;
-            int rightLength = word.Length - displayed.Item2 - 1;
+            // collect displayed indices for verification at completion
+            List<int> displayedIndices = new List<int>();
+            for (int k = 0; k < Math.Min(word.Length, displayedPositions.Length); k++) if (displayedPositions[k]) displayedIndices.Add(k);
 
             // leftlength, rightlength, nextLeftIndex, nextRightIndex, pivotPos, usedarray, current path
             Queue<Tuple<int, int, int, int, int, int[,], List<Tuple<int, int>>>> queue = new();
+
+            // choose a single seed displayed index to start BFS from: pick the rarest displayed letter
+            int seedDisplayIndex = displayedIndices[0];
+            if (displayedIndices.Count > 1)
+            {
+                // find the kth-rarest letter in the word that is also one of the displayed indices
+                for (int k = 1; k <= word.Length; k++)
+                {
+                    int candidateIdx = FindKthRarestLetter(word, k);
+                    if (displayedIndices.Contains(candidateIdx))
+                    {
+                        seedDisplayIndex = candidateIdx;
+                        break;
+                    }
+                }
+            }
+
             for (int i = 0; i < boardArray.GetLength(0); i++)
             {
                 for (int j = 0; j < boardArray.GetLength(1); j++)
                 {
-                    if (boardArray[i, j] == displayed.Item1)
+                    if (boardArray[i, j] == word[seedDisplayIndex])
                     {
                         int[,] usedArray = new int[boardArray.GetLength(0), boardArray.GetLength(1)];
                         usedArray[i, j] = 1;
                         List<Tuple<int, int>> candidatePath = new();
                         candidatePath.Add(Tuple.Create(i, j));
-                        int nextLeftIndex = displayed.Item2 - 1;
-                        int nextRightIndex = displayed.Item2 + 1;
+                        int nextLeftIndex = seedDisplayIndex - 1;
+                        int nextRightIndex = seedDisplayIndex + 1;
+                        int leftLength = seedDisplayIndex;
+                        int rightLength = word.Length - seedDisplayIndex - 1;
                         int pivotPos = 0; // pivot is at index 0 in candidatePath initially
                         queue.Enqueue(Tuple.Create(leftLength, rightLength, nextLeftIndex, nextRightIndex, pivotPos, usedArray, candidatePath));
                     }
                 }
             }
+
+            var neighborOffsets = new List<Tuple<int, int>> {
+                Tuple.Create(-1, 0), Tuple.Create(-1, -1), Tuple.Create(-1, 1),
+                Tuple.Create(1, 0), Tuple.Create(1, -1), Tuple.Create(1, 1),
+                Tuple.Create(0, -1), Tuple.Create(0, 1)
+            };
 
             while (queue.Count != 0)
             {
@@ -458,7 +548,6 @@ public class BoardGenerator
                 if (curLeft <= 0 && curRight <= 0)
                 {
                     string candidateWord = "";
-
                     foreach (Tuple<int, int> coordinate in candidatePath)
                     {
                         candidateWord += boardArray[coordinate.Item1, coordinate.Item2];
@@ -469,6 +558,19 @@ public class BoardGenerator
                     {
                         continue;
                     }
+
+                    // ensure candidate matches the displayed characters at displayed indices
+                    bool matchesDisplayed = true;
+                    foreach (int idx in displayedIndices)
+                    {
+                        if (idx < 0 || idx >= candidateWord.Length || candidateWord[idx] != word[idx])
+                        {
+                            matchesDisplayed = false;
+                            break;
+                        }
+                    }
+
+                    if (!matchesDisplayed) continue;
 
                     if (!seenWords.Contains(candidateWord) && dictionaryManager.IsValidWord(candidateWord))
                     {
@@ -484,200 +586,37 @@ public class BoardGenerator
                 int i = candidatePath[movingLeft ? 0 : candidatePath.Count - 1].Item1;
                 int j = candidatePath[movingLeft ? 0 : candidatePath.Count - 1].Item2;
 
-                // expected character index for the neighbor based on direction
-                int expectedIndex = movingLeft ? nextLeftIndex : nextRightIndex;
-                char expectedChar = (expectedIndex >= 0 && expectedIndex < word.Length) ? word[expectedIndex] : '\0';
+                // compute next-state bases based on direction (left vs right growth)
+                int newCurLeftBase = movingLeft ? curLeft - 1 : curLeft;
+                int newCurRightBase = movingLeft ? curRight : curRight - 1;
+                int newNextLeftIndexBase = movingLeft ? nextLeftIndex - 1 : nextLeftIndex;
+                int newNextRightIndexBase = movingLeft ? nextRightIndex : nextRightIndex + 1;
+                int newPivotPosBase = movingLeft ? pivotPos + 1 : pivotPos;
 
-                if (i > 0)
+                foreach (var offset in neighborOffsets)
                 {
-                    if (usedArray[i - 1, j] != 1)
+                    int neighborRow = i + offset.Item1;
+                    int neighborCol = j + offset.Item2;
+
+                    // bounds check
+                    if (neighborRow < 0 || neighborRow >= boardArray.GetLength(0) || neighborCol < 0 || neighborCol >= boardArray.GetLength(1))
+                        continue;
+
+                    if (usedArray[neighborRow, neighborCol] == 1) continue;
+
+                    int[,] newUsedArray = (int[,])usedArray.Clone();
+                    newUsedArray[neighborRow, neighborCol] = 1;
+                    List<Tuple<int, int>> newPath = new(candidatePath);
+                    if (movingLeft)
                     {
-                        int[,] newUsedArray = (int[,])usedArray.Clone();
-                        newUsedArray[i - 1, j] = 1;
-                        List<Tuple<int, int>> newPath = new(candidatePath);
-                        if (movingLeft)
-                        {
-                            newPath.Insert(0, Tuple.Create(i - 1, j));
-                        }
-                        else
-                        {
-                            newPath.Add(Tuple.Create(i - 1, j));
-                        }
-                        queue.Enqueue(Tuple.Create(movingLeft ? curLeft - 1 : curLeft,
-                            movingLeft ? curRight : curRight - 1,
-                            movingLeft ? nextLeftIndex - 1 : nextLeftIndex,
-                            movingLeft ? nextRightIndex : nextRightIndex + 1,
-                            movingLeft ? pivotPos + 1 : pivotPos,
-                            newUsedArray, newPath));
+                        newPath.Insert(0, Tuple.Create(neighborRow, neighborCol));
+                    }
+                    else
+                    {
+                        newPath.Add(Tuple.Create(neighborRow, neighborCol));
                     }
 
-                    if (j > 0)
-                    {
-                        if (usedArray[i - 1, j - 1] != 1)
-                        {
-                            int[,] newUsedArray = (int[,])usedArray.Clone();
-                            newUsedArray[i - 1, j - 1] = 1;
-                            List<Tuple<int, int>> newPath = new(candidatePath);
-                            if (movingLeft)
-                            {
-                                newPath.Insert(0, Tuple.Create(i - 1, j - 1));
-                            }
-                            else
-                            {
-                                newPath.Add(Tuple.Create(i - 1, j - 1));
-                            }
-                            queue.Enqueue(Tuple.Create(movingLeft ? curLeft - 1 : curLeft,
-                                movingLeft ? curRight : curRight - 1,
-                                movingLeft ? nextLeftIndex - 1 : nextLeftIndex,
-                                movingLeft ? nextRightIndex : nextRightIndex + 1,
-                                movingLeft ? pivotPos + 1 : pivotPos,
-                                newUsedArray, newPath));
-                        }
-                    }
-
-                    if (j < boardArray.GetLength(1) - 1)
-                    {
-                        if (usedArray[i - 1, j + 1] != 1)
-                        {
-                            int[,] newUsedArray = (int[,])usedArray.Clone();
-                            newUsedArray[i - 1, j + 1] = 1;
-                            List<Tuple<int, int>> newPath = new(candidatePath);
-                            if (movingLeft)
-                            {
-                                newPath.Insert(0, Tuple.Create(i - 1, j + 1));
-                            }
-                            else
-                            {
-                                newPath.Add(Tuple.Create(i - 1, j + 1));
-                            }
-                            queue.Enqueue(Tuple.Create(movingLeft ? curLeft - 1 : curLeft,
-                                movingLeft ? curRight : curRight - 1,
-                                movingLeft ? nextLeftIndex - 1 : nextLeftIndex,
-                                movingLeft ? nextRightIndex : nextRightIndex + 1,
-                                movingLeft ? pivotPos + 1 : pivotPos,
-                                newUsedArray, newPath));
-                        }
-                    }
-                }
-
-                if (i < boardArray.GetLength(0) - 1)
-                {
-                    if (usedArray[i + 1, j] != 1)
-                    {
-                        int[,] newUsedArray = (int[,])usedArray.Clone();
-                        newUsedArray[i + 1, j] = 1;
-                        List<Tuple<int, int>> newPath = new(candidatePath);
-                        if (movingLeft)
-                        {
-                            newPath.Insert(0, Tuple.Create(i + 1, j));
-                        }
-                        else
-                        {
-                            newPath.Add(Tuple.Create(i + 1, j));
-                        }
-                        queue.Enqueue(Tuple.Create(movingLeft ? curLeft - 1 : curLeft,
-                            movingLeft ? curRight : curRight - 1,
-                            movingLeft ? nextLeftIndex - 1 : nextLeftIndex,
-                            movingLeft ? nextRightIndex : nextRightIndex + 1,
-                            movingLeft ? pivotPos + 1 : pivotPos,
-                            newUsedArray, newPath));
-                    }
-
-                    if (j > 0)
-                    {
-                        if (usedArray[i + 1, j - 1] != 1)
-                        {
-                            int[,] newUsedArray = (int[,])usedArray.Clone();
-                            newUsedArray[i + 1, j - 1] = 1;
-                            List<Tuple<int, int>> newPath = new(candidatePath);
-                            if (movingLeft)
-                            {
-                                newPath.Insert(0, Tuple.Create(i + 1, j - 1));
-                            }
-                            else
-                            {
-                                newPath.Add(Tuple.Create(i + 1, j - 1));
-                            }
-                            queue.Enqueue(Tuple.Create(movingLeft ? curLeft - 1 : curLeft,
-                                movingLeft ? curRight : curRight - 1,
-                                movingLeft ? nextLeftIndex - 1 : nextLeftIndex,
-                                movingLeft ? nextRightIndex : nextRightIndex + 1,
-                                movingLeft ? pivotPos + 1 : pivotPos,
-                                newUsedArray, newPath));
-                        }
-                    }
-
-                    if (j < boardArray.GetLength(1) - 1)
-                    {
-                        if (usedArray[i + 1, j + 1] != 1)
-                        {
-                            int[,] newUsedArray = (int[,])usedArray.Clone();
-                            newUsedArray[i + 1, j + 1] = 1;
-                            List<Tuple<int, int>> newPath = new(candidatePath);
-                            if (movingLeft)
-                            {
-                                newPath.Insert(0, Tuple.Create(i + 1, j + 1));
-                            }
-                            else
-                            {
-                                newPath.Add(Tuple.Create(i + 1, j + 1));
-                            }
-                            queue.Enqueue(Tuple.Create(movingLeft ? curLeft - 1 : curLeft,
-                                movingLeft ? curRight : curRight - 1,
-                                movingLeft ? nextLeftIndex - 1 : nextLeftIndex,
-                                movingLeft ? nextRightIndex : nextRightIndex + 1,
-                                movingLeft ? pivotPos + 1 : pivotPos,
-                                newUsedArray, newPath));
-                        }
-                    }
-                }
-
-                if (j > 0)
-                {
-                    if (usedArray[i, j - 1] != 1)
-                    {
-                        int[,] newUsedArray = (int[,])usedArray.Clone();
-                        newUsedArray[i, j - 1] = 1;
-                        List<Tuple<int, int>> newPath = new(candidatePath);
-                        if (movingLeft)
-                        {
-                            newPath.Insert(0, Tuple.Create(i, j - 1));
-                        }
-                        else
-                        {
-                            newPath.Add(Tuple.Create(i, j - 1));
-                        }
-                        queue.Enqueue(Tuple.Create(movingLeft ? curLeft - 1 : curLeft,
-                            movingLeft ? curRight : curRight - 1,
-                            movingLeft ? nextLeftIndex - 1 : nextLeftIndex,
-                            movingLeft ? nextRightIndex : nextRightIndex + 1,
-                            movingLeft ? pivotPos + 1 : pivotPos,
-                            newUsedArray, newPath));
-                    }
-                }
-
-                if (j < boardArray.GetLength(1) - 1)
-                {
-                    if (usedArray[i, j + 1] != 1)
-                    {
-                        int[,] newUsedArray = (int[,])usedArray.Clone();
-                        newUsedArray[i, j + 1] = 1;
-                        List<Tuple<int, int>> newPath = new(candidatePath);
-                        if (movingLeft)
-                        {
-                            newPath.Insert(0, Tuple.Create(i, j + 1));
-                        }
-                        else
-                        {
-                            newPath.Add(Tuple.Create(i, j + 1));
-                        }
-                        queue.Enqueue(Tuple.Create(movingLeft ? curLeft - 1 : curLeft,
-                            movingLeft ? curRight : curRight - 1,
-                            movingLeft ? nextLeftIndex - 1 : nextLeftIndex,
-                            movingLeft ? nextRightIndex : nextRightIndex + 1,
-                            movingLeft ? pivotPos + 1 : pivotPos,
-                            newUsedArray, newPath));
-                    }
+                    queue.Enqueue(Tuple.Create(newCurLeftBase, newCurRightBase, newNextLeftIndexBase, newNextRightIndexBase, newPivotPosBase, newUsedArray, newPath));
                 }
             }
 
@@ -688,35 +627,41 @@ public class BoardGenerator
         {
             List<Tuple<int, int>> path = new List<Tuple<int, int>>();
 
-            if (string.IsNullOrEmpty(word)) {
+            if (string.IsNullOrEmpty(word))
+            {
                 return path;
             }
 
             Queue<Tuple<int, int, int, int[,], List<Tuple<int, int>>>> queue = new();
 
-            for (int i = 0; i < boardArray.GetLength(0); i++)
+            for (int row = 0; row < boardArray.GetLength(0); row++)
             {
-                for (int j = 0; j < boardArray.GetLength(1); j++)
+                for (int col = 0; col < boardArray.GetLength(1); col++)
                 {
-                    if (boardArray[i, j] == word[0])
+                    if (boardArray[row, col] == word[0])
                     {
                         int[,] usedArray = new int[boardArray.GetLength(0), boardArray.GetLength(1)];
-                        usedArray[i, j] = 1;
+                        usedArray[row, col] = 1;
                         List<Tuple<int, int>> candidatePath = new();
-                        candidatePath.Add(Tuple.Create(i, j));
-                        queue.Enqueue(Tuple.Create(i, j, 0, usedArray, candidatePath));
+                        candidatePath.Add(Tuple.Create(row, col));
+                        queue.Enqueue(Tuple.Create(row, col, 0, usedArray, candidatePath));
                     }
                 }
             }
 
             int longestPathIndex = -1;
 
+            var neighborOffsets = new List<Tuple<int, int>> {
+                Tuple.Create(-1, 0), Tuple.Create(-1, -1), Tuple.Create(-1, 1),
+                Tuple.Create(1, 0), Tuple.Create(1, -1), Tuple.Create(1, 1),
+                Tuple.Create(0, -1), Tuple.Create(0, 1)
+            };
+
             while (queue.Count != 0)
             {
-                Tuple<int, int, int, int[,], List<Tuple<int, int>>> tuple = queue.Dequeue();
-
-                int i = tuple.Item1;
-                int j = tuple.Item2;
+                var tuple = queue.Dequeue();
+                int curRow = tuple.Item1;
+                int curCol = tuple.Item2;
                 int guessIndex = tuple.Item3;
                 int[,] usedArray = tuple.Item4;
                 List<Tuple<int, int>> candidatePath = tuple.Item5;
@@ -729,103 +674,24 @@ public class BoardGenerator
 
                 if (guessIndex == word.Length - 1)
                 {
-                    path = candidatePath;
-                    return path;
+                    return candidatePath;
                 }
 
-                if (i > 0)
+                foreach (var offset in neighborOffsets)
                 {
-                    if (usedArray[i - 1, j] != 1 && boardArray[i - 1, j] == word[guessIndex + 1])
+                    int neighborRow = curRow + offset.Item1;
+                    int neighborCol = curCol + offset.Item2;
+
+                    if (neighborRow < 0 || neighborRow >= boardArray.GetLength(0) || neighborCol < 0 || neighborCol >= boardArray.GetLength(1))
+                        continue;
+
+                    if (usedArray[neighborRow, neighborCol] != 1 && boardArray[neighborRow, neighborCol] == word[guessIndex + 1])
                     {
                         int[,] newUsedArray = (int[,])usedArray.Clone();
-                        newUsedArray[i - 1, j] = 1;
+                        newUsedArray[neighborRow, neighborCol] = 1;
                         List<Tuple<int, int>> newPath = new(candidatePath);
-                        newPath.Add(Tuple.Create(i - 1, j));
-                        queue.Enqueue(Tuple.Create(i - 1, j, guessIndex + 1, newUsedArray, newPath));
-                    }
-
-                    if (j > 0)
-                    {
-                        if (usedArray[i - 1, j - 1] != 1 && boardArray[i - 1, j - 1] == word[guessIndex + 1])
-                        {
-                            int[,] newUsedArray = (int[,])usedArray.Clone();
-                            newUsedArray[i - 1, j - 1] = 1;
-                            List<Tuple<int, int>> newPath = new(candidatePath);
-                            newPath.Add(Tuple.Create(i - 1, j - 1));
-                            queue.Enqueue(Tuple.Create(i - 1, j - 1, guessIndex + 1, newUsedArray, newPath));
-                        }
-                    }
-
-                    if (j < boardArray.GetLength(1) - 1)
-                    {
-                        if (usedArray[i - 1, j + 1] != 1 && boardArray[i - 1, j + 1] == word[guessIndex + 1])
-                        {
-                            int[,] newUsedArray = (int[,])usedArray.Clone();
-                            newUsedArray[i - 1, j + 1] = 1;
-                            List<Tuple<int, int>> newPath = new(candidatePath);
-                            newPath.Add(Tuple.Create(i - 1, j + 1));
-                            queue.Enqueue(Tuple.Create(i - 1, j + 1, guessIndex + 1, newUsedArray, newPath));
-                        }
-                    }
-                }
-
-                if (i < boardArray.GetLength(0) - 1)
-                {
-                    if (usedArray[i + 1, j] != 1 && boardArray[i + 1, j] == word[guessIndex + 1])
-                    {
-                        int[,] newUsedArray = (int[,])usedArray.Clone();
-                        newUsedArray[i + 1, j] = 1;
-                        List<Tuple<int, int>> newPath = new(candidatePath);
-                        newPath.Add(Tuple.Create(i + 1, j));
-                        queue.Enqueue(Tuple.Create(i + 1, j, guessIndex + 1, newUsedArray, newPath));
-                    }
-
-                    if (j > 0)
-                    {
-                        if (usedArray[i + 1, j - 1] != 1 && boardArray[i + 1, j - 1] == word[guessIndex + 1])
-                        {
-                            int[,] newUsedArray = (int[,])usedArray.Clone();
-                            newUsedArray[i + 1, j - 1] = 1;
-                            List<Tuple<int, int>> newPath = new(candidatePath);
-                            newPath.Add(Tuple.Create(i + 1, j - 1));
-                            queue.Enqueue(Tuple.Create(i + 1, j - 1, guessIndex + 1, newUsedArray, newPath));
-                        }
-                    }
-
-                    if (j < boardArray.GetLength(1) - 1)
-                    {
-                        if (usedArray[i + 1, j + 1] != 1 && boardArray[i + 1, j + 1] == word[guessIndex + 1])
-                        {
-                            int[,] newUsedArray = (int[,])usedArray.Clone();
-                            newUsedArray[i + 1, j + 1] = 1;
-                            List<Tuple<int, int>> newPath = new(candidatePath);
-                            newPath.Add(Tuple.Create(i + 1, j + 1));
-                            queue.Enqueue(Tuple.Create(i + 1, j + 1, guessIndex + 1, newUsedArray, newPath));
-                        }
-                    }
-                }
-
-                if (j > 0)
-                {
-                    if (usedArray[i, j - 1] != 1 && boardArray[i, j - 1] == word[guessIndex + 1])
-                    {
-                        int[,] newUsedArray = (int[,])usedArray.Clone();
-                        newUsedArray[i, j - 1] = 1;
-                        List<Tuple<int, int>> newPath = new(candidatePath);
-                        newPath.Add(Tuple.Create(i, j - 1));
-                        queue.Enqueue(Tuple.Create(i, j - 1, guessIndex + 1, newUsedArray, newPath));
-                    }
-                }
-
-                if (j < boardArray.GetLength(1) - 1)
-                {
-                    if (usedArray[i, j + 1] != 1 && boardArray[i, j + 1] == word[guessIndex + 1])
-                    {
-                        int[,] newUsedArray = (int[,])usedArray.Clone();
-                        newUsedArray[i, j + 1] = 1;
-                        List<Tuple<int, int>> newPath = new(candidatePath);
-                        newPath.Add(Tuple.Create(i, j + 1));
-                        queue.Enqueue(Tuple.Create(i, j + 1, guessIndex + 1, newUsedArray, newPath));
+                        newPath.Add(Tuple.Create(neighborRow, neighborCol));
+                        queue.Enqueue(Tuple.Create(neighborRow, neighborCol, guessIndex + 1, newUsedArray, newPath));
                     }
                 }
             }
@@ -835,34 +701,40 @@ public class BoardGenerator
 
         public bool TryFindWordPath(string word, out List<Tuple<int, int>> path)
         {
-            path = null;
+            path = new List<Tuple<int, int>>();
+
             if (string.IsNullOrEmpty(word))
             {
                 return false;
             }
 
             Queue<Tuple<int, int, int, int[,], List<Tuple<int, int>>>> queue = new();
-            for (int i = 0; i < boardArray.GetLength(0); i++)
+            for (int row = 0; row < boardArray.GetLength(0); row++)
             {
-                for (int j = 0; j < boardArray.GetLength(1); j++)
+                for (int col = 0; col < boardArray.GetLength(1); col++)
                 {
-                    if (boardArray[i, j] == word[0])
+                    if (boardArray[row, col] == word[0])
                     {
                         int[,] usedArray = new int[boardArray.GetLength(0), boardArray.GetLength(1)];
-                        usedArray[i, j] = 1;
+                        usedArray[row, col] = 1;
                         List<Tuple<int, int>> candidatePath = new();
-                        candidatePath.Add(Tuple.Create(i, j));
-                        queue.Enqueue(Tuple.Create(i, j, 0, usedArray, candidatePath));
+                        candidatePath.Add(Tuple.Create(row, col));
+                        queue.Enqueue(Tuple.Create(row, col, 0, usedArray, candidatePath));
                     }
                 }
             }
 
+            var neighborOffsets = new List<Tuple<int, int>> {
+                Tuple.Create(-1, 0), Tuple.Create(-1, -1), Tuple.Create(-1, 1),
+                Tuple.Create(1, 0), Tuple.Create(1, -1), Tuple.Create(1, 1),
+                Tuple.Create(0, -1), Tuple.Create(0, 1)
+            };
+
             while (queue.Count != 0)
             {
-                Tuple<int, int, int, int[,], List<Tuple<int, int>>> tuple = queue.Dequeue();
-
-                int i = tuple.Item1;
-                int j = tuple.Item2;
+                var tuple = queue.Dequeue();
+                int curRow = tuple.Item1;
+                int curCol = tuple.Item2;
                 int guessIndex = tuple.Item3;
                 int[,] usedArray = tuple.Item4;
                 List<Tuple<int, int>> candidatePath = tuple.Item5;
@@ -873,99 +745,21 @@ public class BoardGenerator
                     return true;
                 }
 
-                if (i > 0)
+                foreach (var offset in neighborOffsets)
                 {
-                    if (usedArray[i - 1, j] != 1 && boardArray[i - 1, j] == word[guessIndex + 1])
+                    int neighborRow = curRow + offset.Item1;
+                    int neighborCol = curCol + offset.Item2;
+
+                    if (neighborRow < 0 || neighborRow >= boardArray.GetLength(0) || neighborCol < 0 || neighborCol >= boardArray.GetLength(1))
+                        continue;
+
+                    if (usedArray[neighborRow, neighborCol] != 1 && boardArray[neighborRow, neighborCol] == word[guessIndex + 1])
                     {
                         int[,] newUsedArray = (int[,])usedArray.Clone();
-                        newUsedArray[i - 1, j] = 1;
+                        newUsedArray[neighborRow, neighborCol] = 1;
                         List<Tuple<int, int>> newPath = new(candidatePath);
-                        newPath.Add(Tuple.Create(i - 1, j));
-                        queue.Enqueue(Tuple.Create(i - 1, j, guessIndex + 1, newUsedArray, newPath));
-                    }
-
-                    if (j > 0)
-                    {
-                        if (usedArray[i - 1, j - 1] != 1 && boardArray[i - 1, j - 1] == word[guessIndex + 1])
-                        {
-                            int[,] newUsedArray = (int[,])usedArray.Clone();
-                            newUsedArray[i - 1, j - 1] = 1;
-                            List<Tuple<int, int>> newPath = new(candidatePath);
-                            newPath.Add(Tuple.Create(i - 1, j - 1));
-                            queue.Enqueue(Tuple.Create(i - 1, j - 1, guessIndex + 1, newUsedArray, newPath));
-                        }
-                    }
-
-                    if (j < boardArray.GetLength(1) - 1)
-                    {
-                        if (usedArray[i - 1, j + 1] != 1 && boardArray[i - 1, j + 1] == word[guessIndex + 1])
-                        {
-                            int[,] newUsedArray = (int[,])usedArray.Clone();
-                            newUsedArray[i - 1, j + 1] = 1;
-                            List<Tuple<int, int>> newPath = new(candidatePath);
-                            newPath.Add(Tuple.Create(i - 1, j + 1));
-                            queue.Enqueue(Tuple.Create(i - 1, j + 1, guessIndex + 1, newUsedArray, newPath));
-                        }
-                    }
-                }
-
-                if (i < boardArray.GetLength(0) - 1)
-                {
-                    if (usedArray[i + 1, j] != 1 && boardArray[i + 1, j] == word[guessIndex + 1])
-                    {
-                        int[,] newUsedArray = (int[,])usedArray.Clone();
-                        newUsedArray[i + 1, j] = 1;
-                        List<Tuple<int, int>> newPath = new(candidatePath);
-                        newPath.Add(Tuple.Create(i + 1, j));
-                        queue.Enqueue(Tuple.Create(i + 1, j, guessIndex + 1, newUsedArray, newPath));
-                    }
-
-                    if (j > 0)
-                    {
-                        if (usedArray[i + 1, j - 1] != 1 && boardArray[i + 1, j - 1] == word[guessIndex + 1])
-                        {
-                            int[,] newUsedArray = (int[,])usedArray.Clone();
-                            newUsedArray[i + 1, j - 1] = 1;
-                            List<Tuple<int, int>> newPath = new(candidatePath);
-                            newPath.Add(Tuple.Create(i + 1, j - 1));
-                            queue.Enqueue(Tuple.Create(i + 1, j - 1, guessIndex + 1, newUsedArray, newPath));
-                        }
-                    }
-
-                    if (j < boardArray.GetLength(1) - 1)
-                    {
-                        if (usedArray[i + 1, j + 1] != 1 && boardArray[i + 1, j + 1] == word[guessIndex + 1])
-                        {
-                            int[,] newUsedArray = (int[,])usedArray.Clone();
-                            newUsedArray[i + 1, j + 1] = 1;
-                            List<Tuple<int, int>> newPath = new(candidatePath);
-                            newPath.Add(Tuple.Create(i + 1, j + 1));
-                            queue.Enqueue(Tuple.Create(i + 1, j + 1, guessIndex + 1, newUsedArray, newPath));
-                        }
-                    }
-                }
-
-                if (j > 0)
-                {
-                    if (usedArray[i, j - 1] != 1 && boardArray[i, j - 1] == word[guessIndex + 1])
-                    {
-                        int[,] newUsedArray = (int[,])usedArray.Clone();
-                        newUsedArray[i, j - 1] = 1;
-                        List<Tuple<int, int>> newPath = new(candidatePath);
-                        newPath.Add(Tuple.Create(i, j - 1));
-                        queue.Enqueue(Tuple.Create(i, j - 1, guessIndex + 1, newUsedArray, newPath));
-                    }
-                }
-
-                if (j < boardArray.GetLength(1) - 1)
-                {
-                    if (usedArray[i, j + 1] != 1 && boardArray[i, j + 1] == word[guessIndex + 1])
-                    {
-                        int[,] newUsedArray = (int[,])usedArray.Clone();
-                        newUsedArray[i, j + 1] = 1;
-                        List<Tuple<int, int>> newPath = new(candidatePath);
-                        newPath.Add(Tuple.Create(i, j + 1));
-                        queue.Enqueue(Tuple.Create(i, j + 1, guessIndex + 1, newUsedArray, newPath));
+                        newPath.Add(Tuple.Create(neighborRow, neighborCol));
+                        queue.Enqueue(Tuple.Create(neighborRow, neighborCol, guessIndex + 1, newUsedArray, newPath));
                     }
                 }
             }
@@ -973,7 +767,7 @@ public class BoardGenerator
             return false;
         }
 
-        public Board Mutate()
+        public Board Mutate() // TODO: improve mutation
         {
             int index = Random.Next(16);
             int row = index / 4;
@@ -981,6 +775,30 @@ public class BoardGenerator
             boardArray[row, col] = GetRandomWeightedLetter();
 
             return this;
+        }
+
+        public static int FindKthRarestLetter(string word, int k)
+        {
+            if (string.IsNullOrEmpty(word)) return 0;
+            int n = word.Length;
+            if (k <= 1) k = 1;
+            if (k > n) k = n;
+
+            // build list of (weight, index)
+            List<Tuple<float, int>> weightsWithIndex = new List<Tuple<float, int>>(n);
+            for (int i = 0; i < n; i++)
+            {
+                char c = char.ToUpperInvariant(word[i]);
+                int idx = c - 'A';
+                float w = 1.0f;
+                if (idx >= 0 && idx < Weights.Length) w = Weights[idx];
+                weightsWithIndex.Add(Tuple.Create(w, i));
+            }
+
+            // sort ascending by weight (rarest first)
+            weightsWithIndex.Sort((a, b) => a.Item1.CompareTo(b.Item1));
+
+            return weightsWithIndex[k - 1].Item2;
         }
 
         public Board(char[] letterSet)

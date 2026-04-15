@@ -2,6 +2,8 @@ using System;
 using System.Diagnostics;
 using SignScramble.StandaloneDebug;
 
+#pragma warning disable CS8600, CS8602, CS8604, CS8618
+
 string[] words = { "CLOCK", "DOOR", "ROD", "SIGN", "CROOKS" };
 
 BoardGenerator generator = new(usingTest: true);
@@ -18,7 +20,7 @@ try
     stopwatch.Stop();
 
     string[] generatedBoards = result.Item1;
-    Tuple<char, int>[][] displayedPerBoard = result.Item2;
+    bool[][][] displayedPerBoard = result.Item2;
 
     if (generatedBoards == null || generatedBoards.Length == 0)
     {
@@ -44,30 +46,40 @@ try
                 validBoards++;
             }
             PrintBoard($"Board {i + 1}", board);
-            // print revealed (masked) words using the displayed pivot letters for this board
-            Tuple<char, int>[] displayedLetters = displayedPerBoard[i];
+            // print revealed (masked) words using the displayed masks for this board
+            bool[][] displayedMasksForThisBoard = null;
+            if (displayedPerBoard != null && i >= 0 && i < displayedPerBoard.Length) displayedMasksForThisBoard = displayedPerBoard[i];
+
+            // prepare safe default masks if data missing
+            bool[][] defaultMasks = new bool[words.Length][];
+            for (int wi = 0; wi < words.Length; wi++) defaultMasks[wi] = new bool[words[wi].Length];
+
             Console.WriteLine("Revealed words:");
             for (int wi = 0; wi < words.Length; wi++)
             {
                 string w = words[wi];
-                var disp = displayedLetters[wi];
-                char pivot = disp.Item1;
-                int pidx = disp.Item2;
+                bool[] maskForWord = (displayedMasksForThisBoard != null && wi < displayedMasksForThisBoard.Length && displayedMasksForThisBoard[wi] != null)
+                    ? displayedMasksForThisBoard[wi]
+                    : defaultMasks[wi];
+
                 char[] mask = new char[w.Length];
-                for (int m = 0; m < w.Length; m++) mask[m] = (m == pidx) ? pivot : '_';
+                for (int m = 0; m < w.Length; m++) mask[m] = (m < maskForWord.Length && maskForWord[m]) ? w[m] : '_';
                 Console.WriteLine($"  {new string(mask)}");
             }
 
             PrintWordCoverage(generator, board, words);
 
-            // Use displayed letters returned by GenerateBoards for this board
-            Tuple<char, int>[] displayedLetters = displayedPerBoard[i];
-            float altScore = generator.ScoreBoardOnAlternatives(board, words, displayedLetters.ToList());
+            // Use displayed masks returned by GenerateBoards for this board (safely)
+            bool[][] displayMasksForPrints = (displayedPerBoard != null && i >= 0 && i < displayedPerBoard.Length && displayedPerBoard[i] != null)
+                ? displayedPerBoard[i]
+                : defaultMasks;
+
+            float altScore = generator.ScoreBoardOnAlternatives(board, words, displayMasksForPrints.ToList());
             Console.WriteLine($"ScoreBoardOnAlternatives: {altScore}");
             for (int wi = 0; wi < words.Length; wi++)
             {
-                int altCount = board.FindAlternateWordsFromPosition(words[wi], displayedLetters[wi]);
-                Console.WriteLine($"  Alternatives for {words[wi]} (pivot {displayedLetters[wi].Item1}@{displayedLetters[wi].Item2}): {altCount}");
+                int altCount = board.FindAlternateWordsFromPosition(words[wi], displayMasksForPrints[wi]);
+                Console.WriteLine($"  Alternatives for {words[wi]}: {altCount}");
             }
 
             Console.WriteLine();
