@@ -16,7 +16,7 @@ Console.WriteLine();
 Stopwatch stopwatch = Stopwatch.StartNew();
 try
 {
-    var result = generator.GenerateBoards(words, 10);
+    var result = generator.GenerateBoards(words, 5);
     stopwatch.Stop();
 
     string[] generatedBoards = result.Item1;
@@ -120,7 +120,11 @@ static void PrintBoard(string title, BoardGenerator.Board board)
 static void PrintWordCoverage(BoardGenerator generator, BoardGenerator.Board board, string[] words)
 {
     float score = generator.ScoreBoardOnWords(board, words);
-    Console.WriteLine($"ScoreBoardOnWords: {score}/{words.Length}");
+    int targetScore = 0;
+    foreach (string w in words) targetScore += w.Length;
+    int foundCount = 0;
+    foreach (string word in words) if (board.TryFindWordPath(word, out _)) foundCount++;
+    Console.WriteLine($"ScoreBoardOnWords (coverage): {score}/{targetScore}  (words found: {foundCount}/{words.Length})");
     foreach (string word in words)
     {
         bool found = board.TryFindWordPath(word, out _);
