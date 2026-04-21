@@ -375,7 +375,12 @@ public class BoardGenerator
                     // active = words not removed in this branch
                     bool[] active = new bool[words.Length];
                     for (int ai = 0; ai < words.Length; ai++) active[ai] = !removed[ai];
-                    Console.WriteLine($"[BoardGenerator] TrainingStep2 success finalScore={currentScore} masks={FormatMasks(currentDisplayedLetters, words)}");
+                    // clear masks for removed words so callers don't see irrelevant reveals
+                    for (int ai = 0; ai < finalMasks.Length; ai++)
+                    {
+                        if (ai < removed.Length && removed[ai]) finalMasks[ai] = 0;
+                    }
+                    Console.WriteLine($"[BoardGenerator] TrainingStep2 success finalScore={currentScore} masks={FormatMasks(currentDisplayedLetters, words, removed)}");
                     return new TrainingResult { Success = true, Board = currentBoard, Masks = finalMasks, Active = active };
                 }
 
@@ -490,9 +495,11 @@ public class BoardGenerator
                             currentDisplayedLetters = tempMasks;
                             // if this reveal caused the word to be more than half-displayed, remove it from this branch
                             int nowShown = System.Numerics.BitOperations.PopCount((uint)currentDisplayedLetters[wi]);
+                            bool justRemoved = false;
                             if (nowShown > (words[wi].Length / 2) && !removed[wi])
                             {
                                 removed[wi] = true;
+                                justRemoved = true;
                                 Console.WriteLine($"[BoardGenerator] Removed word for this branch: {words[wi]} (>{words[wi].Length/2} shown)");
                                 int activeNow = words.Length - removed.Count(r => r);
                                 if (activeNow <= 2)
@@ -502,7 +509,15 @@ public class BoardGenerator
                                 }
                             }
                             accepted = true;
-                            Console.WriteLine($"[BoardGenerator] Display masks updated (reveal word #{wi} idx {revealIdx}): {FormatMasks(currentDisplayedLetters, words)}");
+                            // avoid printing full mask updates for words that were just removed (they are ignored in this branch)
+                            if (!justRemoved)
+                            {
+                                Console.WriteLine($"[BoardGenerator] Display masks updated (reveal word #{wi} idx {revealIdx}): {FormatMasks(currentDisplayedLetters, words, removed)}");
+                            }
+                            else
+                            {
+                                Console.WriteLine($"[BoardGenerator] Reveal accepted but word #{wi} removed; masks will be ignored for this branch.");
+                            }
                             break;
                         }
 
@@ -726,6 +741,23 @@ public class BoardGenerator
         if (masks == null || masks.Count == 0) return "[]";
         return string.Join(" | ", masks.Select((m, i) => {
             int len = (i < words.Length) ? words[i].Length : 16;
+            char[] chars = new char[len];
+            for (int k = 0; k < len; k++) chars[k] = (((m >> k) & 1) != 0) ? '1' : '0';
+            return new string(chars);
+        }));
+    }
+
+    // Overload to format masks while indicating removed/ignored words
+    private static string FormatMasks(List<ushort> masks, string[] words, bool[] removed)
+    {
+        if (masks == null || masks.Count == 0) return "[]";
+        return string.Join(" | ", masks.Select((m, i) => {
+            bool isRemoved = (removed != null && i < removed.Length && removed[i]);
+            int len = (i < words.Length) ? words[i].Length : 16;
+            if (isRemoved)
+            {
+                return new string('-', Math.Max(1, len));
+            }
             char[] chars = new char[len];
             for (int k = 0; k < len; k++) chars[k] = (((m >> k) & 1) != 0) ? '1' : '0';
             return new string(chars);
