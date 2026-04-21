@@ -62,11 +62,11 @@ public class BoardGenerator
     {
         const string fileName = "fingerspellingwords.txt";
 
-        string[] allWords = File.ReadAllLines("../Resources/fingerspellingwords.txt")
-                    .Select(w => w?.Trim().ToUpperInvariant())
-                    .Where(w => !string.IsNullOrEmpty(w))
-                    .Where(w => w.Length <= 6)
-                    .ToArray();
+        string[] allWords = File.ReadAllLines(Path.Combine("..", "Resources", fileName))
+                .Select(w => w.Trim().ToUpperInvariant())
+                .Where(w => !string.IsNullOrEmpty(w))
+                .Where(w => w.Length <= 6)
+                .ToArray();
 
         var candidates = allWords
             .Select(w => new string(w.Where(char.IsLetter).ToArray()))
@@ -242,7 +242,6 @@ public class BoardGenerator
     {
         int limit = 3000;
         int initialLimit = limit;
-        int lastLogIter = -1;
         float previousScore = float.MinValue;
         int previousFound = 0;
         Board previousBoard = new Board(board.ToString());
@@ -270,7 +269,7 @@ public class BoardGenerator
             // reduced logging: avoid per-iteration flood
             if (currentFound > previousFound)
             {
-                lastLogIter = iter;
+                // progress observed
             }
 
             if (currentFound == words.Length)
@@ -330,7 +329,6 @@ public class BoardGenerator
         for (int attempt = 0; attempt < maxRestartAttempts; attempt++)
         {
             int perDisplaySetLimit = initialPerDisplaySetLimit;
-            int lastLogIter = -1;
             float previousScore = float.MaxValue;
             Board previousBoard = new Board(board.ToString());
             Board currentBoard = new Board(board.ToString());
@@ -358,7 +356,6 @@ public class BoardGenerator
             // start of attempt (minimal log)
             Console.WriteLine($"[BoardGenerator] TrainingStep2 attempt {attempt+1}/{maxRestartAttempts} start");
 
-            int currentWordToDisplayMore = 0;
             bool restartRequested = false;
 
             // simple strict loop: compute alternatives only, require zero alternatives for success
@@ -467,9 +464,9 @@ public class BoardGenerator
                     // shuffle eligible reveals and try them sequentially (early accept)
                     var rndOrder = eligible.OrderBy(_ => Random.Next()).ToList();
                     int trials = Math.Min(6, rndOrder.Count);
-                    List<ushort> bestMasks = null;
+                    List<ushort>? bestMasks = null;
                     float bestScore = float.MaxValue;
-                    Tuple<int,int> bestPair = null;
+                    Tuple<int,int>? bestPair = null;
                     bool accepted = false;
 
                     for (int t = 0; t < trials; t++)
@@ -545,7 +542,7 @@ public class BoardGenerator
                         {
                             break;
                         }
-                        Console.WriteLine($"[BoardGenerator] Accepted best reveal for word #{bestPair.Item1} idx {bestPair.Item2}");
+                        Console.WriteLine($"[BoardGenerator] Accepted best reveal for word #{(bestPair?.Item1 ?? -1)} idx {(bestPair?.Item2 ?? -1)}");
                     }
 
                     perDisplaySetLimit = initialPerDisplaySetLimit;
@@ -643,13 +640,13 @@ public class BoardGenerator
 
         currentBoard = new Board(board.ToString());
 
-        for (int i = 0; i < 16; i++)
-        {
-            int row = i / 4;
-            int col = i % 4;
-            char c = currentBoard.get(row, col);
-            letterObjects[row, col].changeLetter(c);
-        }
+            for (int i = 0; i < 16; i++)
+            {
+                int row = i / 4;
+                int col = i % 4;
+                char c = currentBoard.get(row, col);
+                letterObjects[row, col]!.changeLetter(c);
+            }
     }
 
     public void SetBoardFromString(string board)
@@ -666,7 +663,7 @@ public class BoardGenerator
             {
                 int row = i / 4;
                 int col = i % 4;
-                foreach (Arrow arrow in letterObjects[row, col].arrows)
+                foreach (Arrow arrow in letterObjects[row, col]!.arrows)
                 {
                     arrow.SetActive(false);
                 }
@@ -683,8 +680,8 @@ public class BoardGenerator
 
                 Letter letterObject = new Letter();
                 letterObjects[row, col] = letterObject;
-                letterObjects[row, col].changeLetter(currentBoard.get(row, col));
-                foreach (Arrow arrow in letterObjects[row, col].arrows)
+                letterObjects[row, col]!.changeLetter(currentBoard.get(row, col));
+                foreach (Arrow arrow in letterObjects[row, col]!.arrows)
                 {
                     arrow.SetActive(false);
                 }
@@ -973,7 +970,7 @@ public class BoardGenerator
                 }
 
                 bool movingLeft = curLeft > 0;
-                int currentLinear = movingLeft ? candidatePath.First.Value : candidatePath.Last.Value;
+                int currentLinear = movingLeft ? candidatePath.First!.Value : candidatePath.Last!.Value;
 
                 int newCurLeftBase = movingLeft ? curLeft - 1 : curLeft;
                 int newCurRightBase = movingLeft ? curRight : curRight - 1;
