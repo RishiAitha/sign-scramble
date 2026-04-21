@@ -3,7 +3,7 @@
 This document explains the 4x4 board generation and two-step training process implemented in `BoardGeneratorStandalone.cs`. Use this as context for future LLM queries about how boards are created, scored, and how displayed letters are chosen to minimize alternate valid words.
 
 **Overview**
-- **Goal:** produce 4x4 Boggle-style boards that contain a chosen set of target words while minimizing the number of alternate valid words guessable by players when only some letters of each target word are revealed.
+- **Goal:** produce 4x4 Boggle-style boards that contain a set of target words while completely minimizing the number of alternate valid words (must be 0) guessable by players when only some letters of each target word are revealed.
 - **Two training phases:**
   - `TrainingStep1`: find complete board layouts that contain all target words (coverage).
   - `TrainingStep2`: iteratively mutate boards and set which letters of each word are displayed to reduce the count of alternate words anchored by those displayed letters.
@@ -47,6 +47,25 @@ TrainingStep2 — reduce alternate valid words given displayed letters
   - If the search times out for the current revealed-letter counts, reveal one additional letter for the next word that still has undisplayed letters (using `Board.FindKthRarestLetter` to choose the next reveal index). This increases anchor information to reduce alternates.
   - Repeat until alternatives reach zero or all letters for all words are revealed (the code throws if it times out after revealing all letters).
 
+Desired specifications (explicit)
+- Many valid boards: be able to run the program and generate many independent valid boards that meet the constraints rather than a single filtered set.
+- Per-board active word sets: each generated board may present a different subset of the candidate words as "active" (i.e., those preserved for alternate-word scoring). The generator should treat each successful board as an independent result and not compute an intersection of active words across boards.
+- Minimum displayed letters: for each active word on a board, display the minimal number of letter indices needed to reach zero alternates (prefer fewer reveals; prefer revealing rare letters first).
+- No alternatives: for every active word reported for a board, the alternate-word count anchored on its displayed letters should be zero.
+
+Recommended output / API change
+- Current signature: `Tuple<string[], bool[][][]> GenerateBoards(int numberOfBoards)` — returns an array of board strings and a per-board-per-original-word boolean array.
+- Recommended: return a per-board structure so each board carries its own active word list and displayed-mask alignment. Example structure:
+  - `class GeneratedBoard { string BoardString; string[] ActiveWords; bool[][] DisplayedMasks; }`
+  - `List<GeneratedBoard> GenerateBoards(int numberOfBoards)`
+
+This avoids throwing away valid boards just because they do not share the same active-word subset.
+
+Performance and robustness notes (short)
+- `FindAlternateWordsFromPosition` is the most expensive inner operation (BFS per word + dictionary checks). Consider caching per-board+mask results or using a prefix trie to prune candidate exploration.
+- Replace exception-throwing control flow in `TrainingStep2` (e.g., when all letters become displayed or no eligible reveal exists) with a clean failure return so the outer `GenerateBoards` loop can treat the word set as failed and continue trying additional sets.
+- Make the random seed and iteration budgets configurable to support reproducible bulk generation and easier tuning.
+
 Pathfinding and alternative-word search
 - `FindBestWordPath`, `TryFindWordPath`: BFS-style searches over linear indices with a bitmask of used cells to locate paths matching a word; `FindBestWordPath` returns the best/longest partial path if a full path is not found.
 - `FindAlternateWordsFromPosition` enumerates connected paths that contain the displayed letters at the same indices as the target word. It generates candidate words by growing a deque from the chosen seed displayed index, verifies displayed-letter constraints, consults the `DictionaryManager.IsValidWord`, and counts unique alternates.
@@ -85,3 +104,16 @@ Contact
 
 ---
 Generated for use as context in future LLM queries about board generation.
+
+**Performance update (2026-04-21)**
+
+- The `altCache` used to memoize expensive alternate-word searches has been moved out of the per-attempt loop in `TrainingStep2` so cached `(board, word, mask)` results persist across restart attempts. This is a pure performance optimization (no logic change) and reduces repeated expensive BFS calls for the same queries.
+
+- Optimization idea: preprocessing the dictionary into prefix/position-aware structures (trie, reversed trie, or per-length per-offset prefix sets) can greatly prune BFS expansion in `FindAlternateWordsFromPosition`.
+  - A standard prefix trie or a HashSet of prefixes quickly answers "is there any word starting with this partial string?" and cuts branches early when searching from one end.
+  - Because the current alternate-word BFS grows outward from an anchored pivot (two-sided expansion), you must account for substrings that start at arbitrary offsets. Practical approaches:
+    - Keep two tries (forward and reversed) and validate the left-hand partial sequence against the reversed trie and the right-hand partial sequence against the forward trie; or
+    - Precompute, per word-length and per start-index, a HashSet of allowed substrings/prefixes so you can check whether the currently-built contiguous substring at offset `s` is a prefix of any length-`L` word starting at `s`.
+  - Trade-offs: preprocessing increases startup time and memory, but for typical moderate-sized dictionaries it dramatically reduces runtime BFS expansions and lowers the chance of hitting combinatorial expansion caps.
+
+If you want, I can implement a simple per-length/offset prefix set in `DictionaryManager` and add the corresponding pruning checks in `FindAlternateWordsFromPosition` as a follow-up patch.
