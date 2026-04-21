@@ -5,7 +5,6 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="*.cs" />
-  </ItemGroup>
+  <!-- Rely on SDK default implicit inclusion of .cs files in the project directory.
+       Explicitly listing all .cs files causes duplicate Compile items. -->
 </Project>
