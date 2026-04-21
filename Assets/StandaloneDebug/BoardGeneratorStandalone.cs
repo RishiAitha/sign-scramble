@@ -344,7 +344,9 @@ public class BoardGenerator
             perDisplaySetLimit -= 1;
             if (perDisplaySetLimit <= 0)
             {
-                // reveal one more letter (the next-rarest undisplayed) for the next eligible word
+                // reveal additional letters using lightweight randomized trials.
+                // Try candidates in random order, accept immediately on improvement,
+                // otherwise pick the best candidate after a few trials.
                 bool displayedAll = true;
                 for (int wi = 0; wi < currentDisplayedLetters.Count; wi++)
                 {
@@ -361,39 +363,69 @@ public class BoardGenerator
                     throw new Exception("Training step 2 timed out after all letters displayed.");
                 }
 
-                // find next word (starting from currentWordToDisplayMore) that still has undisplayed letters
-                int foundWord = -1;
-                for (int offset = 0; offset < words.Length; offset++)
+                List<Tuple<int, int>> eligible = new List<Tuple<int, int>>();
+                for (int wi = 0; wi < words.Length; wi++)
                 {
-                    int idx = (currentWordToDisplayMore + offset) % words.Length;
-                        int displayedCount = System.Numerics.BitOperations.PopCount((uint)currentDisplayedLetters[idx]);
-                    if (displayedCount < words[idx].Length)
+                    int displayedCount = System.Numerics.BitOperations.PopCount((uint)currentDisplayedLetters[wi]);
+                    if (displayedCount < words[wi].Length)
                     {
-                        foundWord = idx;
-                        break;
+                        int nextK = displayedCount + 1;
+                        int revealIdx = Board.FindKthRarestLetter(words[wi], nextK);
+                        if (revealIdx >= 0 && revealIdx < words[wi].Length)
+                        {
+                            eligible.Add(Tuple.Create(wi, revealIdx));
+                        }
                     }
                 }
 
-                if (foundWord == -1)
+                if (eligible.Count == 0)
                 {
                     perDisplaySetLimit = initialPerDisplaySetLimit;
                     throw new Exception("Training step 2 failed.");
                 }
 
-                int currentlyShown = System.Numerics.BitOperations.PopCount((uint)currentDisplayedLetters[foundWord]);
-                int nextK = currentlyShown + 1;
-                int revealIndex = Board.FindKthRarestLetter(words[foundWord], nextK);
-                if (revealIndex >= 0 && revealIndex < words[foundWord].Length)
+                float currentScoreBeforeReveal = ScoreBoardOnAlternatives(currentBoard, words, currentDisplayedLetters);
+
+                // shuffle eligible reveals and try them sequentially (early accept)
+                var rndOrder = eligible.OrderBy(_ => Random.Next()).ToList();
+                int trials = Math.Min(6, rndOrder.Count);
+                List<ushort> bestMasks = null;
+                float bestScore = float.MaxValue;
+                Tuple<int,int> bestPair = null;
+                bool accepted = false;
+
+                for (int t = 0; t < trials; t++)
                 {
-                    currentDisplayedLetters[foundWord] |= (ushort)(1 << revealIndex);
-                    Console.WriteLine($"[BoardGenerator] Revealed letter for word #{foundWord} at index {revealIndex}; masks now: {FormatMasks(currentDisplayedLetters, words)}");
-                    // Immediately evaluate alternatives after reveal so we see search activity tied to this reveal
-                    float postRevealScore = ScoreBoardOnAlternatives(currentBoard, words, currentDisplayedLetters);
-                    Console.WriteLine($"[BoardGenerator] Post-reveal alternative score={postRevealScore} masks={FormatMasks(currentDisplayedLetters, words)}");
+                    var pair = rndOrder[t];
+                    int wi = pair.Item1;
+                    int revealIdx = pair.Item2;
+
+                    List<ushort> tempMasks = currentDisplayedLetters.Select(m => m).ToList();
+                    tempMasks[wi] = (ushort)(tempMasks[wi] | (1 << revealIdx));
+                    float postScore = ScoreBoardOnAlternatives(currentBoard, words, tempMasks);
+
+                    if (postScore < currentScoreBeforeReveal)
+                    {
+                        currentDisplayedLetters = tempMasks;
+                        accepted = true;
+                        Console.WriteLine($"[BoardGenerator] Accepted reveal (improved) for word #{wi} at index {revealIdx}; masks now: {FormatMasks(currentDisplayedLetters, words)} postScore={postScore}");
+                        break;
+                    }
+
+                    if (postScore < bestScore)
+                    {
+                        bestScore = postScore;
+                        bestMasks = tempMasks;
+                        bestPair = pair;
+                    }
                 }
 
-                // advance pointer for next time
-                currentWordToDisplayMore = (foundWord + 1) % words.Length;
+                if (!accepted && bestMasks != null)
+                {
+                    // no immediate improvement found; accept the best candidate to make progress
+                    currentDisplayedLetters = bestMasks;
+                    Console.WriteLine($"[BoardGenerator] No immediate improvement; choosing best candidate for word #{bestPair.Item1} idx {bestPair.Item2} with postScore={bestScore}");
+                }
 
                 perDisplaySetLimit = initialPerDisplaySetLimit;
             }
