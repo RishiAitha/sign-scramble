@@ -47,9 +47,10 @@ jobs:
       - name: Build generator (explicit path)
         run: dotnet build ./Assets/StandaloneDebug/SignScramble.Generator.csproj --configuration Release
 
-      - name: Run generator (explicit paths)
+      - name: Run generator (from StandaloneDebug)
+        working-directory: Assets/StandaloneDebug
         run: |
-          dotnet run --project ./Assets/StandaloneDebug/SignScramble.Generator.csproj -- ${{ github.event.inputs.totalBoards || '100' }} ./Assets/Resources/generated_boards.json ./Assets/Resources/generated_boards.txt ${{ github.event.inputs.chunkSize || '10' }}
+          dotnet run --project SignScramble.Generator.csproj -- ${{ github.event.inputs.totalBoards || '100' }} ../Resources/generated_boards.json ../Resources/generated_boards.txt ${{ github.event.inputs.chunkSize || '10' }}
 
       - name: Upload generated JSON
         uses: actions/upload-artifact@v4
