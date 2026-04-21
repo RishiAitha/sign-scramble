@@ -1,0 +1,69 @@
+name: Generate Boards
+
+on:
+  workflow_dispatch:
+    inputs:
+      totalBoards:
+        description: 'Total boards to generate'
+        required: false
+        default: '100'
+      chunkSize:
+        description: 'Chunk size per run'
+        required: false
+        default: '10'
+      commitResults:
+        description: 'Commit generated results back to repo (true/false)'
+        required: false
+        default: 'true'
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7.0.x'
+
+      - name: Build generator
+        working-directory: Assets/StandaloneDebug
+        run: dotnet build SignScramble.Generator.csproj --configuration Release
+
+      - name: Run generator
+        working-directory: Assets/StandaloneDebug
+        run: |
+          dotnet run --project SignScramble.Generator.csproj -- ${{ github.event.inputs.totalBoards || '100' }} ../Resources/generated_boards.json ../Resources/generated_boards.txt ${{ github.event.inputs.chunkSize || '10' }}
+
+      - name: Upload generated JSON
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated_boards_json
+          path: Assets/Resources/generated_boards.json
+
+      - name: Upload generated TXT
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated_boards_txt
+          path: Assets/Resources/generated_boards.txt
+
+      - name: Commit results back to repo
+        if: ${{ github.event.inputs.commitResults == 'true' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Assets/Resources/generated_boards.json Assets/Resources/generated_boards.txt || true
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update generated boards (from GitHub Actions)" --no-verify
+            git push
+          fi

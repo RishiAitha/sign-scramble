@@ -27,104 +27,97 @@ class Program
 {
     static int Main(string[] args)
     {
-        int numberOfBoards = 100;
+        int totalBoards = 100;
         string outputJsonPath = "../Resources/generated_boards.json";
         string outputTxtPath = "../Resources/generated_boards.txt";
+        int chunkSize = 10; // generate in smaller chunks so runs can be resumed or scheduled
 
-        if (args.Length > 0 && int.TryParse(args[0], out var parsed)) numberOfBoards = parsed;
+        if (args.Length > 0 && int.TryParse(args[0], out var parsed)) totalBoards = parsed;
         if (args.Length > 1) outputJsonPath = args[1];
         if (args.Length > 2) outputTxtPath = args[2];
+        if (args.Length > 3 && int.TryParse(args[3], out var parsedChunk)) chunkSize = parsedChunk;
 
         BoardGenerator generator = new();
 
-        Console.WriteLine($"Generating {numberOfBoards} boards and writing to '{outputJsonPath}' (text summary: '{outputTxtPath}')");
+        Console.WriteLine($"Generating {totalBoards} boards (chunk {chunkSize}) and writing to '{outputJsonPath}' (text summary: '{outputTxtPath}')");
+
+        var allOutputs = LoadExistingOutputs(outputJsonPath);
+
+        int done = allOutputs.Count;
+        if (done >= totalBoards)
+        {
+            Console.WriteLine($"Already have {done} boards in {outputJsonPath}. Nothing to do.");
+            return 0;
+        }
 
         Stopwatch stopwatch = Stopwatch.StartNew();
         try
         {
-            var results = generator.GenerateBoards(numberOfBoards);
-            stopwatch.Stop();
-
-            if (results == null || results.Count == 0)
+            while (done < totalBoards)
             {
-                Console.WriteLine("GenerateBoards returned no boards.");
-                return 1;
-            }
+                int toGenerate = Math.Min(chunkSize, totalBoards - done);
+                Console.WriteLine($"Starting chunk: generate {toGenerate} boards (progress {done}/{totalBoards})");
 
-            Console.WriteLine($"GenerateBoards produced {results.Count} board(s) in {stopwatch.ElapsedMilliseconds} ms.");
-            Console.WriteLine();
-
-            List<OutputBoard> outputs = new List<OutputBoard>(results.Count);
-            var sb = new StringBuilder();
-            sb.AppendLine($"Generated {results.Count} boards in {stopwatch.ElapsedMilliseconds} ms.");
-
-            int validBoards = 0;
-
-            for (int i = 0; i < results.Count; i++)
-            {
-                var gen = results[i];
-                BoardGenerator.Board board = new(gen.BoardString);
-
-                int targetScore = 0;
-                foreach (string w in gen.ActiveWords) targetScore += w.Length;
-
-                float score = generator.ScoreBoardOnWords(board, gen.ActiveWords);
-                if (score >= targetScore) validBoards++;
-
-                // convert bool[] masks to ushort bitmasks for the updated API and build masked strings
-                ushort[] displayMasksForCalls = new ushort[Math.Max(0, gen.ActiveWords.Length)];
-                string[] maskStrings = new string[Math.Max(0, gen.ActiveWords.Length)];
-                int[] altCounts = new int[Math.Max(0, gen.ActiveWords.Length)];
-
-                for (int wi = 0; wi < gen.ActiveWords.Length; wi++)
+                var results = generator.GenerateBoards(toGenerate);
+                if (results == null || results.Count == 0)
                 {
-                    bool[] m = (gen.DisplayedMasks != null && wi < gen.DisplayedMasks.Length && gen.DisplayedMasks[wi] != null)
-                        ? gen.DisplayedMasks[wi]
-                        : new bool[gen.ActiveWords[wi].Length];
-                    ushort mask = 0;
-                    for (int k = 0; k < Math.Min(m.Length, 16); k++) if (m[k]) mask |= (ushort)(1 << k);
-                    displayMasksForCalls[wi] = mask;
-
-                    string w = gen.ActiveWords[wi];
-                    char[] masked = new char[w.Length];
-                    for (int mindex = 0; mindex < w.Length; mindex++) masked[mindex] = (mindex < m.Length && m[mindex]) ? w[mindex] : '_';
-                    maskStrings[wi] = new string(masked);
-
-                    altCounts[wi] = board.FindAlternateWordsFromPosition(gen.ActiveWords[wi], displayMasksForCalls[wi]);
+                    Console.WriteLine("GenerateBoards returned no boards for this chunk; aborting further attempts.");
+                    break;
                 }
 
-                float altScore = generator.ScoreBoardOnAlternatives(board, gen.ActiveWords, displayMasksForCalls.ToList());
-
-                outputs.Add(new OutputBoard
+                foreach (var gen in results)
                 {
-                    BoardString = gen.BoardString,
-                    GridRows = BoardToRows(board),
-                    ActiveWords = gen.ActiveWords,
-                    DisplayedMasks = displayMasksForCalls.Select(x => (int)x).ToArray(),
-                    DisplayedMasksString = maskStrings,
-                    AltScore = altScore,
-                    AltCounts = altCounts,
-                    CoverageScore = score,
-                    TargetScore = targetScore
-                });
+                    BoardGenerator.Board board = new(gen.BoardString);
 
-                sb.AppendLine($"Board {i + 1}: {gen.BoardString}");
-                sb.AppendLine($"  ActiveWords: {string.Join(',', gen.ActiveWords)}");
-                sb.AppendLine($"  DisplayedMasks: {string.Join(',', outputs.Last().DisplayedMasks)}");
-                sb.AppendLine($"  MaskedWords: {string.Join(", ", outputs.Last().DisplayedMasksString)}");
-                sb.AppendLine($"  AltScore: {altScore}, AltCounts: {string.Join(',', altCounts)}");
-                sb.AppendLine($"  Coverage: {score}/{targetScore}");
-                sb.AppendLine();
+                    int targetScore = 0;
+                    foreach (string w in gen.ActiveWords) targetScore += w.Length;
+
+                    float score = generator.ScoreBoardOnWords(board, gen.ActiveWords);
+
+                    ushort[] displayMasksForCalls = new ushort[Math.Max(0, gen.ActiveWords.Length)];
+                    string[] maskStrings = new string[Math.Max(0, gen.ActiveWords.Length)];
+                    int[] altCounts = new int[Math.Max(0, gen.ActiveWords.Length)];
+
+                    for (int wi = 0; wi < gen.ActiveWords.Length; wi++)
+                    {
+                        bool[] m = (gen.DisplayedMasks != null && wi < gen.DisplayedMasks.Length && gen.DisplayedMasks[wi] != null)
+                            ? gen.DisplayedMasks[wi]
+                            : new bool[gen.ActiveWords[wi].Length];
+                        ushort mask = 0;
+                        for (int k = 0; k < Math.Min(m.Length, 16); k++) if (m[k]) mask |= (ushort)(1 << k);
+                        displayMasksForCalls[wi] = mask;
+
+                        string w = gen.ActiveWords[wi];
+                        char[] masked = new char[w.Length];
+                        for (int mindex = 0; mindex < w.Length; mindex++) masked[mindex] = (mindex < m.Length && m[mindex]) ? w[mindex] : '_';
+                        maskStrings[wi] = new string(masked);
+
+                        altCounts[wi] = board.FindAlternateWordsFromPosition(gen.ActiveWords[wi], displayMasksForCalls[wi]);
+                    }
+
+                    float altScore = generator.ScoreBoardOnAlternatives(board, gen.ActiveWords, displayMasksForCalls.ToList());
+
+                    allOutputs.Add(new OutputBoard
+                    {
+                        BoardString = gen.BoardString,
+                        GridRows = BoardToRows(board),
+                        ActiveWords = gen.ActiveWords,
+                        DisplayedMasks = displayMasksForCalls.Select(x => (int)x).ToArray(),
+                        DisplayedMasksString = maskStrings,
+                        AltScore = altScore,
+                        AltCounts = altCounts,
+                        CoverageScore = score,
+                        TargetScore = targetScore
+                    });
+                }
+
+                done = allOutputs.Count;
+                SaveOutputs(outputJsonPath, outputTxtPath, allOutputs, stopwatch.ElapsedMilliseconds);
+                Console.WriteLine($"Chunk complete; saved progress. {done}/{totalBoards} boards total.");
             }
 
-            sb.AppendLine($"Valid boards (all active words found): {validBoards}/{results.Count}");
-
-            var opts = new JsonSerializerOptions { WriteIndented = true };
-            File.WriteAllText(outputJsonPath, JsonSerializer.Serialize(outputs, opts));
-            File.WriteAllText(outputTxtPath, sb.ToString());
-
-            Console.WriteLine($"Wrote JSON to {outputJsonPath}");
-            Console.WriteLine($"Wrote text summary to {outputTxtPath}");
+            stopwatch.Stop();
+            Console.WriteLine($"Finished. Generated {allOutputs.Count} boards in {stopwatch.ElapsedMilliseconds} ms.");
             return 0;
         }
         catch (Exception ex)
@@ -147,5 +140,58 @@ class Program
             rows[r] = new string(row);
         }
         return rows;
+    }
+
+    private static List<OutputBoard> LoadExistingOutputs(string jsonPath)
+    {
+        try
+        {
+            if (!File.Exists(jsonPath)) return new List<OutputBoard>();
+            string text = File.ReadAllText(jsonPath);
+            if (string.IsNullOrWhiteSpace(text)) return new List<OutputBoard>();
+            var opts = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            var list = JsonSerializer.Deserialize<List<OutputBoard>>(text, opts);
+            return list ?? new List<OutputBoard>();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Warning: failed to load existing outputs from {jsonPath}: {ex.Message}");
+            return new List<OutputBoard>();
+        }
+    }
+
+    private static void SaveOutputs(string jsonPath, string txtPath, List<OutputBoard> outputs, long elapsedMs)
+    {
+        try
+        {
+            var opts = new JsonSerializerOptions { WriteIndented = true };
+            string tmpJson = jsonPath + ".tmp";
+            File.WriteAllText(tmpJson, JsonSerializer.Serialize(outputs, opts));
+            File.Copy(tmpJson, jsonPath, true);
+            File.Delete(tmpJson);
+
+            var sb = new StringBuilder();
+            sb.AppendLine($"Generated {outputs.Count} boards in {elapsedMs} ms.");
+
+            int validBoards = 0;
+            foreach (var o in outputs)
+            {
+                sb.AppendLine($"Board: {o.BoardString}");
+                sb.AppendLine($"  ActiveWords: {string.Join(',', o.ActiveWords ?? Array.Empty<string>())}");
+                sb.AppendLine($"  DisplayedMasks: {string.Join(',', o.DisplayedMasks ?? Array.Empty<int>())}");
+                sb.AppendLine($"  MaskedWords: {string.Join(", ", o.DisplayedMasksString ?? Array.Empty<string>())}");
+                sb.AppendLine($"  AltScore: {o.AltScore}, AltCounts: {string.Join(',', o.AltCounts ?? Array.Empty<int>())}");
+                sb.AppendLine($"  Coverage: {o.CoverageScore}/{o.TargetScore}");
+                sb.AppendLine();
+                if (o.CoverageScore >= o.TargetScore) validBoards++;
+            }
+
+            sb.AppendLine($"Valid boards (all active words found): {validBoards}/{outputs.Count}");
+            File.WriteAllText(txtPath, sb.ToString());
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Warning: failed to save outputs: {ex.Message}");
+        }
     }
 }
