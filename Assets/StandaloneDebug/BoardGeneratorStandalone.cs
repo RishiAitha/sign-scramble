@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Numerics;
+using System.IO;
 using System.Linq;
 
 namespace SignScramble.StandaloneDebug;
@@ -12,15 +14,13 @@ public class BoardGenerator
 {
     private readonly object? letterPrefab;
 
-    private readonly bool usingTest;
     private Board currentBoard;
     private readonly Letter[,] letterObjects; // Store references to Letter components
     private bool isInitialized;
     private static readonly Random Random = new();
 
-    public BoardGenerator(bool usingTest = true, object? letterPrefab = null)
+    public BoardGenerator(object? letterPrefab = null)
     {
-        this.usingTest = usingTest;
         this.letterPrefab = letterPrefab;
         currentBoard = new Board();
         letterObjects = new Letter[4, 4];
@@ -34,102 +34,180 @@ public class BoardGenerator
 
     public void Start()
     {
-        if (usingTest)
-        {
-            GenerateBoards(new[] { "CLOCK", "DOOR", "ROD", "SIGN", "CROOKS" }, 10);
-        }
-        else
-        {
-            throw new Exception("Need to use test words for now."); // TODO: set up word sets
-        }
+        // Let GenerateBoards choose word sets itself and drive the full process.
+        GenerateBoards(10);
     }
 
-    public Tuple<string[], bool[][][]> GenerateBoards(string[] words, int numberOfBoards)
+    // Load a word list and pick `count` words with decent Jaccard similarity.
+    public string[] GetRandomSimilarWordSet(int count = 5)
     {
-        if (!usingTest) throw new Exception("Need to use test for now.");
-        if (!ValidateWordSet(words))
+        const string fileName = "fingerspellingwords.txt";
+
+        string[] allWords = File.ReadAllLines("../Resources/fingerspellingwords.txt")
+                    .Select(w => w?.Trim().ToUpperInvariant())
+                    .Where(w => !string.IsNullOrEmpty(w))
+                    .Where(w => w.Length <= 6)
+                    .ToArray();
+
+        var candidates = allWords
+            .Select(w => new string(w.Where(char.IsLetter).ToArray()))
+            .Where(w => w.Length > 0)
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .ToArray();
+
+        if (candidates.Length <= count) return candidates.Take(count).ToArray();
+
+        static double Jaccard(string a, string b)
         {
-            throw new Exception("Invalid word set.");
+            var sa = new HashSet<char>(a.ToUpperInvariant());
+            var sb = new HashSet<char>(b.ToUpperInvariant());
+            var inter = sa.Intersect(sb).Count();
+            var uni = sa.Union(sb).Count();
+            return uni == 0 ? 0.0 : (double)inter / uni;
         }
 
-        Stack<Board> completeBoards = new Stack<Board>();
+        string[] bestSet = candidates.Take(count).ToArray();
+        double bestScore = -1.0;
+        double targetMin = 0.18;
+        double targetMax = 0.55;
 
-        string letterSet = "";
-        foreach (string word in words)
+        int attempts = 2000;
+        for (int a = 0; a < attempts; a++)
         {
-            letterSet += word.ToUpperInvariant();
-        }
-        
-        letterSet += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        char[] shuffledLetterSet = letterSet.ToCharArray();
-        Random.Shuffle(shuffledLetterSet);
-        letterSet = new string(shuffledLetterSet);
-
-        // adaptive training1 limit: scale with number of target words to balance
-        // quality vs runtime. For small sets (5 words) this yields ~2000 iterations;
-        // for larger sets it scales up linearly.
-        int training1Limit = Math.Max(500, 400 * words.Length);
-
-        while (completeBoards.Count < numberOfBoards)
-        {
-            Board newBoard = new Board(letterSet.ToCharArray());
-
-            Board? trainedBoard = TrainingStep1(newBoard, words);
-
-            if (trainedBoard != null)
+            var set = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            while (set.Count < count)
             {
-                completeBoards.Push(trainedBoard);
-                Console.WriteLine($"[BoardGenerator] TrainingStep1 produced board #{completeBoards.Count}: {trainedBoard}");
+                set.Add(candidates[Random.Next(candidates.Length)]);
+            }
+            var arr = set.ToArray();
+
+            double sum = 0; int pairs = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                for (int j = i + 1; j < arr.Length; j++)
+                {
+                    sum += Jaccard(arr[i], arr[j]);
+                    pairs++;
+                }
+            }
+            double avg = pairs > 0 ? sum / pairs : 0.0;
+
+            if (avg >= targetMin && avg <= targetMax)
+            {
+                return arr.Select(s => s.ToUpperInvariant()).ToArray();
             }
 
-            training1Limit -= 1;
-            if (training1Limit <= 0)
+            double mid = (targetMin + targetMax) / 2.0;
+            double score = -Math.Abs(avg - mid);
+            if (score > bestScore)
             {
-                throw new Exception("First training step timed out.");
-            }
-        }
-
-        // For each word create a boolean mask (per-index) indicating which letters are displayed.
-        List<bool[]> displayedPositionsPerWord = new List<bool[]>(words.Length);
-        for (int i = 0; i < words.Length; i++)
-        {
-            // choose the rarest letter index as the initially revealed letter
-            int rarestLetterIndex = Board.FindKthRarestLetter(words[i], 1);
-
-            bool[] mask = new bool[words[i].Length];
-            if (mask.Length > 0 && rarestLetterIndex >= 0 && rarestLetterIndex < mask.Length) mask[rarestLetterIndex] = true;
-            displayedPositionsPerWord.Add(mask);
-        }
-
-        List<Board> optimizedBoards = new List<Board>(numberOfBoards);
-        List<bool[][]> perBoardDisplayedMasks = new List<bool[][]>(numberOfBoards);
-
-        while (completeBoards.Count > 0)
-        {
-            var b = completeBoards.Pop();
-            // compute static protection mask from training step 1 (complete paths on this board)
-            var protectedFromStep1 = GetProtectedCellsFromBestPaths(b, words);
-            var result = TrainingStep2(b, words, displayedPositionsPerWord, protectedFromStep1);
-            if (result != null && result.Item1 != null)
-            {
-                optimizedBoards.Add(result.Item1);
-                perBoardDisplayedMasks.Add(result.Item2);
-                Console.WriteLine($"[BoardGenerator] TrainingStep2 completed for board: {result.Item1}");
-                Console.WriteLine($"[BoardGenerator] Final displayed masks: {FormatMasks(result.Item2.Select(m => m).ToList())}");
+                bestScore = score;
+                bestSet = arr.Select(s => s.ToUpperInvariant()).ToArray();
             }
         }
 
-        // sort boards by increasing number of revealed letters (fewer reveals = better)
-        var paired = optimizedBoards.Select((b, i) => new {
-            board = b,
-            masks = perBoardDisplayedMasks[i],
-            revealed = perBoardDisplayedMasks[i].Sum(m => m.Count(x => x))
-        }).OrderBy(p => p.revealed).ToList();
+        return bestSet;
+    }
 
-        string[] boardStrings = paired.Select(p => p.board.ToString()).ToArray();
-        bool[][][] perBoardDisplayed = paired.Select(p => p.masks.Select(m => m.ToArray()).ToArray()).ToArray();
+    public string[] LastUsedWordSet { get; private set; } = Array.Empty<string>();
 
-        return Tuple.Create(boardStrings, perBoardDisplayed);
+    public Tuple<string[], bool[][][]> GenerateBoards(int numberOfBoards)
+    {
+        // Try multiple candidate word sets until we find one that yields `numberOfBoards`
+        int wordSetAttempts = 0;
+        while (true)
+        {
+            wordSetAttempts++;
+            string[] words = GetRandomSimilarWordSet(6);
+            if (!ValidateWordSet(words))
+            {
+                Console.WriteLine($"[BoardGenerator] Skipping invalid word set: {string.Join(", ", words)}");
+                continue;
+            }
+
+            Console.WriteLine($"[BoardGenerator] Trying word set #{wordSetAttempts}: {string.Join(", ", words)}");
+
+            Stack<Board> completeBoards = new Stack<Board>();
+
+            string letterSet = "";
+            foreach (string word in words)
+            {
+                letterSet += word.ToUpperInvariant();
+            }
+
+            letterSet += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            char[] shuffledLetterSet = letterSet.ToCharArray();
+            Random.Shuffle(shuffledLetterSet);
+            letterSet = new string(shuffledLetterSet);
+
+            int training1Limit = Math.Max(500, 400 * words.Length);
+
+            while (completeBoards.Count < numberOfBoards && training1Limit > 0)
+            {
+                Board newBoard = new Board(letterSet.ToCharArray());
+                Board? trainedBoard = TrainingStep1(newBoard, words);
+                if (trainedBoard != null)
+                {
+                    completeBoards.Push(trainedBoard);
+                    Console.WriteLine($"[BoardGenerator] TrainingStep1 produced board #{completeBoards.Count} for words {string.Join(", ", words)}: {trainedBoard}");
+                }
+
+                training1Limit -= 1;
+            }
+
+            if (completeBoards.Count < numberOfBoards)
+            {
+                Console.WriteLine($"[BoardGenerator] Word set failed to produce {numberOfBoards} boards; trying next word set.");
+                continue;
+            }
+
+            // For each word create a bitmask (per-index) indicating which letters are displayed.
+            List<ushort> displayedPositionsPerWord = new List<ushort>(words.Length);
+            for (int i = 0; i < words.Length; i++)
+            {
+                int rarestLetterIndex = Board.FindKthRarestLetter(words[i], 1);
+                ushort mask = 0;
+                if (words[i].Length > 0 && rarestLetterIndex >= 0 && rarestLetterIndex < words[i].Length) mask = (ushort)(1 << rarestLetterIndex);
+                displayedPositionsPerWord.Add(mask);
+            }
+
+            List<Board> optimizedBoards = new List<Board>(numberOfBoards);
+            List<ushort[]> perBoardDisplayedMasks = new List<ushort[]>(numberOfBoards);
+
+            while (completeBoards.Count > 0)
+            {
+                var b = completeBoards.Pop();
+                ushort protectedFromStep1 = GetProtectedMaskFromBestPaths(b, words);
+                var result = TrainingStep2(b, words, displayedPositionsPerWord, protectedFromStep1);
+                if (result != null && result.Item1 != null)
+                {
+                    optimizedBoards.Add(result.Item1);
+                    perBoardDisplayedMasks.Add(result.Item2);
+                    Console.WriteLine($"[BoardGenerator] TrainingStep2 completed for board: {result.Item1}");
+                    Console.WriteLine($"[BoardGenerator] Final displayed masks: {FormatMasks(result.Item2.ToList(), words)}");
+                }
+            }
+
+            // sort boards by increasing number of revealed letters (fewer reveals = better)
+            var paired = optimizedBoards.Select((b, i) => new {
+                board = b,
+                masks = perBoardDisplayedMasks[i],
+                revealed = perBoardDisplayedMasks[i].Sum(m => System.Numerics.BitOperations.PopCount((uint)m))
+            }).OrderBy(p => p.revealed).ToList();
+
+            string[] boardStrings = paired.Select(p => p.board.ToString()).ToArray();
+            bool[][][] perBoardDisplayed = paired.Select(p => p.masks.Select((m, wi) => {
+                int len = words[wi].Length;
+                bool[] arr = new bool[len];
+                for (int k = 0; k < len; k++) arr[k] = ((m >> k) & 1) != 0;
+                return arr;
+            }).ToArray()).ToArray();
+
+            // remember which word set produced these boards
+            LastUsedWordSet = words;
+
+            return Tuple.Create(boardStrings, perBoardDisplayed);
+        }
     }
 
     public Board? TrainingStep1(Board board, string[] words)
@@ -142,11 +220,11 @@ public class BoardGenerator
         int previousFound = 0;
         Board previousBoard = new Board(board.ToString());
         Board currentBoard = new Board(board.ToString());
-        // start with protection discovered from previousBoard's complete paths
-        bool[,] cumulativeProtected = GetProtectedCellsFromBestPaths(previousBoard, words);
+        // start with protection discovered from previousBoard's complete paths (bitmask)
+        ushort cumulativeProtected = GetProtectedMaskFromBestPaths(previousBoard, words);
         bool[] previousFoundFlags = new bool[words.Length];
         for (int i = 0; i < words.Length; i++) previousFoundFlags[i] = previousBoard.TryFindWordPath(words[i], out _);
-        previousScore = ScoreBoardOnWordsAndProtect(previousBoard, words, cumulativeProtected, previousFoundFlags);
+        previousScore = ScoreBoardOnWordsAndProtect(previousBoard, words, ref cumulativeProtected, previousFoundFlags);
         previousFound = previousFoundFlags.Count(f => f);
         int targetScore = 0;
         foreach (string word in words) {
@@ -157,8 +235,8 @@ public class BoardGenerator
         {
             // score and collect protected cells for current board in a single pass
             bool[] currentFoundFlags = new bool[words.Length];
-            bool[,] tempProtected = new bool[4,4];
-            float currentScore = ScoreBoardOnWordsAndProtect(currentBoard, words, tempProtected, currentFoundFlags);
+            ushort tempProtected = 0;
+            float currentScore = ScoreBoardOnWordsAndProtect(currentBoard, words, ref tempProtected, currentFoundFlags);
             int currentFound = currentFoundFlags.Count(f => f);
 
             int iter = initialLimit - limit;
@@ -187,7 +265,7 @@ public class BoardGenerator
                 previousScore = currentScore;
                 previousFound = currentFound;
                 // union protected cells from newly accepted best (best paths)
-                UnionProtected(cumulativeProtected, tempProtected);
+                cumulativeProtected |= tempProtected;
             }
 
             // mutate while avoiding any cumulatively protected cells
@@ -200,7 +278,7 @@ public class BoardGenerator
         return null;
     }
 
-    public Tuple<Board, bool[][]>? TrainingStep2(Board board, string[] words, List<bool[]> displayedLetters, bool[,]? protectedFromStep1 = null)
+    public Tuple<Board, ushort[]>? TrainingStep2(Board board, string[] words, List<ushort> displayedLetters, ushort? protectedFromStep1 = null)
     {
         int initialPerDisplaySetLimit = Math.Max(100, 150 * words.Length);
         int perDisplaySetLimit = initialPerDisplaySetLimit;
@@ -214,9 +292,9 @@ public class BoardGenerator
         foreach (string w in words) wordTargetScore += w.Length;
         
         // clone the displayed-positions masks so we can modify locally if needed
-        List<bool[]> currentDisplayedLetters = displayedLetters.Select(mask => mask.ToArray()).ToList();
+        List<ushort> currentDisplayedLetters = displayedLetters.Select(mask => mask).ToList();
 
-        Console.WriteLine($"[BoardGenerator] TrainingStep2 start board={board} initialMasks={FormatMasks(currentDisplayedLetters)} initialLimit={initialPerDisplaySetLimit}");
+        Console.WriteLine($"[BoardGenerator] TrainingStep2 start board={board} initialMasks={FormatMasks(currentDisplayedLetters, words)} initialLimit={initialPerDisplaySetLimit}");
 
         int currentWordToDisplayMore = 0;
 
@@ -227,14 +305,14 @@ public class BoardGenerator
             int iter = initialPerDisplaySetLimit - perDisplaySetLimit;
             if (iter - lastLogIter >= 50 || currentScore < previousScore)
             {
-                Console.WriteLine($"[BoardGenerator] TrainingStep2 iter={iter} currentScore={currentScore} prevScore={previousScore} perDisplayLimit={perDisplaySetLimit} masks={FormatMasks(currentDisplayedLetters)}");
+                Console.WriteLine($"[BoardGenerator] TrainingStep2 iter={iter} currentScore={currentScore} prevScore={previousScore} perDisplayLimit={perDisplaySetLimit} masks={FormatMasks(currentDisplayedLetters, words)}");
                 lastLogIter = iter;
             }
             if (currentScore <= targetScore)
             {
-                // return the board plus the final displayed masks
-                bool[][] finalMasks = currentDisplayedLetters.Select(m => m.ToArray()).ToArray();
-                Console.WriteLine($"[BoardGenerator] TrainingStep2 success finalScore={currentScore} masks={FormatMasks(currentDisplayedLetters)}");
+                // return the board plus the final displayed masks (ushort per-word masks)
+                ushort[] finalMasks = currentDisplayedLetters.ToArray();
+                Console.WriteLine($"[BoardGenerator] TrainingStep2 success finalScore={currentScore} masks={FormatMasks(currentDisplayedLetters, words)}");
                 return Tuple.Create(currentBoard, finalMasks);
             }
 
@@ -270,7 +348,8 @@ public class BoardGenerator
                 bool displayedAll = true;
                 for (int wi = 0; wi < currentDisplayedLetters.Count; wi++)
                 {
-                    if (currentDisplayedLetters[wi].Any(b => !b))
+                    int shown = System.Numerics.BitOperations.PopCount(currentDisplayedLetters[wi]);
+                    if (shown < words[wi].Length)
                     {
                         displayedAll = false;
                         break;
@@ -287,7 +366,7 @@ public class BoardGenerator
                 for (int offset = 0; offset < words.Length; offset++)
                 {
                     int idx = (currentWordToDisplayMore + offset) % words.Length;
-                    int displayedCount = currentDisplayedLetters[idx].Count(b => b);
+                        int displayedCount = System.Numerics.BitOperations.PopCount((uint)currentDisplayedLetters[idx]);
                     if (displayedCount < words[idx].Length)
                     {
                         foundWord = idx;
@@ -301,16 +380,16 @@ public class BoardGenerator
                     throw new Exception("Training step 2 failed.");
                 }
 
-                int currentlyShown = currentDisplayedLetters[foundWord].Count(b => b);
+                int currentlyShown = System.Numerics.BitOperations.PopCount((uint)currentDisplayedLetters[foundWord]);
                 int nextK = currentlyShown + 1;
                 int revealIndex = Board.FindKthRarestLetter(words[foundWord], nextK);
-                if (revealIndex >= 0 && revealIndex < currentDisplayedLetters[foundWord].Length)
+                if (revealIndex >= 0 && revealIndex < words[foundWord].Length)
                 {
-                    currentDisplayedLetters[foundWord][revealIndex] = true;
-                    Console.WriteLine($"[BoardGenerator] Revealed letter for word #{foundWord} at index {revealIndex}; masks now: {FormatMasks(currentDisplayedLetters)}");
+                    currentDisplayedLetters[foundWord] |= (ushort)(1 << revealIndex);
+                    Console.WriteLine($"[BoardGenerator] Revealed letter for word #{foundWord} at index {revealIndex}; masks now: {FormatMasks(currentDisplayedLetters, words)}");
                     // Immediately evaluate alternatives after reveal so we see search activity tied to this reveal
                     float postRevealScore = ScoreBoardOnAlternatives(currentBoard, words, currentDisplayedLetters);
-                    Console.WriteLine($"[BoardGenerator] Post-reveal alternative score={postRevealScore} masks={FormatMasks(currentDisplayedLetters)}");
+                    Console.WriteLine($"[BoardGenerator] Post-reveal alternative score={postRevealScore} masks={FormatMasks(currentDisplayedLetters, words)}");
                 }
 
                 // advance pointer for next time
@@ -339,7 +418,7 @@ public class BoardGenerator
         return score;
     }
 
-    public float ScoreBoardOnAlternatives(Board board, string[] words, List<bool[]> displayed)
+    public float ScoreBoardOnAlternatives(Board board, string[] words, List<ushort> displayed)
     {
         int score = 0;
         for (int i = 0; i < words.Length; i++)
@@ -461,14 +540,14 @@ public class BoardGenerator
     }
 
     // Helper: returns the list of characters from `word` that are marked as displayed by `displayedMask`.
-    public static List<char> GetDisplayedCharactersFromMask(string word, bool[] displayedMask)
+    public static List<char> GetDisplayedCharactersFromMask(string word, ushort displayedMask)
     {
         List<char> displayed = new List<char>();
-        if (string.IsNullOrEmpty(word) || displayedMask == null) return displayed;
-        int len = Math.Min(word.Length, displayedMask.Length);
+        if (string.IsNullOrEmpty(word)) return displayed;
+        int len = Math.Min(word.Length, 16);
         for (int i = 0; i < len; i++)
         {
-            if (displayedMask[i]) displayed.Add(word[i]);
+            if (((displayedMask >> i) & 1) != 0) displayed.Add(word[i]);
         }
         return displayed;
     }
@@ -480,11 +559,23 @@ public class BoardGenerator
         return string.Join(" | ", masks.Select(m => new string(m.Select(b => b ? '1' : '0').ToArray())));
     }
 
-    // Collect cells used by the complete paths for each word (used after TrainingStep1)
-    // This checks for full paths (uses TryFindWordPath) so protected cells are truly part of complete solutions.
-    private static bool[,] GetProtectedCellsFromBestPaths(Board board, string[] words)
+    // Helper: format ushort bitmasks for logging given the corresponding words
+    private static string FormatMasks(List<ushort> masks, string[] words)
     {
-        bool[,] prot = new bool[4,4];
+        if (masks == null || masks.Count == 0) return "[]";
+        return string.Join(" | ", masks.Select((m, i) => {
+            int len = (i < words.Length) ? words[i].Length : 16;
+            char[] chars = new char[len];
+            for (int k = 0; k < len; k++) chars[k] = (((m >> k) & 1) != 0) ? '1' : '0';
+            return new string(chars);
+        }));
+    }
+
+    // Collect cells used by the complete paths for each word (used after TrainingStep1)
+    // Return a 16-bit mask where bit (r*4 + c) is set for protected cells.
+    private static ushort GetProtectedMaskFromBestPaths(Board board, string[] words)
+    {
+        ushort prot = 0;
         if (board == null || words == null) return prot;
         foreach (string w in words)
         {
@@ -493,33 +584,25 @@ public class BoardGenerator
                 foreach (var t in path)
                 {
                     int r = t.Item1, c = t.Item2;
-                    if (r >= 0 && r < 4 && c >= 0 && c < 4) prot[r,c] = true;
+                    if (r >= 0 && r < 4 && c >= 0 && c < 4) prot |= (ushort)(1 << (r * 4 + c));
                 }
             }
         }
         return prot;
     }
 
-    // NOTE: removed redundant complete-path collector; GetProtectedCellsFromBestPaths handles full-path detection.
-
-    private static void UnionProtected(bool[,] target, bool[,] source)
+    private static void AddPathToProtected(ref ushort prot, List<Tuple<int,int>> path)
     {
-        if (target == null || source == null) return;
-        for (int r = 0; r < 4; r++) for (int c = 0; c < 4; c++) target[r,c] = target[r,c] || source[r,c];
-    }
-
-    private static void AddPathToProtected(bool[,] prot, List<Tuple<int,int>> path)
-    {
-        if (prot == null || path == null) return;
+        if (path == null) return;
         foreach (var t in path)
         {
             int r = t.Item1, c = t.Item2;
-            if (r >= 0 && r < 4 && c >= 0 && c < 4) prot[r,c] = true;
+            if (r >= 0 && r < 4 && c >= 0 && c < 4) prot |= (ushort)(1 << (r * 4 + c));
         }
     }
 
-    // Score words while also marking protected cells for successfully found complete paths.
-    private static float ScoreBoardOnWordsAndProtect(Board board, string[] words, bool[,] protectedCells, bool[]? foundFlags)
+    // Score words while also marking protected cells (bitmask) for successfully found complete paths.
+    private static float ScoreBoardOnWordsAndProtect(Board board, string[] words, ref ushort protectedCells, bool[]? foundFlags)
     {
         int score = 0;
         if (board == null || words == null) return score;
@@ -531,39 +614,16 @@ public class BoardGenerator
                 continue;
             }
 
-            if (board.TryFindWordPath(words[i], out var path) && path != null && path.Count > 0)
+            var bestPath = board.FindBestWordPath(words[i]);
+            if (bestPath != null && bestPath.Count > 0)
             {
-                if (foundFlags != null) foundFlags[i] = true;
-                if (protectedCells != null) AddPathToProtected(protectedCells, path);
-                score += Math.Min(path.Count, words[i].Length);
+                if (bestPath.Count == words[i].Length)
+                {
+                    if (foundFlags != null) foundFlags[i] = true;
+                    AddPathToProtected(ref protectedCells, bestPath);
+                }
+                score += Math.Min(bestPath.Count, words[i].Length);
             }
-        }
-
-        return score;
-    }
-
-    // Score alternatives while also marking protected cells for any successfully found complete paths.
-    private static float ScoreBoardOnAlternativesAndProtect(Board board, string[] words, List<bool[]> displayed, bool[,]? protectedCells, bool[]? foundFlags)
-    {
-        int score = 0;
-        if (board == null || words == null || displayed == null) return score;
-        for (int i = 0; i < words.Length; i++)
-        {
-            if (foundFlags != null && foundFlags[i])
-            {
-                // word already known to have a complete path, skip alternative calculation
-                continue;
-            }
-
-            if (board.TryFindWordPath(words[i], out var path) && path != null && path.Count > 0)
-            {
-                if (foundFlags != null) foundFlags[i] = true;
-                if (protectedCells != null) AddPathToProtected(protectedCells, path);
-                continue;
-            }
-
-            int alternatives = board.FindAlternateWordsFromPosition(words[i], displayed[i]);
-            score += alternatives;
         }
 
         return score;
@@ -639,13 +699,12 @@ public class BoardGenerator
         private static readonly SignScramble.StandaloneDebug.DictionaryManager dictionaryManager =
             new SignScramble.StandaloneDebug.DictionaryManager("dictionary.txt");
 
-        public int FindAlternateWordsFromPosition(string word, bool[] displayedPositions)
+        public int FindAlternateWordsFromPosition(string word, ushort displayedPositions)
         {
-            if (string.IsNullOrEmpty(word) || displayedPositions == null)
+            if (string.IsNullOrEmpty(word))
             {
                 throw new Exception("Illegal argument in find alternate words from position.");
             }
-
             List<char> displayedChars = BoardGenerator.GetDisplayedCharactersFromMask(word, displayedPositions);
             if (displayedChars.Count == 0)
             {
@@ -658,10 +717,11 @@ public class BoardGenerator
 
             // collect displayed indices for verification at completion
             List<int> displayedIndices = new List<int>();
-            for (int k = 0; k < Math.Min(word.Length, displayedPositions.Length); k++) if (displayedPositions[k]) displayedIndices.Add(k);
+            for (int k = 0; k < Math.Min(word.Length, 16); k++) if (((displayedPositions >> k) & 1) != 0) displayedIndices.Add(k);
 
             // leftlength, rightlength, nextLeftIndex, nextRightIndex, pivotPos, usedMask, current path (linear indices)
-            Queue<Tuple<int, int, int, int, int, int, List<int>>> queue = new();
+            // use LinkedList<int> as a deque to avoid O(n) inserts at the head
+            Queue<Tuple<int, int, int, int, int, int, LinkedList<int>>> queue = new();
 
             // choose a single seed displayed index to start BFS from: pick the rarest displayed letter
             int seedDisplayIndex = displayedIndices[0];
@@ -685,7 +745,7 @@ public class BoardGenerator
                 if (boardArray[rr, rc] == word[seedDisplayIndex])
                 {
                     int usedMask = 1 << linear;
-                    List<int> candidatePath = new List<int> { linear };
+                    LinkedList<int> candidatePath = new LinkedList<int>(new[] { linear });
                     int nextLeftIndex = seedDisplayIndex - 1;
                     int nextRightIndex = seedDisplayIndex + 1;
                     int leftLength = seedDisplayIndex;
@@ -705,15 +765,15 @@ public class BoardGenerator
                 int nextRightIndex = tuple.Item4;
                 int pivotPos = tuple.Item5;
                 int usedMask = tuple.Item6;
-                List<int> candidatePath = tuple.Item7;
+                LinkedList<int> candidatePath = tuple.Item7;
 
                 if (curLeft <= 0 && curRight <= 0)
                 {
                     char[] buf = new char[candidatePath.Count];
-                    for (int pi = 0; pi < candidatePath.Count; pi++)
+                    int pi = 0;
+                    foreach (int idx in candidatePath)
                     {
-                        int idx = candidatePath[pi];
-                        buf[pi] = boardArray[idx/4, idx%4];
+                        buf[pi++] = boardArray[idx / 4, idx % 4];
                     }
                     string candidateWord = new string(buf);
 
@@ -738,7 +798,7 @@ public class BoardGenerator
                 }
 
                 bool movingLeft = curLeft > 0;
-                int currentLinear = movingLeft ? candidatePath[0] : candidatePath[candidatePath.Count - 1];
+                int currentLinear = movingLeft ? candidatePath.First.Value : candidatePath.Last.Value;
 
                 int newCurLeftBase = movingLeft ? curLeft - 1 : curLeft;
                 int newCurRightBase = movingLeft ? curRight : curRight - 1;
@@ -751,8 +811,8 @@ public class BoardGenerator
                     if ((usedMask & (1 << neighborLinear)) != 0) continue;
 
                     int newUsed = usedMask | (1 << neighborLinear);
-                    List<int> newPath = new List<int>(candidatePath);
-                    if (movingLeft) newPath.Insert(0, neighborLinear); else newPath.Add(neighborLinear);
+                    LinkedList<int> newPath = new LinkedList<int>(candidatePath);
+                    if (movingLeft) newPath.AddFirst(neighborLinear); else newPath.AddLast(neighborLinear);
 
                     queue.Enqueue(Tuple.Create(newCurLeftBase, newCurRightBase, newNextLeftIndexBase, newNextRightIndexBase, newPivotPosBase, newUsed, newPath));
                 }
@@ -864,7 +924,7 @@ public class BoardGenerator
             return false;
         }
 
-        public Board Mutate(bool[,]? protectedCells = null) // TODO: improve mutation
+        public Board Mutate(ushort? protectedMask = null) // TODO: improve mutation
         {
             // try a number of random picks avoiding protected cells
             for (int attempt = 0; attempt < 64; attempt++)
@@ -872,13 +932,10 @@ public class BoardGenerator
                 int index = Random.Next(16);
                 int row = index / 4;
                 int col = index % 4;
-                if (protectedCells != null)
+                if (protectedMask.HasValue)
                 {
-                    try
-                    {
-                        if (protectedCells[row, col]) continue;
-                    }
-                    catch { /* out-of-range: ignore protection */ }
+                    int maskBit = 1 << index;
+                    if ((protectedMask.Value & maskBit) != 0) continue;
                 }
                 boardArray[row, col] = GetRandomWeightedLetter();
                 return this;
@@ -889,13 +946,10 @@ public class BoardGenerator
             for (int i = 0; i < 16; i++)
             {
                 int r = i / 4, c = i % 4;
-                if (protectedCells != null)
+                if (protectedMask.HasValue)
                 {
-                    try
-                    {
-                        if (protectedCells[r, c]) continue;
-                    }
-                    catch { }
+                    int maskBit = 1 << i;
+                    if ((protectedMask.Value & maskBit) != 0) continue;
                 }
                 candidates.Add(i);
             }

@@ -4,23 +4,19 @@ using SignScramble.StandaloneDebug;
 
 #pragma warning disable CS8600, CS8602, CS8604, CS8618
 
-string[] words = { "CLOCK", "DOOR", "ROD", "SIGN", "CROOKS" };
-
-BoardGenerator generator = new(usingTest: true);
+BoardGenerator generator = new();
 
 Console.WriteLine("=== Full Step-1 Generation Debug Run ===");
-Console.WriteLine($"Word set valid: {generator.ValidateWordSet(words)}");
-Console.WriteLine($"Target words: {string.Join(", ", words)}");
-Console.WriteLine();
+Console.WriteLine("GenerateBoards will choose candidate word sets and run training.");
 
 Stopwatch stopwatch = Stopwatch.StartNew();
 try
 {
-    var result = generator.GenerateBoards(words, 10);
+    var result = generator.GenerateBoards(3);
     stopwatch.Stop();
-
     string[] generatedBoards = result.Item1;
     bool[][][] displayedPerBoard = result.Item2;
+    string[] words = generator.LastUsedWordSet;
 
     if (generatedBoards == null || generatedBoards.Length == 0)
     {
@@ -74,11 +70,23 @@ try
                 ? displayedPerBoard[i]
                 : defaultMasks;
 
-            float altScore = generator.ScoreBoardOnAlternatives(board, words, displayMasksForPrints.ToList());
+            // convert bool[] masks to ushort bitmasks for the updated API
+            ushort[] displayMasksForCalls = new ushort[words.Length];
+            for (int wi = 0; wi < words.Length; wi++)
+            {
+                bool[] m = (displayMasksForPrints != null && wi < displayMasksForPrints.Length && displayMasksForPrints[wi] != null)
+                    ? displayMasksForPrints[wi]
+                    : defaultMasks[wi];
+                ushort mask = 0;
+                for (int k = 0; k < Math.Min(m.Length, 16); k++) if (m[k]) mask |= (ushort)(1 << k);
+                displayMasksForCalls[wi] = mask;
+            }
+
+            float altScore = generator.ScoreBoardOnAlternatives(board, words, displayMasksForCalls.ToList());
             Console.WriteLine($"ScoreBoardOnAlternatives: {altScore}");
             for (int wi = 0; wi < words.Length; wi++)
             {
-                int altCount = board.FindAlternateWordsFromPosition(words[wi], displayMasksForPrints[wi]);
+                int altCount = board.FindAlternateWordsFromPosition(words[wi], displayMasksForCalls[wi]);
                 Console.WriteLine($"  Alternatives for {words[wi]}: {altCount}");
             }
 

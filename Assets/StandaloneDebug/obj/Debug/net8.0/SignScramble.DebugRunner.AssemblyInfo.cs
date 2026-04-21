@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SignScramble.DebugRunner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbc9c1a4c5ccb03ff60b639ecf8561f6b78dde9f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea7d2c354fe5329919f949336290f4b6a9c1fc1c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SignScramble.DebugRunner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SignScramble.DebugRunner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
