@@ -34,14 +34,22 @@ jobs:
         with:
           dotnet-version: '7.0.x'
 
-      - name: Build generator
-        working-directory: Assets/StandaloneDebug
-        run: dotnet build SignScramble.Generator.csproj --configuration Release
-
-      - name: Run generator
-        working-directory: Assets/StandaloneDebug
+      - name: List repo files (debug)
         run: |
-          dotnet run --project SignScramble.Generator.csproj -- ${{ github.event.inputs.totalBoards || '100' }} ../Resources/generated_boards.json ../Resources/generated_boards.txt ${{ github.event.inputs.chunkSize || '10' }}
+          echo "Workspace root: $(pwd)"
+          echo "Top-level files:" 
+          ls -la
+          echo "Recursive list (top 4 levels):"
+          ls -laR | sed -n '1,200p'
+          echo "Looking for project file:"
+          find . -maxdepth 6 -type f -name 'SignScramble.Generator.csproj' -print || true
+
+      - name: Build generator (explicit path)
+        run: dotnet build ./Assets/StandaloneDebug/SignScramble.Generator.csproj --configuration Release
+
+      - name: Run generator (explicit paths)
+        run: |
+          dotnet run --project ./Assets/StandaloneDebug/SignScramble.Generator.csproj -- ${{ github.event.inputs.totalBoards || '100' }} ./Assets/Resources/generated_boards.json ./Assets/Resources/generated_boards.txt ${{ github.event.inputs.chunkSize || '10' }}
 
       - name: Upload generated JSON
         uses: actions/upload-artifact@v4
