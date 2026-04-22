@@ -31,6 +31,8 @@ class Program
         string outputJsonPath = "../Resources/generated_boards.json";
         string outputTxtPath = "../Resources/generated_boards.txt";
         int chunkSize = 10; // generate in smaller chunks so runs can be resumed or scheduled
+        // optional 5th arg: if provided and non-empty, treated as a suffix for new output files.
+        // pass 'timestamp' to auto-generate a UTC timestamp suffix and avoid overwriting existing files.
 
         if (args.Length > 0 && int.TryParse(args[0], out var parsed)) totalBoards = parsed;
         if (args.Length > 1) outputJsonPath = args[1];
@@ -41,7 +43,35 @@ class Program
 
         Console.WriteLine($"Generating {totalBoards} boards (chunk {chunkSize}) and writing to '{outputJsonPath}' (text summary: '{outputTxtPath}')");
 
-        var allOutputs = LoadExistingOutputs(outputJsonPath);
+        bool createNewSuffix = false;
+        string suffixArg = null;
+        if (args.Length > 4 && !string.IsNullOrWhiteSpace(args[4]))
+        {
+            suffixArg = args[4];
+            createNewSuffix = true;
+        }
+
+        List<OutputBoard> allOutputs;
+        if (createNewSuffix)
+        {
+            // If requested, generate new unique output filenames (or use provided suffix)
+            string suffixToUse = suffixArg.Equals("timestamp", StringComparison.OrdinalIgnoreCase) || suffixArg.Equals("new", StringComparison.OrdinalIgnoreCase)
+                ? DateTime.UtcNow.ToString("yyyyMMddTHHmmssZ")
+                : suffixArg;
+
+            if (File.Exists(outputJsonPath) || File.Exists(outputTxtPath))
+            {
+                outputJsonPath = InsertSuffixBeforeExtension(outputJsonPath, "_" + suffixToUse);
+                outputTxtPath = InsertSuffixBeforeExtension(outputTxtPath, "_" + suffixToUse);
+                Console.WriteLine($"Output files exist; using new output paths: {outputJsonPath} , {outputTxtPath}");
+            }
+
+            allOutputs = new List<OutputBoard>();
+        }
+        else
+        {
+            allOutputs = LoadExistingOutputs(outputJsonPath);
+        }
 
         int done = allOutputs.Count;
         if (done >= totalBoards)
@@ -193,5 +223,15 @@ class Program
         {
             Console.WriteLine($"Warning: failed to save outputs: {ex.Message}");
         }
+    }
+
+    private static string InsertSuffixBeforeExtension(string path, string suffix)
+    {
+        if (string.IsNullOrEmpty(path)) return path;
+        string dir = Path.GetDirectoryName(path) ?? string.Empty;
+        string file = Path.GetFileNameWithoutExtension(path);
+        string ext = Path.GetExtension(path);
+        string newName = file + suffix + ext;
+        return Path.Combine(dir, newName);
     }
 }

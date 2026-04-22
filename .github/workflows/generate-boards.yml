@@ -11,6 +11,10 @@ on:
         description: 'Chunk size per run'
         required: false
         default: '10'
+      outputSuffix:
+        description: 'Optional suffix for output files. Use "timestamp" to auto-append UTC timestamp.'
+        required: false
+        default: 'timestamp'
       commitResults:
         description: 'Commit generated results back to repo (true/false)'
         required: false
@@ -50,26 +54,26 @@ jobs:
       - name: Run generator (from StandaloneDebug)
         working-directory: Assets/StandaloneDebug
         run: |
-          dotnet run --project SignScramble.Generator.csproj -- ${{ github.event.inputs.totalBoards || '100' }} ../Resources/generated_boards.json ../Resources/generated_boards.txt ${{ github.event.inputs.chunkSize || '10' }}
+          dotnet run --project SignScramble.Generator.csproj -- ${{ github.event.inputs.totalBoards || '100' }} ../Resources/generated_boards.json ../Resources/generated_boards.txt ${{ github.event.inputs.chunkSize || '10' }} ${{ github.event.inputs.outputSuffix || 'timestamp' }}
 
-      - name: Upload generated JSON
+      - name: Upload generated JSON(s)
         uses: actions/upload-artifact@v4
         with:
           name: generated_boards_json
-          path: Assets/Resources/generated_boards.json
+          path: Assets/Resources/generated_boards*.json
 
-      - name: Upload generated TXT
+      - name: Upload generated TXT(s)
         uses: actions/upload-artifact@v4
         with:
           name: generated_boards_txt
-          path: Assets/Resources/generated_boards.txt
+          path: Assets/Resources/generated_boards*.txt
 
       - name: Commit results back to repo
         if: ${{ github.event.inputs.commitResults == 'true' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Assets/Resources/generated_boards.json Assets/Resources/generated_boards.txt || true
+          git add Assets/Resources/generated_boards*.json Assets/Resources/generated_boards*.txt || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
