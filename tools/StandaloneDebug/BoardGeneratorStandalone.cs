@@ -4,8 +4,10 @@ using System.Numerics;
 using System.IO;
 using System.Linq;
 
-namespace SignScramble.StandaloneDebug;
+#nullable enable
 
+namespace SignScramble.StandaloneDebug
+{
 /*
     This script generates a 4x4 board of letters containing words.
 */
@@ -37,6 +39,18 @@ public class BoardGenerator
     private readonly Letter[,] letterObjects; // Store references to Letter components
     private bool isInitialized;
     private static readonly Random Random = new();
+
+    // Fallback PopCount for runtimes that don't provide System.Numerics.BitOperations
+    private static int PopCount(uint x)
+    {
+        int count = 0;
+        while (x != 0)
+        {
+            x &= x - 1;
+            count++;
+        }
+        return count;
+    }
 
     public BoardGenerator(object? letterPrefab = null)
     {
@@ -341,7 +355,7 @@ public class BoardGenerator
             bool[] removed = new bool[words.Length];
             for (int i = 0; i < words.Length; i++)
             {
-                int shown = System.Numerics.BitOperations.PopCount((uint)currentDisplayedLetters[i]);
+                int shown = PopCount((uint)currentDisplayedLetters[i]);
                 removed[i] = shown > (words[i].Length / 2);
                 // initial removals are internal; avoid verbose startup logs
             }
@@ -421,7 +435,7 @@ public class BoardGenerator
                     for (int wi = 0; wi < currentDisplayedLetters.Count; wi++)
                     {
                         if (removed[wi]) continue;
-                        int shown = System.Numerics.BitOperations.PopCount((uint)currentDisplayedLetters[wi]);
+                        int shown = PopCount((uint)currentDisplayedLetters[wi]);
                         if (shown < words[wi].Length)
                         {
                             displayedAll = false;
@@ -440,7 +454,7 @@ public class BoardGenerator
                     for (int wi = 0; wi < words.Length; wi++)
                     {
                         if (removed[wi]) continue;
-                        int displayedCount = System.Numerics.BitOperations.PopCount((uint)currentDisplayedLetters[wi]);
+                        int displayedCount = PopCount((uint)currentDisplayedLetters[wi]);
                         if (displayedCount < words[wi].Length)
                         {
                             int nextK = displayedCount + 1;
@@ -494,7 +508,7 @@ public class BoardGenerator
                         {
                             currentDisplayedLetters = tempMasks;
                             // if this reveal caused the word to be more than half-displayed, remove it from this branch
-                            int nowShown = System.Numerics.BitOperations.PopCount((uint)currentDisplayedLetters[wi]);
+                            int nowShown = PopCount((uint)currentDisplayedLetters[wi]);
                             bool justRemoved = false;
                             if (nowShown > (words[wi].Length / 2) && !removed[wi])
                             {
@@ -541,7 +555,7 @@ public class BoardGenerator
                         // mark any words that crossed the >threshold as ignored
                         for (int j = 0; j < words.Length; j++)
                         {
-                            int nowShown = System.Numerics.BitOperations.PopCount((uint)currentDisplayedLetters[j]);
+                            int nowShown = PopCount((uint)currentDisplayedLetters[j]);
                             if (nowShown > (words[j].Length / 2) && !removed[j])
                             {
                                 removed[j] = true;
@@ -1316,4 +1330,5 @@ public class Arrow
     {
         IsActive = active;
     }
+}
 }

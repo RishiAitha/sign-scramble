@@ -49,12 +49,12 @@ jobs:
           find . -maxdepth 6 -type f -name 'SignScramble.Generator.csproj' -print || true
 
       - name: Build generator (explicit path)
-        run: dotnet build ./Assets/StandaloneDebug/SignScramble.Generator.csproj --configuration Release
+        run: dotnet build ./tools/StandaloneDebug/SignScramble.Generator.csproj --configuration Release
 
       - name: Run generator (from StandaloneDebug)
-        working-directory: Assets/StandaloneDebug
+        working-directory: tools/StandaloneDebug
         run: |
-          dotnet run --project SignScramble.Generator.csproj -- ${{ github.event.inputs.totalBoards || '100' }} ../Resources/generated_boards.json ../Resources/generated_boards.txt ${{ github.event.inputs.chunkSize || '10' }} ${{ github.event.inputs.outputSuffix || 'timestamp' }}
+          dotnet run --project SignScramble.Generator.csproj -- ${{ github.event.inputs.totalBoards || '100' }} ../Assets/Resources/generated_boards.json ../Assets/Resources/generated_boards.txt ${{ github.event.inputs.chunkSize || '10' }} ${{ github.event.inputs.outputSuffix || 'timestamp' }}
 
       - name: Upload generated JSON(s)
         uses: actions/upload-artifact@v4
