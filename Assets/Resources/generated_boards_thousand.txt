@@ -1,0 +1,7002 @@
+Generated 1000 boards in 9822173 ms.
+Board: TNSWTYARCEMPRALL
+  ActiveWords: PLACE,PRAYER,WANT
+  DisplayedMasks: 9,9,9
+  MaskedWords: P__C_, P__Y__, W__T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: EHSSVYITFEREPOWD
+  ActiveWords: SHIRTS,POWER,EVERY,POWDER
+  DisplayedMasks: 2,5,18,5
+  MaskedWords: _H____, P_W__, _V__Y, P_W___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: TFSLSEEFDTNOSIRE
+  ActiveWords: SEEN,LEFT,ENTIRE
+  DisplayedMasks: 9,5,6
+  MaskedWords: S__N, L_F_, _NT___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: MOONEIWSNLSRCEAU
+  ActiveWords: CLAUS,WOMEN,NEAR
+  DisplayedMasks: 8,5,9
+  MaskedWords: ___U_, W_M__, N__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: SSEUOGDJBRIEUDFC
+  ActiveWords: JUDGES,JEDI,RIFE,BURIED
+  DisplayedMasks: 1,5,5,35
+  MaskedWords: J_____, J_D_, R_F_, BU___D
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: AMDICREWAYTRNONE
+  ActiveWords: RENT,CAMERA,WIDER
+  DisplayedMasks: 12,4,1
+  MaskedWords: __NT, __M___, W____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: YRASPFMEFEIEDORT
+  ActiveWords: EFFORT,MARY,PERIOD
+  DisplayedMasks: 2,9,1
+  MaskedWords: _F____, M__Y, P_____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: FOEPLYARLWESOSDK
+  ActiveWords: FOLLOW,ASKED,WEARS
+  DisplayedMasks: 32,20,9
+  MaskedWords: _____W, __K_D, W__R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: NDSLUIREOSACNMRN
+  ActiveWords: UNIONS,LEARN,CREAM,DREAMS
+  DisplayedMasks: 9,17,17,17
+  MaskedWords: U__O__, L___N, C___M, D___M_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: AEDRHSRIWOUOMEYC
+  ActiveWords: YOUR,WORDS,COURSE,HOME
+  DisplayedMasks: 5,9,5,5
+  MaskedWords: Y_U_, W__D_, C_U___, H_M_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: HNAHGTKBNILEWOLR
+  ActiveWords: KILLER,BLOW,BAKING
+  DisplayedMasks: 5,9,5
+  MaskedWords: K_L___, B__W, B_K___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: EOADUVCRSREITNAW
+  ActiveWords: CARD,NEAR,COURTS
+  DisplayedMasks: 9,9,5
+  MaskedWords: C__D, N__R, C_U___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: GHGRNIEWSVOVAEAT
+  ActiveWords: SAVING,SEAT,GIVE
+  DisplayedMasks: 36,8,5
+  MaskedWords: __V__G, ___T, G_V_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: PAHUREROEFSBATIS
+  ActiveWords: AFTER,HOURS,PREFER
+  DisplayedMasks: 2,5,8
+  MaskedWords: _F___, H_U__, ___F__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: NVECODAETRULELIP
+  ActiveWords: PLACE,ADULT,TRIPLE
+  DisplayedMasks: 9,6,8
+  MaskedWords: P__C_, _DU__, ___P__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: APILTZTEILEROCOM
+  ActiveWords: PATIO,ZERO,ICE
+  DisplayedMasks: 1,1,2
+  MaskedWords: P____, Z___, _C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 12/12
+
+Board: HOMANUPCTJSEAKAT
+  ActiveWords: SPACE,SKATE,AMOUNT,HOPES
+  DisplayedMasks: 10,2,2,5
+  MaskedWords: _P_C_, _K___, _M____, H_P__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: FANEEOSSTHUYYSLB
+  ActiveWords: HOUSE,BUSY,SAFETY
+  DisplayedMasks: 5,9,4
+  MaskedWords: H_U__, B__Y, __F___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: GGITLNSRUEDESTAW
+  ActiveWords: LENDER,SUNSET,WE
+  DisplayedMasks: 13,34,1
+  MaskedWords: L_ND__, _U___T, W_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: TRCKOBAENNEDOTEW
+  ActiveWords: NEED,CANNOT,WEAR
+  DisplayedMasks: 9,49,9
+  MaskedWords: N__D, C___OT, W__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: ESHIGMGRAETOLLIS
+  ActiveWords: GETS,SHIRTS,AGES
+  DisplayedMasks: 5,18,3
+  MaskedWords: G_T_, _H__T_, AG__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: EENFKNMIEOBNYEMA
+  ActiveWords: FINE,MONKEY,OBEY
+  DisplayedMasks: 1,8,8
+  MaskedWords: F___, ___K__, ___Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: HNNGTIETSVPWEUER
+  ActiveWords: SUPER,THING,TENNIS
+  DisplayedMasks: 6,18,13
+  MaskedWords: _UP__, _H__G, T_NN__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: CKUMISFDEVTANERS
+  ActiveWords: FASTER,DATE,SICK,SEVEN
+  DisplayedMasks: 41,5,12,20
+  MaskedWords: F__T_R, D_T_, __CK, __V_N
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: RIEDBANENECRTSXN
+  ActiveWords: NEAR,RAIN,EXCEED
+  DisplayedMasks: 9,9,2
+  MaskedWords: N__R, R__N, _X____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: ROPRBTSBYKRCEEIA
+  ActiveWords: SPOT,SPORT,STRIKE
+  DisplayedMasks: 6,2,18
+  MaskedWords: _PO_, _P___, _T__K_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: SREUVLUTSIWOTIHR
+  ActiveWords: VISIT,HOURS,WROTE
+  DisplayedMasks: 17,5,5
+  MaskedWords: V___T, H_U__, W_O__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: RGRSNIHEETOSWLLG
+  ActiveWords: SHRINE,GOING,LOSERS
+  DisplayedMasks: 18,17,19
+  MaskedWords: _H__N_, G___G, LO__R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: OWSPHLATXMERECDE
+  ActiveWords: EXCEED,WHOLE,DREAM
+  DisplayedMasks: 34,3,17
+  MaskedWords: _X___D, WH___, D___M
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: ANAIIDSFETGRAJAE
+  ActiveWords: JEDI,IDEA,GREAT
+  DisplayedMasks: 5,10,17
+  MaskedWords: J_D_, _D_A, G___T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: THEDISRENAFAKSMD
+  ActiveWords: DREAMS,THINK,FAST
+  DisplayedMasks: 17,18,9
+  MaskedWords: D___M_, _H__K, F__T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: BYUPIHKEMATECGRP
+  ActiveWords: MAKEUP,HATE,BY,CARPET,AGREE
+  DisplayedMasks: 5,5,2,8,2
+  MaskedWords: M_K___, H_T_, _Y, ___P__, _G___
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 23/23
+
+Board: SURNEATEERIVGELS
+  ActiveWords: ENTIRE,TURN,SILVER
+  DisplayedMasks: 22,3,44
+  MaskedWords: _NT_R_, TU__, __LV_R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: IRGOETODHNWLNFIE
+  ActiveWords: WINTER,THEIR,FIELD
+  DisplayedMasks: 9,2,17
+  MaskedWords: W__T__, _H___, F___D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: KTESYSNLAUADSWLH
+  ActiveWords: HANDLE,ALWAYS,SUNSET
+  DisplayedMasks: 9,4,34
+  MaskedWords: H__D__, __W___, _U___T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: CNSOIYOFPTIDLAEN
+  ActiveWords: CITY,PAID,DENIAL
+  DisplayedMasks: 9,9,33
+  MaskedWords: C__Y, P__D, D____L
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: NAMUSBATURECPSUO
+  ActiveWords: RACE,COURSE,UP,BATMAN
+  DisplayedMasks: 5,5,2,9
+  MaskedWords: R_C_, C_U___, _P, B__M__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: TERGASCNNOOAURIN
+  ActiveWords: OCEANS,GREAT,RUNS
+  DisplayedMasks: 3,1,2
+  MaskedWords: OC____, G____, _U__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: AULTNESDHRAFCIOI
+  ActiveWords: RESULT,HEROIC,FOREST
+  DisplayedMasks: 8,33,3
+  MaskedWords: ___U__, H____C, FO____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: USSTNIEWGDRJAFIA
+  ActiveWords: SISTER,AFRAID,JEDI
+  DisplayedMasks: 42,2,5
+  MaskedWords: _I_T_R, _F____, J_D_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: SYHTDOEIBNSINOWR
+  ActiveWords: RISEN,THEY,NOBODY
+  DisplayedMasks: 17,10,52
+  MaskedWords: R___N, _H_Y, __B_DY
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: ORZNPEJISKTAISCR
+  ActiveWords: ZERO,SISTER,STEP
+  DisplayedMasks: 9,42,10
+  MaskedWords: Z__O, _I_T_R, _T_P
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: CAWHDCEAAERMSPSI
+  ActiveWords: SEEMS,AHEAD,SPACE
+  DisplayedMasks: 9,18,10
+  MaskedWords: S__M_, _H__D, _P_C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: LOMAMTSKERIENLSC
+  ActiveWords: ICE,RISK,LISTEN,MAKES
+  DisplayedMasks: 2,9,41,5
+  MaskedWords: _C_, R__K, L__T_N, M_K__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: NSYTAMIBOTNREUEA
+  ActiveWords: NEARBY,MINUTE,AMOUNT
+  DisplayedMasks: 48,25,10
+  MaskedWords: ____BY, M__UT_, _M_U__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: MICCULIEKWAPSRMV
+  ActiveWords: MICE,SWAMP,LIAR,VALIUM
+  DisplayedMasks: 5,10,9,1
+  MaskedWords: M_C_, _W_M_, L__R, V_____
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: LESOARNSWBOEYAPK
+  ActiveWords: NEARBY,AWARE,LESSON,BROKEN
+  DisplayedMasks: 48,2,49,8
+  MaskedWords: ____BY, _W___, L___ON, ___K__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 23/23
+
+Board: LAANLAOMICREELSU
+  ActiveWords: ELSE,USE,LIAR
+  DisplayedMasks: 6,1,9
+  MaskedWords: _LS_, U__, L__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 11/11
+
+Board: OUSEHFNSIEWLRCLH
+  ActiveWords: WELL,FIRE,NEWS,HOUSE,ICE
+  DisplayedMasks: 5,5,5,5,2
+  MaskedWords: W_L_, F_R_, N_W_, H_U__, _C_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 20/20
+
+Board: TACONEKSSEBOWEVL
+  ActiveWords: LOVE,OCEANS,SKATE
+  DisplayedMasks: 5,19,10
+  MaskedWords: L_V_, OC__N_, _K_T_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: LEDFRLINEAPEWBVR
+  ActiveWords: LEAVE,BEWARE,FINER
+  DisplayedMasks: 9,21,5
+  MaskedWords: L__V_, B_W_R_, F_N__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: IOVSCEEBATDGHMJU
+  ActiveWords: TEAM,BE,JUDGES,HATE,VOICE
+  DisplayedMasks: 8,1,1,5,1
+  MaskedWords: ___M, B_, J_____, H_T_, V____
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 21/21
+
+Board: USEDPERBDIHTIEVS
+  ActiveWords: BEER,DEED,SUPER,DRIVE,SHIP
+  DisplayedMasks: 9,9,6,9,10
+  MaskedWords: B__R, D__D, _UP__, D__V_, _H_P
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 22/22
+
+Board: YUHCASUGSORPUNEV
+  ActiveWords: ENOUGH,PERSON,CURVE,SAYS
+  DisplayedMasks: 48,1,8,4
+  MaskedWords: ____GH, P_____, ___V_, __Y_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: OMOCSAEDKIRVCYSB
+  ActiveWords: MARY,DREAMS,VERBS
+  DisplayedMasks: 9,19,1
+  MaskedWords: M__Y, DR__M_, V____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: ECLRXLEIOETFDSNA
+  ActiveWords: CLOSED,AFTER,EXCEED
+  DisplayedMasks: 35,6,2
+  MaskedWords: CL___D, _FT__, _X____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: ELAEPESVRCAIIEDG
+  ActiveWords: IDEA,PLEASE,GIVES
+  DisplayedMasks: 2,3,5
+  MaskedWords: _D__, PL____, G_V__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: MNROYATPPREOILRW
+  ActiveWords: OPERA,WROTE,TRIPLE
+  DisplayedMasks: 2,5,24
+  MaskedWords: _P___, W_O__, ___PL_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: IESUAHRNLLSIWAYK
+  ActiveWords: RISK,ALWAYS,REALLY
+  DisplayedMasks: 8,4,32
+  MaskedWords: ___K, __W___, _____Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: PISSRMEDDEABETZL
+  ActiveWords: BLAZED,DATE,EMPIRE
+  DisplayedMasks: 41,5,22
+  MaskedWords: B__Z_D, D_T_, _MP_R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: ASOPTUWDEALDRCYW
+  ActiveWords: WOULD,WATER,CLAUS,STAY,POSTAL
+  DisplayedMasks: 5,5,9,10,33
+  MaskedWords: W_U__, W_T__, C__U_, _T_Y, P____L
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 25/25
+
+Board: DHUYSLOJEWFNEUFE
+  ActiveWords: HOLD,ENJOY,SHOULD,FUEL
+  DisplayedMasks: 9,4,10,3
+  MaskedWords: H__D, __J__, _H_U__, FU__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: BIAWORLHMATLEUEY
+  ActiveWords: YEAR,BIRTH,WALLET,TUMOR
+  DisplayedMasks: 9,17,1,4
+  MaskedWords: Y__R, B___H, W_____, __M__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: GNISCOMDSEVINAKF
+  ActiveWords: FIVE,KIDS,MEANS,COMING
+  DisplayedMasks: 5,5,9,32
+  MaskedWords: F_V_, K_D_, M__N_, _____G
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: ENETTOINWFLUCLOS
+  ActiveWords: FOLLOW,NOTE,SUITE,UNTIL
+  DisplayedMasks: 32,6,10,17
+  MaskedWords: _____W, _OT_, _U_T_, U___L
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: ZMPAASRRAEEKDROZ
+  ActiveWords: DREAMS,PARK,ZERO
+  DisplayedMasks: 16,9,9
+  MaskedWords: ____M_, P__K, Z__O
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: HOEGLUDOFOSENATR
+  ActiveWords: LOT,HOUSE,EGO
+  DisplayedMasks: 1,1,2
+  MaskedWords: L__, H____, _G_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 11/11
+
+Board: HTERSILVANELMKGS
+  ActiveWords: THINGS,MAKES,AM,SILVER
+  DisplayedMasks: 18,5,2,12
+  MaskedWords: _H__G_, M_K__, _M, __LV__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: MNHSIGATSREOBFFV
+  ActiveWords: VOTERS,OFFER,BRING
+  DisplayedMasks: 1,2,17
+  MaskedWords: V_____, _F___, B___G
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: SKINETINRBAGROMA
+  ActiveWords: KING,ROMAN,AGAIN
+  DisplayedMasks: 9,6,18
+  MaskedWords: K__G, _OM__, _G__N
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: LKAFELNCDSESONRP
+  ActiveWords: SNAKE,PERSON,FALL
+  DisplayedMasks: 10,49,5
+  MaskedWords: _N_K_, P___ON, F_L_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: ITNDULAUFEROVYSB
+  ActiveWords: YEARS,FUTILE,VERBS
+  DisplayedMasks: 1,19,9
+  MaskedWords: Y____, FU__L_, V__B_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: FACHPEETEISKDRNE
+  ActiveWords: DRINK,STEEP,CHEESE
+  DisplayedMasks: 17,18,3
+  MaskedWords: D___K, _T__P, CH____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: MOIHYNTAEASPRSWS
+  ActiveWords: WANTS,PATIO,YEARS,MONTH
+  DisplayedMasks: 9,17,9,17
+  MaskedWords: W__T_, P___O, Y__R_, M___H
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: RHMHAESUILTRFDEO
+  ActiveWords: HEAR,ELSE,STORE
+  DisplayedMasks: 9,6,4
+  MaskedWords: H__R, _LS_, __O__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: COEIRMLDEATIGPOV
+  ActiveWords: IDIOT,VIDEO,GAME,OPERA
+  DisplayedMasks: 2,5,5,2
+  MaskedWords: _D___, V_D__, G_M_, _P___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: HOUTONRTMESOOWFF
+  ActiveWords: WOMEN,EFFORT,HONEST
+  DisplayedMasks: 5,14,35
+  MaskedWords: W_M__, _FFO__, HO___T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: ELEOHKBNCBOUEARD
+  ActiveWords: DOUBLE,BROKE,CARD
+  DisplayedMasks: 13,8,9
+  MaskedWords: D_UB__, ___K_, C__D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: NGHEOIMTHNETUSSR
+  ActiveWords: HONEST,UNION,SUNSET
+  DisplayedMasks: 35,9,2
+  MaskedWords: HO___T, U__O_, _U____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: EDIPIORCRWAETOVR
+  ActiveWords: ROVER,TRIED,PRICE
+  DisplayedMasks: 6,17,9
+  MaskedWords: _OV__, T___D, P__C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: SLLEMACDFREOATON
+  ActiveWords: CALLED,AFTER,NEAR,SMART
+  DisplayedMasks: 37,2,9,18
+  MaskedWords: C_L__D, _F___, N__R, _M__T
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: ONNETSNCRIAFPYTE
+  ActiveWords: CANNOT,SAFETY,FACE
+  DisplayedMasks: 17,52,5
+  MaskedWords: C___O_, __F_TY, F_C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: ALPYMBNAROTWUOSM
+  ActiveWords: LABOUR,WANTS,ALMOST
+  DisplayedMasks: 4,1,6
+  MaskedWords: __B___, W____, _LM___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: KRNOBATNREDEELWL
+  ActiveWords: BREAK,ONE,LENDER,WENT
+  DisplayedMasks: 16,1,13,9
+  MaskedWords: ____K, O__, L_ND__, W__T
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: EUNPZERONITSGHSI
+  ActiveWords: THING,PRIZE,SISTER
+  DisplayedMasks: 18,8,42
+  MaskedWords: _H__G, ___Z_, _I_T_R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: OTRARVETVDFWLFOP
+  ActiveWords: ORDER,POWER,OVER
+  DisplayedMasks: 5,5,2
+  MaskedWords: O_D__, P_W__, _V__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: CLMEDSIAKHSPCABY
+  ActiveWords: EMAIL,CHILD,BACK,BYPASS,SHACK
+  DisplayedMasks: 18,18,9,2,16
+  MaskedWords: _M__L, _H__D, B__K, _Y____, ____K
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 25/25
+
+Board: RTRHAWEAILDCNOOI
+  ActiveWords: COOLED,WATER,RAIN,LATE
+  DisplayedMasks: 41,5,9,5
+  MaskedWords: C__L_D, W_T__, R__N, L_T_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: AIOPMTLHEUSEDFRA
+  ActiveWords: RESULT,EMAIL,SHOP,HEAR
+  DisplayedMasks: 24,18,10,9
+  MaskedWords: ___UL_, _M__L, _H_P, H__R
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: NITIAOTEMROCEPWT
+  ActiveWords: WROTE,OPERA,COTTON
+  DisplayedMasks: 1,2,19
+  MaskedWords: W____, _P___, CO__O_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: NOCHFEISWTREANSA
+  ActiveWords: SHIRTS,NATION,RISES
+  DisplayedMasks: 18,16,3
+  MaskedWords: _H__T_, ____O_, RI___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: KSIWCESDEUOEAHRT
+  ActiveWords: USE,TRUCKS,HOUSE
+  DisplayedMasks: 1,16,5
+  MaskedWords: U__, ____K_, H_U__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: TADWHEAONFRSONID
+  ActiveWords: AHEAD,TENNIS,RIFE
+  DisplayedMasks: 2,1,5
+  MaskedWords: _H___, T_____, R_F_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: SULKELSHOTARMMHE
+  ActiveWords: US,MASK,MOTHER
+  DisplayedMasks: 1,9,9
+  MaskedWords: U_, M__K, M__H__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 12/12
+
+Board: TLNGCOMECORADUNC
+  ActiveWords: LONGER,DOCTOR,OCCUR
+  DisplayedMasks: 9,1,10
+  MaskedWords: L__G__, D_____, _C_U_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: SSNDGDRTMAEXLESA
+  ActiveWords: EXTRA,GAME,LEARN
+  DisplayedMasks: 6,5,17
+  MaskedWords: _XT__, G_M_, L___N
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: ERBJAUOAGITKFRSE
+  ActiveWords: FIGURE,SKATE,ABOUT
+  DisplayedMasks: 1,2,10
+  MaskedWords: F_____, _K___, _B_U_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: KLCKSEAFEWKSPMAN
+  ActiveWords: FACE,SWAMP,SNAKE
+  DisplayedMasks: 5,10,10
+  MaskedWords: F_C_, _W_M_, _N_K_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: ECIYZNTEISPALIRT
+  ActiveWords: STEP,SIZE,YEAR
+  DisplayedMasks: 10,4,9
+  MaskedWords: _T_P, __Z_, Y__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 12/12
+
+Board: CAZOLDERLEFTWKEI
+  ActiveWords: CALLED,ZERO,WEEK
+  DisplayedMasks: 33,9,9
+  MaskedWords: C____D, Z__O, W__K
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: MAAYKRSDEEUNWKEP
+  ActiveWords: MAKEUP,SUNDAY,KEEP,WEEK
+  DisplayedMasks: 37,34,9,9
+  MaskedWords: M_K__P, _U___Y, K__P, W__K
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: UOPLHSREELATRLNR
+  ActiveWords: HOUSE,LEARN,PLEASE
+  DisplayedMasks: 5,17,3
+  MaskedWords: H_U__, L___N, PL____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: EKROYONUTIMIONSV
+  ActiveWords: UNIONS,VISIT,MONKEY
+  DisplayedMasks: 1,1,41
+  MaskedWords: U_____, V____, M__K_Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: LWNOAESUTSRAAFID
+  ActiveWords: LESSON,NEWS,AFRAID,WATER
+  DisplayedMasks: 17,5,34,5
+  MaskedWords: L___O_, N_W_, _F___D, W_T__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: TNCHOUKEMASCEPRT
+  ActiveWords: CHECKS,HE,SPEAK,AMOUNT,PARTS
+  DisplayedMasks: 18,1,18,10,9
+  MaskedWords: _H__K_, H_, _P__K, _M_U__, P__T_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 24/24
+
+Board: MTMSUIAERERLNDFI
+  ActiveWords: MURDER,FRIEND,LIFE
+  DisplayedMasks: 11,49,5
+  MaskedWords: MU_D__, F___ND, L_F_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: RETNZARUIRYSDPBU
+  ActiveWords: YARD,RETURN,PRIZE
+  DisplayedMasks: 9,8,9
+  MaskedWords: Y__D, ___U__, P__Z_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: SKPOHCESAROTLMWF
+  ActiveWords: OPERA,FOREST,WORM,ALMOST
+  DisplayedMasks: 3,35,9,14
+  MaskedWords: OP___, FO___T, W__M, _LMO__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: NOOSRMHTEEIEHBPS
+  ActiveWords: BITES,SHIP,MOTHER
+  DisplayedMasks: 5,10,11
+  MaskedWords: B_T__, _H_P, MO_H__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: HBLDGIADCHROSSWD
+  ActiveWords: SWORD,HIGH,HARD
+  DisplayedMasks: 2,9,9
+  MaskedWords: _W___, H__H, H__D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: TLTHNIEAUEUDVYRF
+  ActiveWords: DATE,FREUD,THE,UNTIL,VERY
+  DisplayedMasks: 5,9,2,17,9
+  MaskedWords: D_T_, F__U_, _H_, U___L, V__Y
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 21/21
+
+Board: INGORDREAOETNMUN
+  ActiveWords: TUMOR,DARING,AMOUNT
+  DisplayedMasks: 6,33,10
+  MaskedWords: _UM__, D____G, _M_U__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: SCROERITNEUCLBOD
+  ActiveWords: SCENE,DOCTOR,DOUBLE
+  DisplayedMasks: 10,5,8
+  MaskedWords: _C_N_, D_C___, ___B__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: BIUKOMNTDRAEYCRP
+  ActiveWords: CARPET,TUMOR,ROBIN
+  DisplayedMasks: 9,6,4
+  MaskedWords: C__P__, _UM__, __B__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: BUIYSERTEAENEFSI
+  ActiveWords: USER,BEES,SAFETY,ENTIRE
+  DisplayedMasks: 9,9,36,22
+  MaskedWords: U__R, B__S, __F__Y, _NT_R_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: FKOBIAERRNPESTDM
+  ActiveWords: NEED,FINER,ME,BROKEN,TRAINS
+  DisplayedMasks: 9,5,1,8,1
+  MaskedWords: N__D, F_N__, M_, ___K__, T_____
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 23/23
+
+Board: RPRLTHIERSFNEUOC
+  ActiveWords: COURT,REFUSE,SHIP,PRISON
+  DisplayedMasks: 5,13,10,1
+  MaskedWords: C_U__, R_FU__, _H_P, P_____
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: THGHDIETEARYSTLB
+  ActiveWords: THEY,THIGH,IDEA
+  DisplayedMasks: 10,18,10
+  MaskedWords: _H_Y, _H__H, _D_A
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: AILTDIEAWNRVLOUF
+  ActiveWords: FRIEND,AROUND,VALID
+  DisplayedMasks: 1,8,17
+  MaskedWords: F_____, ___U__, V___D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: DARTEHSPTEISNNLS
+  ActiveWords: HEAR,TENNIS,PILE
+  DisplayedMasks: 9,5,5
+  MaskedWords: H__R, T_N___, P_L_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: GERGENDASISBHTRO
+  ActiveWords: SHIRTS,AGREE,BORING
+  DisplayedMasks: 18,6,35
+  MaskedWords: _H__T_, _GR__, BO___G
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: KNSPDCOTOEUILONE
+  ActiveWords: STUCK,UNIONS,COOLED,SPOT,SCENE
+  DisplayedMasks: 20,1,41,6,10
+  MaskedWords: __U_K, U_____, C__L_D, _PO_, _C_N_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 26/26
+
+Board: UDPCLENFXPRSMAPT
+  ActiveWords: FREUD,EXAM,PARTS
+  DisplayedMasks: 9,10,9
+  MaskedWords: F__U_, _X_M, P__T_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: TESHSNRWWIOTIDLU
+  ActiveWords: SHRINE,IDIOT,LISTEN,WOULD,WINTER
+  DisplayedMasks: 2,10,41,5,9
+  MaskedWords: _H____, _D_O_, L__T_N, W_U__, W__T__
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 28/28
+
+Board: BMVEEITAKSHEJOPL
+  ActiveWords: TIMES,JOKE,HELP,LEAVE,BIKE
+  DisplayedMasks: 4,5,9,9,5
+  MaskedWords: __M__, J_K_, H__P, L__V_, B_K_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 22/22
+
+Board: OODGCLENTOSIAIMV
+  ActiveWords: COOLED,COMING,VISIT
+  DisplayedMasks: 41,37,17
+  MaskedWords: C__L_D, C_M__G, V___T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: MOWWNTOIHRLFSLEF
+  ActiveWords: OFFER,WORTH,MONTHS,TWO
+  DisplayedMasks: 2,17,17,2
+  MaskedWords: _F___, W___H, M___H_, _W_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: FLWDVINYRESUBTSA
+  ActiveWords: SILVER,BEST,WINDY,FIVE,SUNSET
+  DisplayedMasks: 8,9,17,5,2
+  MaskedWords: ___V__, B__T, W___Y, F_V_, _U____
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 25/25
+
+Board: TYBADNEROUOMONAC
+  ActiveWords: NEARBY,NOON,CAMERA,AROUND,AMOUNT
+  DisplayedMasks: 48,6,5,40,10
+  MaskedWords: ____BY, _OO_, C_M___, ___U_D, _M_U__
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 28/28
+
+Board: ELNIDCTWLNHDGARI
+  ActiveWords: HANDLE,WITH,GLANCE
+  DisplayedMasks: 9,9,1
+  MaskedWords: H__D__, W__H, G_____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: PUIREKAELMICSLLH
+  ActiveWords: CARE,MAKEUP,CHILLS
+  DisplayedMasks: 5,5,11
+  MaskedWords: C_R_, M_K___, CH_L__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: NTKDDAIAEPGNPNOR
+  ActiveWords: AGAIN,TAKING,DIPPED
+  DisplayedMasks: 18,4,13
+  MaskedWords: _G__N, __K___, D_PP__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: BEATOBRRNADTOOSF
+  ActiveWords: TREAT,ABOARD,SOON
+  DisplayedMasks: 17,38,6
+  MaskedWords: T___T, _BO__D, _OO_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: VLNEPIDEEGEDMICO
+  ActiveWords: MICE,VIDEO,NEEDED
+  DisplayedMasks: 5,5,41
+  MaskedWords: M_C_, V_D__, N__D_D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: TOEDRPWVSDTISERH
+  ActiveWords: SPOT,DRIVE,WITH,WORDS
+  DisplayedMasks: 6,8,9,9
+  MaskedWords: _PO_, ___V_, W__H, W__D_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: THTTRPTEAESBLJOL
+  ActiveWords: LEAP,JOBS,BETTER,EARTH
+  DisplayedMasks: 9,5,1,24
+  MaskedWords: L__P, J_B_, B_____, ___TH
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: EWEEEKYTASCHMROM
+  ActiveWords: MAKE,WEARS,MARCH,EASY
+  DisplayedMasks: 5,9,17,10
+  MaskedWords: M_K_, W__R_, M___H, _A_Y
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: RWMHSARCPOEKTEVE
+  ActiveWords: WROTE,OVER,KEEPS,WARM,MARCH
+  DisplayedMasks: 5,3,9,9,17
+  MaskedWords: W_O__, OV__, K__P_, W__M, M___H
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 23/23
+
+Board: STNSYAOKNUEJDSOG
+  ActiveWords: SOUND,JOKE,NASTY,GOES
+  DisplayedMasks: 20,5,24,1
+  MaskedWords: __U_D, J_K_, ___TY, G___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: LCHWANDIHELKZROO
+  ActiveWords: HANDLE,LOOK,ZERO
+  DisplayedMasks: 25,9,9
+  MaskedWords: H__DL_, L__K, Z__O
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: INLCEDLOBEORSWTC
+  ActiveWords: WORLD,DINE,COOLED,BEES
+  DisplayedMasks: 1,5,41,9
+  MaskedWords: W____, D_N_, C__L_D, B__S
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: ESTGCAEMYEOTRUHC
+  ActiveWords: HOME,CHEESE,STAY,HOUR,THEY
+  DisplayedMasks: 5,19,10,5,10
+  MaskedWords: H_M_, CH__S_, _T_Y, H_U_, _H_Y
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 22/22
+
+Board: TIUEESENLPEDPAUD
+  ActiveWords: STEP,NEEDED,SEEN
+  DisplayedMasks: 10,41,9
+  MaskedWords: _T_P, N__D_D, S__N
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: STOEAEIRENLLDXOI
+  ActiveWords: INDEX,EAST,STORE
+  DisplayedMasks: 16,10,6
+  MaskedWords: ____X, _A_T, _TO__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: ILBUENODGSEMIAHT
+  ActiveWords: SIGN,AGES,DOUBLE
+  DisplayedMasks: 12,3,8
+  MaskedWords: __GN, AG__, ___B__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: PILLCSTPACEEDEDN
+  ActiveWords: NEEDED,LISTEN,ACCEPT
+  DisplayedMasks: 41,41,16
+  MaskedWords: N__D_D, L__T_N, ____P_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: SORCRIVOSETWLOLN
+  ActiveWords: LOSERS,CROWN,VOTE
+  DisplayedMasks: 1,8,3
+  MaskedWords: L_____, ___W_, VO__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: NWSSECSEEARIUHSD
+  ActiveWords: HARD,RISES,NEWS
+  DisplayedMasks: 9,3,4
+  MaskedWords: H__D, RI___, __W_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: RFLLTEAONUDODERN
+  ActiveWords: LENDER,ENTER,RETURN
+  DisplayedMasks: 13,6,44
+  MaskedWords: L_ND__, _NT__, __TU_N
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: KNFASRCRWOEPMRNO
+  ActiveWords: WORK,FROM,PERSON
+  DisplayedMasks: 9,9,1
+  MaskedWords: W__K, F__M, P_____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: GNIGIKNEUMYESNAS
+  ActiveWords: KING,MANY,KNEES
+  DisplayedMasks: 9,9,3
+  MaskedWords: K__G, M__Y, KN___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: GMTSVIEHEWNRDOIE
+  ActiveWords: DOWN,SHRINE,GIVE
+  DisplayedMasks: 5,22,5
+  MaskedWords: D_W_, _HR_N_, G_V_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: LASBNREDITFEWEND
+  ActiveWords: FRIEND,BEARS,DEED,WINTER
+  DisplayedMasks: 49,1,9,9
+  MaskedWords: F___ND, B____, D__D, W__T__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: FIEERKSNOMADTSOL
+  ActiveWords: SNAKE,FRIEND,SEEN
+  DisplayedMasks: 10,33,9
+  MaskedWords: _N_K_, F____D, S__N
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: NOOOLATKNESPRSIO
+  ActiveWords: SISTER,LOOKS,POSTAL
+  DisplayedMasks: 42,9,35
+  MaskedWords: _I_T_R, L__K_, PO___L
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: OEYACADWLNIOPWSV
+  ActiveWords: OCEANS,VIDEO,WINDOW,PLAYED
+  DisplayedMasks: 2,5,33,9
+  MaskedWords: _C____, V_D__, W____W, P__Y__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 23/23
+
+Board: SCIIMTRWYAESSTNL
+  ActiveWords: NEWS,CREAM,CITY
+  DisplayedMasks: 5,17,9
+  MaskedWords: N_W_, C___M, C__Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: OSEKBEHAFRYUEEYQ
+  ActiveWords: OBEY,QUAKES,FREE
+  DisplayedMasks: 10,1,3
+  MaskedWords: _B_Y, Q_____, FR__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: SDCAODREILVUEAAO
+  ActiveWords: VALID,LEAVE,CARD,SOLD
+  DisplayedMasks: 1,9,9,12
+  MaskedWords: V____, L__V_, C__D, __LD
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: UOCMRVEITEROLTAP
+  ActiveWords: PRICE,COURT,RATTLE,MEET
+  DisplayedMasks: 9,4,16,9
+  MaskedWords: P__C_, __U__, ____L_, M__T
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: YUFYRXLLATESESIR
+  ActiveWords: EXTRA,EAST,FULLY
+  DisplayedMasks: 6,10,17
+  MaskedWords: _XT__, _A_T, F___Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: EESCRTYAUOALMCCW
+  ActiveWords: OCCUR,ALWAYS,TUMOR
+  DisplayedMasks: 10,4,4
+  MaskedWords: _C_U_, __W___, __M__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: LDOCANUTEROYFIBW
+  ActiveWords: DOCTOR,FRIEND,AROUND,NEARBY
+  DisplayedMasks: 5,1,44,48
+  MaskedWords: D_C___, F_____, __OU_D, ____BY
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 24/24
+
+Board: BOURAGSILROEDOCS
+  ActiveWords: RISES,DOORS,LABOUR
+  DisplayedMasks: 3,3,4
+  MaskedWords: RI___, DO___, __B___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: TDPLRIESWNSEMOKY
+  ActiveWords: LESSON,TRIPLE,MONKEY
+  DisplayedMasks: 49,25,41
+  MaskedWords: L___ON, T__PL_, M__K_Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: YEERTRCFADIPANER
+  ActiveWords: DATE,FREE,PRICE
+  DisplayedMasks: 5,3,9
+  MaskedWords: D_T_, FR__, P__C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: TNKRPOYEMSITYASU
+  ActiveWords: SPOT,MONKEY,SUITE,SISTER
+  DisplayedMasks: 2,41,2,42
+  MaskedWords: _P__, M__K_Y, _U___, _I_T_R
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: TAPPMEODTRWKVOCS
+  ActiveWords: CREAM,TREAT,POWER,ROCKS,DO
+  DisplayedMasks: 16,17,5,8,1
+  MaskedWords: ____M, T___T, P_W__, ___K_, D_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 22/22
+
+Board: SMBLRUILDEOPRSVS
+  ActiveWords: MURDER,OVER,BILL
+  DisplayedMasks: 1,2,5
+  MaskedWords: M_____, _V__, B_L_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: CMEOIRAGEUEKSWPI
+  ActiveWords: MAKEUP,WERE,CRIME,SUPER
+  DisplayedMasks: 4,5,8,4
+  MaskedWords: __K___, W_R_, ___M_, __P__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: TCATHRENOAVCLDME
+  ActiveWords: CANCER,MARCH,TREAT,HOLD
+  DisplayedMasks: 9,17,17,9
+  MaskedWords: C__C__, M___H, T___T, H__D
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: NEEHASCNIFEOERTJ
+  ActiveWords: CHEESE,OCEANS,AFTER,JONES
+  DisplayedMasks: 2,3,6,3
+  MaskedWords: _H____, OC____, _FT__, JO___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: IQFWTUEFENIMRGOL
+  ActiveWords: LONGER,WENT,MINUTE
+  DisplayedMasks: 11,1,25
+  MaskedWords: LO_G__, W___, M__UT_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: EPIGNMERDSATXYMF
+  ActiveWords: AFTER,END,EMPIRE,GREASY
+  DisplayedMasks: 2,4,22,32
+  MaskedWords: _F___, __D, _MP_R_, _____Y
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: IDULNPTSACERCWAY
+  ActiveWords: WEAR,CANCER,STUPID
+  DisplayedMasks: 9,9,12
+  MaskedWords: W__R, C__C__, __UP__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: DHYNETEFLNCAOOTS
+  ActiveWords: THEY,COOLED,SAFETY
+  DisplayedMasks: 8,33,36
+  MaskedWords: ___Y, C____D, __F__Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: NMLIINSIBUETLLPR
+  ActiveWords: MINE,UP,SUPER,LISTEN,BULLET
+  DisplayedMasks: 1,2,4,41,7
+  MaskedWords: M___, _P, __P__, L__T_N, BUL___
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 23/23
+
+Board: RASITTLCEIEEQUWJ
+  ActiveWords: RATTLE,JEWELS,ICE
+  DisplayedMasks: 28,1,2
+  MaskedWords: __TTL_, J_____, _C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: INGSEYLAAFCMDRET
+  ActiveWords: CAMERA,YEAR,YARD
+  DisplayedMasks: 5,9,9
+  MaskedWords: C_M___, Y__R, Y__D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: RETWPAEMGUNNEOSI
+  ActiveWords: MEANS,TENNIS,WE
+  DisplayedMasks: 9,1,1
+  MaskedWords: M__N_, T_____, W_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: ARDUFHESISBLNDAM
+  ActiveWords: FREUD,LAMB,BEHIND
+  DisplayedMasks: 9,12,5
+  MaskedWords: F__U_, __MB, B_H___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: USYBDNWOETSSHREH
+  ActiveWords: SUNSET,OWNED,BOYS
+  DisplayedMasks: 34,18,5
+  MaskedWords: _U___T, _W__D, B_Y_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: MACHTROBSNUAGEIK
+  ActiveWords: HONEST,BAKING,HOUR
+  DisplayedMasks: 35,4,5
+  MaskedWords: HO___T, __K___, H_U_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: AMALSNILUCATERHR
+  ActiveWords: ANIMAL,SUCH,AM
+  DisplayedMasks: 40,10,2
+  MaskedWords: ___M_L, _U_H, _M
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 12/12
+
+Board: WEROYCUEBVHNXEDI
+  ActiveWords: BEHIND,WERE,CHEVY,ROUND,INDEX
+  DisplayedMasks: 1,5,8,20,16
+  MaskedWords: B_____, W_R_, ___V_, __U_D, ____X
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 25/25
+
+Board: HVEPNELSACKOHRON
+  ActiveWords: HEAR,HELPS,SEVEN
+  DisplayedMasks: 9,9,20
+  MaskedWords: H__R, H__P_, __V_N
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: BGIFHRNHISITKDRA
+  ActiveWords: THIGH,TRAIN,IF,BRING,KIDS
+  DisplayedMasks: 18,17,2,17,5
+  MaskedWords: _H__H, T___N, _F, B___G, K_D_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 21/21
+
+Board: RSFTLAEYDRWSEOST
+  ActiveWords: TESTS,SAFETY,WEAR
+  DisplayedMasks: 9,36,9
+  MaskedWords: T__T_, __F__Y, W__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: TIPUEEMJSSDOAKOL
+  ActiveWords: JUMPED,ASK,MEET
+  DisplayedMasks: 1,4,9
+  MaskedWords: J_____, __K, M__T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: NDLIIHKLCTEBWARG
+  ActiveWords: BEHIND,WATCH,LIKE,KILLER,GREAT
+  DisplayedMasks: 5,17,4,1,17
+  MaskedWords: B_H___, W___H, __K_, K_____, G___T
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 26/26
+
+Board: SFTYAREMYAOKDDTN
+  ActiveWords: MONKEY,YEARS,SAFETY
+  DisplayedMasks: 41,1,4
+  MaskedWords: M__K_Y, Y____, __F___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: EDTECRENOMARFTYT
+  ActiveWords: MARY,FORCE,ORDER
+  DisplayedMasks: 9,9,5
+  MaskedWords: M__Y, F__C_, O_D__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: UGTYAHESLROAWDTW
+  ActiveWords: EASY,WORLD,LAUGH
+  DisplayedMasks: 10,17,24
+  MaskedWords: _A_Y, W___D, ___GH
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: SKDGEENLAIUCROKH
+  ActiveWords: RAIN,AROUND,KING,KNEES,LUNCH
+  DisplayedMasks: 9,8,9,3,18
+  MaskedWords: R__N, ___U__, K__G, KN___, _U__H
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 24/24
+
+Board: LTTLEIEHNRDWGAOP
+  ActiveWords: LITTLE,POWDER,DARING
+  DisplayedMasks: 21,4,33
+  MaskedWords: L_T_L_, __W___, D____G
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: ULOHSPNMOYEESTSO
+  ActiveWords: SYSTEM,SEEN,HOPES
+  DisplayedMasks: 34,9,5
+  MaskedWords: _Y___M, S__N, H_P__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: BIKANGEDATTIWSLR
+  ActiveWords: IDEA,BIKE,TRIED
+  DisplayedMasks: 10,4,17
+  MaskedWords: _D_A, __K_, T___D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: BOHGRDVUZEALSKYR
+  ActiveWords: BREAKS,ZERO,DROVE,LAUGH
+  DisplayedMasks: 16,9,9,16
+  MaskedWords: ____K_, Z__O, D__V_, ____H
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: WULWODGITAEPESRW
+  ActiveWords: WOULD,STAGE,WEARS
+  DisplayedMasks: 5,10,9
+  MaskedWords: W_U__, _T_G_, W__R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: ISIWTLNPIEAKRYBO
+  ActiveWords: TIRE,PANEL,OBEY,LISTEN
+  DisplayedMasks: 5,17,10,41
+  MaskedWords: T_R_, P___L, _B_Y, L__T_N
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: TRAMTTSEEAERWBRF
+  ActiveWords: WE,SMART,BEWARE
+  DisplayedMasks: 1,18,4
+  MaskedWords: W_, _M__T, __W___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: SAANIGRFNOLETNEF
+  ActiveWords: SIGN,AGAIN,LONG
+  DisplayedMasks: 12,18,9
+  MaskedWords: __GN, _G__N, L__G
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: FIABLSVETPESURID
+  ActiveWords: BEER,TRIED,STUPID
+  DisplayedMasks: 9,17,44
+  MaskedWords: B__R, T___D, __UP_D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: EOFORWFIKPOTMIND
+  ActiveWords: MIND,PROFIT,WORK,POWER
+  DisplayedMasks: 9,8,9,5
+  MaskedWords: M__D, ___F__, W__K, P_W__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: HAPSCREYSITNLSOJ
+  ActiveWords: LISTEN,TIRE,PARTY
+  DisplayedMasks: 41,5,17
+  MaskedWords: L__T_N, T_R_, P___Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: DECARYWMEALEOPAR
+  ActiveWords: CAMERA,AWAY,PLAYED,OPERA,YARD
+  DisplayedMasks: 4,10,41,3,9
+  MaskedWords: __M___, _W_Y, P__Y_D, OP___, Y__D
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 25/25
+
+Board: WSLLCHIDGVSRIEAW
+  ActiveWords: CHILLS,GIVES,WAVES
+  DisplayedMasks: 11,5,5
+  MaskedWords: CH_L__, G_V__, W_V__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: WSTBONEWUDIESSFR
+  ActiveWords: BEER,WINDOW,SUNSET
+  DisplayedMasks: 9,33,38
+  MaskedWords: B__R, W____W, _UN__T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: MTHSNOGNOAERLVES
+  ActiveWords: SEVEN,LAGOON,MONTHS
+  DisplayedMasks: 20,13,16
+  MaskedWords: __V_N, L_GO__, ____H_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: HCGHTIEEMYNKSOSP
+  ActiveWords: NICE,THIGH,MONKEY
+  DisplayedMasks: 5,18,8
+  MaskedWords: N_C_, _H__H, ___K__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: PFDHPISOVEGUDERA
+  ActiveWords: HOUSE,GIVE,FIGURE
+  DisplayedMasks: 5,5,13
+  MaskedWords: H_U__, G_V_, F_GU__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: NWIPDEOEEREZEGAM
+  ActiveWords: AGREE,POWDER,ZERO
+  DisplayedMasks: 2,13,9
+  MaskedWords: _G___, P_WD__, Z__O
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: PSBWEOOLHDNOYWIK
+  ActiveWords: LOOK,BLOW,NOBODY
+  DisplayedMasks: 9,9,36
+  MaskedWords: L__K, B__W, __B__Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: OSAGLRUDUEFGZSEA
+  ActiveWords: RULES,FUDGE,ZERO
+  DisplayedMasks: 6,9,9
+  MaskedWords: _UL__, F__G_, Z__O
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: PIFRREBETSDTULON
+  ActiveWords: PREFER,BEST,TRIED,RESULT
+  DisplayedMasks: 8,9,17,24
+  MaskedWords: ___F__, B__T, T___D, ___UL_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: YEJDDONWRIDOPESL
+  ActiveWords: PERIOD,OWNED,ENJOY
+  DisplayedMasks: 49,2,4
+  MaskedWords: P___OD, _W___, __J__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: EDFIADCLNEEORSVS
+  ActiveWords: OCEANS,CLOSED,NEEDED
+  DisplayedMasks: 2,35,41
+  MaskedWords: _C____, CL___D, N__D_D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: RSODSONGDUIMIESS
+  ActiveWords: GO,SIGN,MISSED
+  DisplayedMasks: 1,4,33
+  MaskedWords: G_, __G_, M____D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 12/12
+
+Board: RECSCNARSETHBMIN
+  ActiveWords: TIMES,CANCER,BEARS
+  DisplayedMasks: 4,9,9
+  MaskedWords: __M__, C__C__, B__R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: EISOHETOMASLSYIR
+  ActiveWords: MAIL,HAIR,SYSTEM,LOOSES
+  DisplayedMasks: 9,9,34,3
+  MaskedWords: M__L, H__R, _Y___M, LO____
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: WMENSORSTVELEPLD
+  ActiveWords: WORLD,STEP,OVER
+  DisplayedMasks: 17,8,3
+  MaskedWords: W___D, ___P, OV__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: ERDOMANWLITEWBKS
+  ActiveWords: DREAM,EMAIL,BITES,WINDOW
+  DisplayedMasks: 17,18,5,33
+  MaskedWords: D___M, _M__L, B_T__, W____W
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: PIWADREMOSESETGN
+  ActiveWords: WROTE,DREAMS,SEEN
+  DisplayedMasks: 5,16,9
+  MaskedWords: W_O__, ____M_, S__N
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: GIWOCDPAOLEDORHA
+  ActiveWords: COOLED,POWDER,AHEAD
+  DisplayedMasks: 41,5,2
+  MaskedWords: C__L_D, P_W___, _H___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: TOUSINEGEMDHWAGN
+  ActiveWords: WENT,ENOUGH,MADE
+  DisplayedMasks: 9,32,5
+  MaskedWords: W__T, _____H, M_D_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: QPPLUAGEOCNSSUKD
+  ActiveWords: AGES,QUACKS,SOUND
+  DisplayedMasks: 2,19,20
+  MaskedWords: _G__, QU__K_, __U_D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: EFOATILWSEKDMNAS
+  ActiveWords: MEANS,WALK,LISTEN,FOLDS
+  DisplayedMasks: 9,9,9,9
+  MaskedWords: M__N_, W__K, L__T__, F__D_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: WIRLPOEAMENRPKSU
+  ActiveWords: EMPIRE,LEARN,WOMEN
+  DisplayedMasks: 6,17,5
+  MaskedWords: _MP___, L___N, W_M__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: SPMRTEOTRIHDOFNN
+  ActiveWords: FOREST,SPORT,PERIOD
+  DisplayedMasks: 35,6,49
+  MaskedWords: FO___T, _PO__, P___OD
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: TRITLWHRUROEDAUN
+  ActiveWords: HOUR,ADULT,WORTH
+  DisplayedMasks: 5,6,17
+  MaskedWords: H_U_, _DU__, W___H
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: ADFOETERXESPCKIL
+  ActiveWords: EXCEED,KEEPS,FOREST,LIKE
+  DisplayedMasks: 2,9,3,5
+  MaskedWords: _X____, K__P_, FO____, L_K_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: QTEKRUARONIASCKN
+  ActiveWords: RETURN,SNAKE,COURT
+  DisplayedMasks: 8,10,5
+  MaskedWords: ___U__, _N_K_, C_U__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: SNTTEJOKSETRDEAP
+  ActiveWords: PARK,NEEDS,JONES
+  DisplayedMasks: 8,9,3
+  MaskedWords: ___K, N__D_, JO___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: RAVEERNLTEOFSNBJ
+  ActiveWords: JONES,TRAVEL,BEER
+  DisplayedMasks: 1,8,9
+  MaskedWords: J____, ___V__, B__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: RKSTEGAEEDRMNFUD
+  ActiveWords: MURDER,NEED,SKATE
+  DisplayedMasks: 11,9,10
+  MaskedWords: MU_D__, N__D, _K_T_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: RECNONICUMATCREH
+  ActiveWords: ROMAN,CANCER,CREAM
+  DisplayedMasks: 6,9,17
+  MaskedWords: _OM__, C__C__, C___M
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: LLEEIDPCTSAWUNDY
+  ActiveWords: SUNDAY,SPACE,SPEED
+  DisplayedMasks: 32,10,18
+  MaskedWords: _____Y, _P_C_, _P__D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: TABLERYTSNUOGPCS
+  ActiveWords: NEARBY,SUNSET,YOUNG
+  DisplayedMasks: 32,34,17
+  MaskedWords: _____Y, _U___T, Y___G
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: PSBJETNOSODAPLEH
+  ActiveWords: JOBS,SPOT,PEOPLE
+  DisplayedMasks: 1,2,9
+  MaskedWords: J___, _P__, P__P__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: LAREKSTOICURDNWI
+  ActiveWords: LATER,TRUCKS,WROTE
+  DisplayedMasks: 1,20,5
+  MaskedWords: L____, __U_K_, W_O__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: LIOUWTRCENESLDMA
+  ActiveWords: LENDER,COURSE,CREAM
+  DisplayedMasks: 13,5,16
+  MaskedWords: L_ND__, C_U___, ____M
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: HIGHBIKFRELOFNDS
+  ActiveWords: LIKE,BIKE,FRIEND,HIGH
+  DisplayedMasks: 5,5,33,9
+  MaskedWords: L_K_, B_K_, F____D, H__H
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: FSWEIRAPDEORNXTY
+  ActiveWords: PARTY,FRIEND,WROTE
+  DisplayedMasks: 17,33,5
+  MaskedWords: P___Y, F____D, W_O__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: ARUSKBEPSAMLVLIU
+  ActiveWords: VALIUM,SAMPLE,BREAKS
+  DisplayedMasks: 33,28,17
+  MaskedWords: V____M, __MPL_, B___K_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: NEGMPECLMTANOWSD
+  ActiveWords: STEP,GLANCE,WOMEN
+  DisplayedMasks: 10,17,5
+  MaskedWords: _T_P, G___C_, W_M__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: NPUMTRDSUOIEBLEC
+  ActiveWords: DOUBLE,TRIED,PRICE
+  DisplayedMasks: 13,17,9
+  MaskedWords: D_UB__, T___D, P__C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: WELLABSEREEPNOHC
+  ActiveWords: BEWARE,ELSE,WELL,SPEECH
+  DisplayedMasks: 4,6,5,34
+  MaskedWords: __W___, _LS_, W_L_, _P___H
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: LNTAYIGHYDAEASPK
+  ActiveWords: HEAD,SPEAK,LYDIA
+  DisplayedMasks: 9,18,6
+  MaskedWords: H__D, _P__K, _YD__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: URNOATKOESAONILC
+  ActiveWords: LOOK,LISTEN,SATURN
+  DisplayedMasks: 9,9,12
+  MaskedWords: L__K, L__T__, __TU__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: CQNUTOUDTRYUIADR
+  ActiveWords: COURT,AROUND,QUOTA
+  DisplayedMasks: 5,8,1
+  MaskedWords: C_U__, ___U__, Q____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: FRONDEVTSOLPMECI
+  ActiveWords: PILE,COME,DROVE
+  DisplayedMasks: 5,5,9
+  MaskedWords: P_L_, C_M_, D__V_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: EIAFRSTRREAIHEDG
+  ActiveWords: AFTER,TIRE,IDEA
+  DisplayedMasks: 6,5,10
+  MaskedWords: _FT__, T_R_, _D_A
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: CAISFSYNETSROVEM
+  ActiveWords: IN,VOTERS,SAFETY,SYSTEM
+  DisplayedMasks: 2,3,4,2
+  MaskedWords: _N, VO____, __F___, _Y____
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: YEDETFNKSIASMMUU
+  ActiveWords: SUMMIT,MIND,SAFETY,SNAKE
+  DisplayedMasks: 12,9,36,10
+  MaskedWords: __MM__, M__D, __F__Y, _N_K_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: YGPAMRNHADIGWREC
+  ActiveWords: MARY,WARM,PRICE,DARING
+  DisplayedMasks: 9,9,9,33
+  MaskedWords: M__Y, W__M, P__C_, D____G
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: PNKSMOEESTYNILAM
+  ActiveWords: LISTEN,MANY,MONKEY,POSTAL
+  DisplayedMasks: 41,9,41,33
+  MaskedWords: L__T_N, M__Y, M__K_Y, P____L
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: LSEDCOIJANNWSKER
+  ActiveWords: WINNER,SNAKE,JEDI,CLOSED
+  DisplayedMasks: 13,10,5,35
+  MaskedWords: W_NN__, _N_K_, J_D_, CL___D
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: OSSFITISDEOOALRC
+  ActiveWords: COOLED,FIELD,IDEA,SISTER
+  DisplayedMasks: 41,17,10,42
+  MaskedWords: C__L_D, F___D, _D_A, _I_T_R
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: EPTLBELEWATKESUC
+  ActiveWords: STEEP,STUCK,WALLET
+  DisplayedMasks: 18,20,1
+  MaskedWords: _T__P, __U_K, W_____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: BEASLCRWLOWGYDUN
+  ActiveWords: LOUDLY,BEARS,YOUNG
+  DisplayedMasks: 44,9,1
+  MaskedWords: __UD_Y, B__R_, Y____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: STETINESFWRASOEC
+  ActiveWords: WINTER,WEARS,NEWS,FOREST,RACE
+  DisplayedMasks: 9,9,5,3,5
+  MaskedWords: W__T__, W__R_, N_W_, FO____, R_C_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 25/25
+
+Board: FOXGLESNSDIEERHT
+  ActiveWords: ELSE,RISEN,THINGS
+  DisplayedMasks: 6,17,18
+  MaskedWords: _LS_, R___N, _H__G_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: HIRVNADIDGPEELOP
+  ActiveWords: PEOPLE,VIDEO,DARING,RAIN
+  DisplayedMasks: 9,5,33,9
+  MaskedWords: P__P__, V_D__, D____G, R__N
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: EIBTRHLSTRAEANDG
+  ActiveWords: LEARN,THEIR,RAGED,SANTA
+  DisplayedMasks: 17,2,20,12
+  MaskedWords: L___N, _H___, __G_D, __NT_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: ASDEIQKYLUCNVAMO
+  ActiveWords: VALIUM,MONKEY,ASKED,QUACKS
+  DisplayedMasks: 1,41,4,17
+  MaskedWords: V_____, M__K_Y, __K__, Q___K_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 23/23
+
+Board: HSEDONEHARPTCMOS
+  ActiveWords: NEED,CARPET,MOTHER
+  DisplayedMasks: 9,41,9
+  MaskedWords: N__D, C__P_T, M__H__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: DYLECALWTSEOAHRD
+  ActiveWords: CALLED,STAY,ELSE
+  DisplayedMasks: 37,10,6
+  MaskedWords: C_L__D, _T_Y, _LS_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: QTUFIUILERELACWH
+  ActiveWords: FUTILE,TIRE,RACE,WHERE,QUIT
+  DisplayedMasks: 19,5,4,1,1
+  MaskedWords: FU__L_, T_R_, __C_, W____, Q___
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 23/23
+
+Board: NOOFGIEFLTRUGABO
+  ActiveWords: LABOUR,BORING,OFFER
+  DisplayedMasks: 21,35,2
+  MaskedWords: L_B_U_, BO___G, _F___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: LVAKETREUIZRBFOE
+  ActiveWords: TAKE,ZERO,TRAVEL
+  DisplayedMasks: 5,9,8
+  MaskedWords: T_K_, Z__O, ___V__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: LEKSMINAEODRVCIE
+  ActiveWords: LENDER,SNAKE,VOICE
+  DisplayedMasks: 9,10,9
+  MaskedWords: L__D__, _N_K_, V__C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: WEFSGFESOCALNSSE
+  ActiveWords: COFFEE,LESSON,SEASON,FEW
+  DisplayedMasks: 12,17,52,4
+  MaskedWords: __FF__, L___O_, __A_ON, __W
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: LLAYMSOTGUDUNNRU
+  ActiveWords: SOUND,SATURN,YOUNG
+  DisplayedMasks: 20,12,17
+  MaskedWords: __U_D, __TU__, Y___G
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: TEMLNGRDIEODRWOS
+  ActiveWords: GOOD,MERGER,WINTER,WORLD
+  DisplayedMasks: 9,9,9,17
+  MaskedWords: G__D, M__G__, W__T__, W___D
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: HIENWTDISOAYRWPL
+  ActiveWords: DENIAL,WITH,LYDIA,POSTAL
+  DisplayedMasks: 37,9,2,33
+  MaskedWords: D_N__L, W__H, _Y___, P____L
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: DLSKNSACERUTWARQ
+  ActiveWords: QUACKS,SATURN,LASER,END
+  DisplayedMasks: 17,44,17,4
+  MaskedWords: Q___K_, __TU_N, L___R, __D
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: LFREEIEUCTGSWYHO
+  ActiveWords: RIFE,THOSE,FIGURE,CITY,FILE
+  DisplayedMasks: 5,2,5,8,5
+  MaskedWords: R_F_, _H___, F_G___, ___Y, F_L_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 23/23
+
+Board: ASTYAEIXFBLOLULF
+  ActiveWords: BULLET,SAFETY,BITES
+  DisplayedMasks: 3,4,5
+  MaskedWords: BU____, __F___, B_T__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: SDTHVEKIEISWGPMA
+  ActiveWords: VISIT,KEEPS,WITH
+  DisplayedMasks: 17,9,9
+  MaskedWords: V___T, K__P_, W__H
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: BAWTZLRODEIKOKHC
+  ActiveWords: LIKE,BLAZED,HEROIC
+  DisplayedMasks: 5,41,33
+  MaskedWords: L_K_, B__Z_D, H____C
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: CYSNARKEWOESOLAD
+  ActiveWords: NEEDS,ALWAYS,KNEE
+  DisplayedMasks: 9,20,3
+  MaskedWords: N__D_, __W_Y_, KN__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: OGNIPWRDSEAMRCKT
+  ActiveWords: CREAM,POWER,DARING
+  DisplayedMasks: 17,5,49
+  MaskedWords: C___M, P_W__, D___NG
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: HTUOXERFLALPBLLS
+  ActiveWords: EXTRA,FOURTH,HELPS
+  DisplayedMasks: 6,1,9
+  MaskedWords: _XT__, F_____, H__P_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: JWINSRENACDHFSWS
+  ActiveWords: FACE,NEWS,SHEDS
+  DisplayedMasks: 5,5,10
+  MaskedWords: F_C_, N_W_, _H_D_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: EOMSKINAHTRESULD
+  ActiveWords: STRIKE,DREAMS,MONTHS
+  DisplayedMasks: 16,19,19
+  MaskedWords: ____K_, DR__M_, MO__H_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: RTAIGESSDOHYSOLD
+  ActiveWords: GREASY,SHEDS,SISTER
+  DisplayedMasks: 33,10,42
+  MaskedWords: G____Y, _H_D_, _I_T_R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: HCLYOAELNMVRGIAE
+  ActiveWords: HAVE,COMING,RAIN
+  DisplayedMasks: 5,37,9
+  MaskedWords: H_V_, C_M__G, R__N
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: DEPAISECLOROETWU
+  ActiveWords: WROTE,COURSE,IDES,SPACE
+  DisplayedMasks: 5,4,2,10
+  MaskedWords: W_O__, __U___, _D__, _P_C_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: IMODCEESGDARLEEN
+  ActiveWords: MICE,NEEDED,NEAR
+  DisplayedMasks: 5,41,9
+  MaskedWords: M_C_, N__D_D, N__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: BELSILEDLPPNNDID
+  ActiveWords: DINE,DIPPED,BEEN
+  DisplayedMasks: 5,13,9
+  MaskedWords: D_N_, D_PP__, B__N
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: NGIFOVTLREACAWND
+  ActiveWords: NEAR,WATER,WRONG,LAND,FIVE
+  DisplayedMasks: 9,5,17,9,5
+  MaskedWords: N__R, W_T__, W___G, L__D, F_V_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 22/22
+
+Board: AMTSJMEDEDGBENIR
+  ActiveWords: GETS,JAMMED,BEST,BRING,NEEDED
+  DisplayedMasks: 5,1,9,17,41
+  MaskedWords: G_T_, J_____, B__T, B___G, N__D_D
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 25/25
+
+Board: AMSFKNAEEEWREBIS
+  ActiveWords: SAFE,AM,BEARS
+  DisplayedMasks: 6,2,9
+  MaskedWords: _AF_, _M, B__R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 11/11
+
+Board: CALPMESLRDOCNOTT
+  ActiveWords: COTTON,DREAM,CLOSED,PLACE
+  DisplayedMasks: 19,16,33,9
+  MaskedWords: CO__O_, ____M, C____D, P__C_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: CEASXRTLECPDDEIP
+  ActiveWords: EXCEED,LAST,DIPPED
+  DisplayedMasks: 34,9,12
+  MaskedWords: _X___D, L__T, __PP__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: PALBSOCEERWNSDAI
+  ActiveWords: POWDER,SPACE,BEWARE,LOSERS
+  DisplayedMasks: 5,10,5,3
+  MaskedWords: P_W___, _P_C_, B_W___, LO____
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 23/23
+
+Board: DLNSOUEMPIROUEFW
+  ActiveWords: WORM,PERIOD,FREUD
+  DisplayedMasks: 9,1,9
+  MaskedWords: W__M, P_____, F__U_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: ATPCDAEAHLNROCUA
+  ActiveWords: LUNCH,HOLD,CANADA
+  DisplayedMasks: 18,9,17
+  MaskedWords: _U__H, H__D, C___D_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: APTHCMPIEALSRTWE
+  ActiveWords: WATER,THIS,SWAMP,CAMERA
+  DisplayedMasks: 5,3,10,5
+  MaskedWords: W_T__, TH__, _W_M_, C_M___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: IZERZPRTANAUYSEC
+  ActiveWords: RETURN,CARPET,NEAR,PIZZA
+  DisplayedMasks: 44,41,9,12
+  MaskedWords: __TU_N, C__P_T, N__R, __ZZ_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: KTOUEARTDOLILUWT
+  ActiveWords: ADULT,TAKE,WOULD
+  DisplayedMasks: 6,5,1
+  MaskedWords: _DU__, T_K_, W____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: PLAYHAETMSKRMSCU
+  ActiveWords: TRUCKS,PLAY,MASK
+  DisplayedMasks: 20,9,9
+  MaskedWords: __U_K_, P__Y, M__K
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: IRITEMSHHTORDLUW
+  ActiveWords: HOURS,MOTHER,HOLD
+  DisplayedMasks: 5,9,9
+  MaskedWords: H_U__, M__H__, H__D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: EMHCTSIRDNSTWORD
+  ActiveWords: MIND,WORDS,SHIRTS
+  DisplayedMasks: 9,9,26
+  MaskedWords: M__D, W__D_, _H_RT_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: BNWDNEPOTREVITAL
+  ActiveWords: BETTER,TRAVEL,ENTIRE,POWER
+  DisplayedMasks: 5,40,6,5
+  MaskedWords: B_T___, ___V_L, _NT___, P_W__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 23/23
+
+Board: WZZRIDAHPNETIREQ
+  ActiveWords: HATE,NEAR,WIND
+  DisplayedMasks: 5,9,9
+  MaskedWords: H_T_, N__R, W__D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 12/12
+
+Board: MHDOSOTCRENKHWEB
+  ActiveWords: MONTHS,DOCTOR,WEEK,ENTER
+  DisplayedMasks: 17,7,9,6
+  MaskedWords: M___H_, DOC___, W__K, _NT__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: BHSYPAEBRSMOEDRU
+  ActiveWords: HEAR,OBEY,MURDER,SHARP
+  DisplayedMasks: 9,10,3,18
+  MaskedWords: H__R, _B_Y, MU____, _H__P
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: MREDYAKCNXTADERR
+  ActiveWords: MAKE,MANY,EXTRA
+  DisplayedMasks: 5,9,2
+  MaskedWords: M_K_, M__Y, _X___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: TSEVEEALSROFTPOD
+  ActiveWords: FOOD,FASTER,TRAVEL
+  DisplayedMasks: 9,9,40
+  MaskedWords: F__D, F__T__, ___V_L
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: FRCOSAEVSPTBHELI
+  ActiveWords: HELPS,BEARS,FACE
+  DisplayedMasks: 1,9,5
+  MaskedWords: H____, B__R_, F_C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: YSITDYEDNASSBUON
+  ActiveWords: BUSY,SUNDAY,SEASON,IDEA
+  DisplayedMasks: 9,32,16,10
+  MaskedWords: B__Y, _____Y, ____O_, _D_A
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: EGATRWSMUEALPKYL
+  ActiveWords: WERE,STAGE,REALLY,MAKEUP
+  DisplayedMasks: 5,10,32,4
+  MaskedWords: W_R_, _T_G_, _____Y, __K___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: TOWHETAEHFRCFOIH
+  ActiveWords: TOWER,EFFORT,HEROIC
+  DisplayedMasks: 6,14,33
+  MaskedWords: _OW__, _FFO__, H____C
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: CADSPRTEBERUWAMO
+  ActiveWords: BEWARE,TUMOR,CARPET
+  DisplayedMasks: 5,6,41
+  MaskedWords: B_W___, _UM__, C__P_T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: ETADSRMETAEICLNA
+  ActiveWords: ANIMAL,CAMERA,NEED
+  DisplayedMasks: 42,5,9
+  MaskedWords: _N_M_L, C_M___, N__D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: GPMGKANIREIVLDAL
+  ActiveWords: DENIAL,MAKE,PARK,PANEL
+  DisplayedMasks: 37,5,9,17
+  MaskedWords: D_N__L, M_K_, P__K, P___L
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: OODETRWNTGIDOHOY
+  ActiveWords: OWNED,WINDY,WORTH
+  DisplayedMasks: 18,17,17
+  MaskedWords: _W__D, W___Y, W___H
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: LOCGIRNTDIUHMEER
+  ActiveWords: RIDING,LONG,CRIME
+  DisplayedMasks: 36,9,8
+  MaskedWords: __D__G, L__G, ___M_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: BTNVDEOWCFRPHIER
+  ActiveWords: PRICE,RICH,VOTE,OWNED,BEFORE
+  DisplayedMasks: 9,8,1,18,5
+  MaskedWords: P__C_, ___H, V___, _W__D, B_F___
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 24/24
+
+Board: OCELSKESENHRTOUK
+  ActiveWords: SOCKET,HOUR,ELSE
+  DisplayedMasks: 12,5,2
+  MaskedWords: __CK__, H_U_, _L__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: EVRADROERMICENFE
+  ActiveWords: DROVE,VOICE,FINER
+  DisplayedMasks: 8,9,5
+  MaskedWords: ___V_, V__C_, F_N__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: HCSWCKTAEAMNDQUO
+  ActiveWords: AMOUNT,WATCH,MADE,QUACKS
+  DisplayedMasks: 2,17,5,17
+  MaskedWords: _M____, W___H, M_D_, Q___K_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: AURNBOECDAAHLIGT
+  ActiveWords: HEAT,AHEAD,LABOUR
+  DisplayedMasks: 9,18,20
+  MaskedWords: H__T, _H__D, __B_U_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: YBNITORGSEFUDAET
+  ActiveWords: BORING,SAFETY,TURFED
+  DisplayedMasks: 33,36,8
+  MaskedWords: B____G, __F__Y, ___F__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: EDYSARGSOIVTWDEM
+  ActiveWords: GIVE,GROW,DRIVE,SYSTEM
+  DisplayedMasks: 5,9,8,2
+  MaskedWords: G_V_, G__W, ___V_, _Y____
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: LERAATSIFHONANDS
+  ActiveWords: AFTER,TRAINS,HANDS
+  DisplayedMasks: 2,17,9
+  MaskedWords: _F___, T___N_, H__D_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: CEGRIHIJTLUHYSCN
+  ActiveWords: JUST,CITY,THEIR
+  DisplayedMasks: 3,8,3
+  MaskedWords: JU__, ___Y, TH___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: GSEMINETOARCGOUO
+  ActiveWords: COURT,GOING,OCEANS
+  DisplayedMasks: 5,17,2
+  MaskedWords: C_U__, G___G, _C____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: PLTEETEAMESCKDNO
+  ActiveWords: ME,TASTE,SECOND,PLEASE,KEEP
+  DisplayedMasks: 1,9,36,3,9
+  MaskedWords: M_, T__T_, __C__D, PL____, K__P
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 23/23
+
+Board: RACEPADLGPIGESBN
+  ActiveWords: AGES,PAID,LIAR,RACE
+  DisplayedMasks: 3,9,9,5
+  MaskedWords: AG__, P__D, L__R, R_C_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 16/16
+
+Board: DERPCDEIPNOLRISD
+  ActiveWords: LENDER,PRISON,PERIOD,PILE
+  DisplayedMasks: 13,49,49,5
+  MaskedWords: L_ND__, P___ON, P___OD, P_L_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: SRCLTNELAVESWORD
+  ActiveWords: WORDS,WANTS,CELLS,SEEN
+  DisplayedMasks: 9,9,5,9
+  MaskedWords: W__D_, W__T_, C_L__, S__N
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: NWTAGIFSADNTLREB
+  ActiveWords: BENIGN,DENIAL,FASTER
+  DisplayedMasks: 1,33,41
+  MaskedWords: B_____, D____L, F__T_R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: SNNOUNNUECHIETSI
+  ActiveWords: ON,TENNIS,SUCH
+  DisplayedMasks: 1,1,10
+  MaskedWords: O_, T_____, _U_H
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 12/12
+
+Board: OSTAOEDLELFCMMIH
+  ActiveWords: FEEL,MEET,CHILD
+  DisplayedMasks: 9,9,18
+  MaskedWords: F__L, M__T, _H__D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: RSENIANEHNLUNTIQ
+  ActiveWords: HAIR,RAIN,RISEN
+  DisplayedMasks: 9,9,17
+  MaskedWords: H__R, R__N, R___N
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: AURELWTNMOIANFST
+  ActiveWords: NATION,SATURN,FINER,ALMOST
+  DisplayedMasks: 20,44,5,4
+  MaskedWords: __T_O_, __TU_N, F_N__, __M___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 23/23
+
+Board: REHCTSEEESINKHRG
+  ActiveWords: SHRINE,RISK,SISTER
+  DisplayedMasks: 22,9,42
+  MaskedWords: _HR_N_, R__K, _I_T_R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: STUWAIRRMANOEXTG
+  ActiveWords: EXAM,SATURN,TRAIN
+  DisplayedMasks: 2,8,17
+  MaskedWords: _X__, ___U__, T___N
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: YSEKOEANSHTIEUMM
+  ActiveWords: KNEES,SUMMIT,EASY
+  DisplayedMasks: 3,4,10
+  MaskedWords: KN___, __M___, _A_Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: TNAPAKADISITFRGN
+  ActiveWords: PAID,IF,TAKING,SANTA
+  DisplayedMasks: 9,2,37,8
+  MaskedWords: P__D, _F, T_K__G, ___T_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 17/17
+
+Board: PRDYSEEONASBRIIS
+  ActiveWords: OBEY,RAIN,SPEED
+  DisplayedMasks: 10,9,18
+  MaskedWords: _B_Y, R__N, _P__D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: ELELTTIPSRUDYASL
+  ActiveWords: STUPID,TRIPLE,LITTLE
+  DisplayedMasks: 12,24,1
+  MaskedWords: __UP__, ___PL_, L_____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: NNAIIWETRCORAUQH
+  ActiveWords: WINNER,WATER,HOUR
+  DisplayedMasks: 5,1,5
+  MaskedWords: W_N___, W____, H_U_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: DIUONRTODEFSXVIS
+  ActiveWords: FIVE,TURFED,INDEX
+  DisplayedMasks: 5,10,16
+  MaskedWords: F_V_, _U_F__, ____X
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: AKLWMEHONOUGTSEE
+  ActiveWords: ENOUGH,MAKE,HOUSE
+  DisplayedMasks: 32,4,5
+  MaskedWords: _____H, __K_, H_U__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: EDLTOETAPSMRUOHL
+  ActiveWords: SPEED,POSTAL,RATTLE,HOME
+  DisplayedMasks: 18,33,16,5
+  MaskedWords: _P__D, P____L, ____L_, H_M_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: DNEPESLCKNAMEXDS
+  ActiveWords: EXAM,PLACE,ASKED
+  DisplayedMasks: 2,9,4
+  MaskedWords: _X__, P__C_, __K__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: ASLSULEAAGOKSTTC
+  ActiveWords: STOCK,USE,STAGE
+  DisplayedMasks: 16,1,10
+  MaskedWords: ____K, U__, _T_G_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: IPFADUNSIRTRPAET
+  ActiveWords: STUPID,RETURN,FAST
+  DisplayedMasks: 8,12,9
+  MaskedWords: ___P__, __TU__, F__T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: TLDALEAJWINOSECA
+  ActiveWords: DENIAL,JONES,CANADA
+  DisplayedMasks: 33,3,16
+  MaskedWords: D____L, JO___, ____D_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: WIDREHMEARDACMTE
+  ActiveWords: CREAM,MADE,WIDER
+  DisplayedMasks: 17,5,1
+  MaskedWords: C___M, M_D_, W____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: AZZSENIRWCSPORET
+  ActiveWords: PIZZA,NICE,SISTER,OCEANS,CROWN
+  DisplayedMasks: 12,5,40,3,8
+  MaskedWords: __ZZ_, N_C_, ___T_R, OC____, ___W_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 26/26
+
+Board: FSECIVEBLNMMTENO
+  ActiveWords: FIVE,BEES,TENNIS,FILE
+  DisplayedMasks: 5,9,1,5
+  MaskedWords: F_V_, B__S, T_____, F_L_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: ADMTCRASRHPEEWON
+  ActiveWords: POWER,MARCH,HONEST
+  DisplayedMasks: 5,17,1
+  MaskedWords: P_W__, M___H, H_____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: RHKAIESNNTCOLARW
+  ActiveWords: SNAKE,KNOW,SHRINE
+  DisplayedMasks: 10,9,18
+  MaskedWords: _N_K_, K__W, _H__N_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: TONPAAELHDEHTRGA
+  ActiveWords: GREAT,HELP,AHEAD
+  DisplayedMasks: 17,9,18
+  MaskedWords: G___T, H__P, _H__D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: BAINPLEDPJFTXARY
+  ActiveWords: PARTY,DENIAL,JEDI
+  DisplayedMasks: 17,1,1
+  MaskedWords: P___Y, D_____, J___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: SSIEOTRCNBFREMOW
+  ActiveWords: FORCE,WOMEN,ENTIRE
+  DisplayedMasks: 9,1,22
+  MaskedWords: F__C_, W____, _NT_R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: RKCFEUOFASRELTEM
+  ActiveWords: LAST,EFFORT,SUCKER
+  DisplayedMasks: 9,14,10
+  MaskedWords: L__T, _FFO__, _U_K__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: KERKABNSDAIHHTRF
+  ActiveWords: THANK,FISH,TRAINS,BREAK
+  DisplayedMasks: 18,9,17,17
+  MaskedWords: _H__K, F__H, T___N_, B___K
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: PIULPSETHOFRGUNE
+  ActiveWords: ENOUGH,RESULT,SHOP,LEFT
+  DisplayedMasks: 32,24,10,5
+  MaskedWords: _____H, ___UL_, _H_P, L_F_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: BHOTNESRIUAMJGNE
+  ActiveWords: SMART,SHORT,BEST,ENGINE
+  DisplayedMasks: 18,6,9,4
+  MaskedWords: _M__T, _HO__, B__T, __G___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: EPASRECKVTEOSORO
+  ActiveWords: ROVER,KEEP,VOTE
+  DisplayedMasks: 4,9,3
+  MaskedWords: __V__, K__P, VO__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: BILLEDASTRWPOVEO
+  ActiveWords: DROVE,BILLS,WROTE
+  DisplayedMasks: 9,5,5
+  MaskedWords: D__V_, B_L__, W_O__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: CABSMANNTRKOPEST
+  ActiveWords: CANNOT,BATMAN,SNAKE,CARPET,PERSON
+  DisplayedMasks: 17,13,10,8,17
+  MaskedWords: C___O_, B_TM__, _N_K_, ___P__, P___O_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 29/29
+
+Board: TETHSOIBPDNSESCG
+  ActiveWords: BITE,IDES,THINGS
+  DisplayedMasks: 5,3,2
+  MaskedWords: B_T_, ID__, _H____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: NOIWNATHUREITISV
+  ActiveWords: WITH,VISIT,NATION
+  DisplayedMasks: 9,17,21
+  MaskedWords: W__H, V___T, N_T_O_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: DISIREAOALOZPIYM
+  ActiveWords: IDEA,EARLY,ZOOM
+  DisplayedMasks: 10,16,9
+  MaskedWords: _D_A, ____Y, Z__M
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: SMTICREUALESSFAT
+  ActiveWords: SUITE,FASTER,SEEMS,CAR
+  DisplayedMasks: 10,41,9,1
+  MaskedWords: _U_T_, F__T_R, S__M_, C__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: LECBLDERSNEOKAUS
+  ActiveWords: NEEDS,BREAKS,USER
+  DisplayedMasks: 9,17,9
+  MaskedWords: N__D_, B___K_, U__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: ATSELERXKITAMHFU
+  ActiveWords: FUTILE,EXTRA,STRIKE
+  DisplayedMasks: 3,2,16
+  MaskedWords: FU____, _X___, ____K_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: HEMLDOAIDWNREESC
+  ActiveWords: NEED,DENIAL,CRIME
+  DisplayedMasks: 9,33,9
+  MaskedWords: N__D, D____L, C__M_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: ECBOTURGLEUDLOYL
+  ActiveWords: YOUR,GO,BULLET,LOUDLY
+  DisplayedMasks: 5,1,7,32
+  MaskedWords: Y_U_, G_, BUL___, _____Y
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: NNAOSEECDKNSMAIG
+  ActiveWords: KING,OCEANS,NEEDS
+  DisplayedMasks: 9,3,9
+  MaskedWords: K__G, OC____, N__D_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: SGIBRKNRENHTEVAS
+  ActiveWords: THAN,BIRTH,STRIKE
+  DisplayedMasks: 3,17,22
+  MaskedWords: TH__, B___H, _TR_K_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: EIRSKUETFDGOOIIV
+  ActiveWords: STRIKE,IDIOT,FIGURE,VOTERS
+  DisplayedMasks: 16,10,5,7
+  MaskedWords: ____K_, _D_O_, F_G___, VOT___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 23/23
+
+Board: ENENBENGARFIMDFO
+  ActiveWords: BENIGN,DREAM,OFFER,FINER
+  DisplayedMasks: 1,17,2,5
+  MaskedWords: B_____, D___M, _F___, F_N__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: LAMUCPASREYAALHO
+  ActiveWords: EARLY,CREAM,PLACE
+  DisplayedMasks: 24,16,9
+  MaskedWords: ___LY, ____M, P__C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: GRYRESABADELRCPN
+  ActiveWords: GREASY,NEARBY,CARD
+  DisplayedMasks: 33,48,9
+  MaskedWords: G____Y, ____BY, C__D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: CHAKYRETEVLSPOPY
+  ActiveWords: EARLY,PEOPLE,CHEVY
+  DisplayedMasks: 24,9,24
+  MaskedWords: ___LY, P__P__, ___VY
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: ETRTIUOKSMCEGNIH
+  ActiveWords: SUITE,COMING,COURT
+  DisplayedMasks: 10,37,5
+  MaskedWords: _U_T_, C_M__G, C_U__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: RLLKEPTITNVOSIGE
+  ActiveWords: KILLER,SIGN,STEP,EGO,GIVE
+  DisplayedMasks: 1,4,8,2,5
+  MaskedWords: K_____, __G_, ___P, _G_, G_V_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 21/21
+
+Board: USHEERINGAOKTWSY
+  ActiveWords: KNOW,GREASY,USER
+  DisplayedMasks: 9,33,9
+  MaskedWords: K__W, G____Y, U__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: DAHAORENPWDUAFOL
+  ActiveWords: FOUND,POWDER,AHEAD
+  DisplayedMasks: 5,4,2
+  MaskedWords: F_U__, __W___, _H___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: ESALTRPOOKUYFCLD
+  ActiveWords: LASER,LOUDLY,FOREST
+  DisplayedMasks: 17,32,35
+  MaskedWords: L___R, _____Y, FO___T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: TRBYNOSUWEROEHTV
+  ActiveWords: BROWN,VOTERS,BUSY
+  DisplayedMasks: 9,1,9
+  MaskedWords: B__W_, V_____, B__Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: AIREUHFBTREDEWAT
+  ActiveWords: BEWARE,RIFE,TURFED,WATER
+  DisplayedMasks: 4,5,8,5
+  MaskedWords: __W___, R_F_, ___F__, W_T__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: EMVCBAIORSLDYVER
+  ActiveWords: BEARS,EMAIL,COLD,MARY
+  DisplayedMasks: 9,18,9,9
+  MaskedWords: B__R_, _M__L, C__D, M__Y
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: MZDTRAEYLUINBRFD
+  ActiveWords: BURIED,YEAR,BLAZED,TEAM,FIND
+  DisplayedMasks: 35,1,8,9,9
+  MaskedWords: BU___D, Y___, ___Z__, T__M, F__D
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 24/24
+
+Board: MCCKITEIFIUPENTI
+  ActiveWords: FINE,PICKET,MICE
+  DisplayedMasks: 5,8,5
+  MaskedWords: F_N_, ___K__, M_C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: WTRSHAIEGESTDMOC
+  ActiveWords: WHAT,COME,SISTER
+  DisplayedMasks: 3,5,42
+  MaskedWords: WH__, C_M_, _I_T_R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: GNSBDIEDLANOHKOT
+  ActiveWords: BENIGN,DENIAL,HANDS
+  DisplayedMasks: 1,33,9
+  MaskedWords: B_____, D____L, H__D_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: PHNEMETVCAERKDSB
+  ActiveWords: HECK,VERBS,NEEDS
+  DisplayedMasks: 9,1,9
+  MaskedWords: H__K, V____, N__D_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: UERFDDEPETRCLLAW
+  ActiveWords: DEED,FREUD,CARPET
+  DisplayedMasks: 9,9,41
+  MaskedWords: D__D, F__U_, C__P_T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: AOPEEWILARSTTNEH
+  ActiveWords: TRIPLE,POWER,LISTEN
+  DisplayedMasks: 25,5,41
+  MaskedWords: T__PL_, P_W__, L__T_N
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: PBHCSRATEELSRFYT
+  ActiveWords: YEARS,STYLE,PREFER
+  DisplayedMasks: 9,12,8
+  MaskedWords: Y__R_, __YL_, ___F__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: DFTUNEROKESNHCAY
+  ActiveWords: KNEE,EACH,TURFED,EASY
+  DisplayedMasks: 3,8,10,10
+  MaskedWords: KN__, ___H, _U_F__, _A_Y
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: TROKMASOSWELRTNL
+  ActiveWords: NEAR,TASTE,WELL,LOOKS,SMART
+  DisplayedMasks: 9,9,5,9,2
+  MaskedWords: N__R, T__T_, W_L_, L__K_, _M___
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 23/23
+
+Board: IDPEBOZRLWIIETHB
+  ActiveWords: PERIOD,PRIZE,WITH,BITE
+  DisplayedMasks: 1,8,9,5
+  MaskedWords: P_____, ___Z_, W__H, B_T_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: KOYDSTLAEFABSRDO
+  ActiveWords: AFTER,LOSERS,ABOARD
+  DisplayedMasks: 2,3,34
+  MaskedWords: _F___, LO____, _B___D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: GYEEUNDCOYRMLEAT
+  ActiveWords: NEED,LEARN,YOUNG,CREAM
+  DisplayedMasks: 9,17,17,17
+  MaskedWords: N__D, L___N, Y___G, C___M
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: TSURYAEGHNLASLDB
+  ActiveWords: HANDLE,SURE,STAY
+  DisplayedMasks: 9,6,10
+  MaskedWords: H__D__, _UR_, _T_Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: EKTFISOMBREACIDE
+  ActiveWords: CREAM,BIKE,FOREST
+  DisplayedMasks: 17,5,35
+  MaskedWords: C___M, B_K_, FO___T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: CETWILORMNLSAPER
+  ActiveWords: MICE,PANEL,PERSON
+  DisplayedMasks: 5,17,17
+  MaskedWords: M_C_, P___L, P___O_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: WLATAPEHYSEBOGIV
+  ActiveWords: HATE,ALWAYS,GIVES,GOSPEL
+  DisplayedMasks: 5,4,4,1
+  MaskedWords: H_T_, __W___, __V__, G_____
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: REDLTSENFURAEABH
+  ActiveWords: HANDLE,AFTER,NEEDS
+  DisplayedMasks: 9,6,9
+  MaskedWords: H__D__, _FT__, N__D_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: BHOJWOSBRYLETRAV
+  ActiveWords: TRAVEL,JOBS,WORRY
+  DisplayedMasks: 40,5,17
+  MaskedWords: ___V_L, J_B_, W___Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: VEDAREPMNUYRROSI
+  ActiveWords: MADE,PRISON,NEVER,YOUR
+  DisplayedMasks: 1,17,4,1
+  MaskedWords: M___, P___O_, __V__, Y___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: DWESENILJONALKRP
+  ActiveWords: JONES,DENIAL,PARK,JOIN
+  DisplayedMasks: 3,33,9,3
+  MaskedWords: JO___, D____L, P__K, JO__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: FTRYNIFTEYLUDALP
+  ActiveWords: IF,PLAYED,FINE
+  DisplayedMasks: 2,9,5
+  MaskedWords: _F, P__Y__, F_N_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 12/12
+
+Board: ASOCGTKFEBEFIKAR
+  ActiveWords: STAGE,OFFER,SOCKET
+  DisplayedMasks: 10,2,12
+  MaskedWords: _T_G_, _F___, __CK__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: HANNPGEDFIKSRTAM
+  ActiveWords: FRIEND,HANDS,MASK
+  DisplayedMasks: 33,1,9
+  MaskedWords: F____D, H____, M__K
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: YLSNFTERASHAAIKC
+  ActiveWords: NEAR,FASTER,STYLE
+  DisplayedMasks: 9,41,12
+  MaskedWords: N__R, F__T_R, __YL_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: GHTUHIUQEDNOEESS
+  ActiveWords: SOUNDS,HIGH,IDES
+  DisplayedMasks: 4,9,3
+  MaskedWords: __U___, H__H, ID__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: FHWAORTKUIERQPND
+  ActiveWords: TAKE,FRIEND,FOURTH,WATER
+  DisplayedMasks: 5,49,33,5
+  MaskedWords: T_K_, F___ND, F____H, W_T__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: ONAECAVTEMNILUOS
+  ActiveWords: OCEANS,AMOUNT,NATION,LEAVE
+  DisplayedMasks: 2,2,16,9
+  MaskedWords: _C____, _M____, ____O_, L__V_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 23/23
+
+Board: SELHVLRTOEISTKEB
+  ActiveWords: ELSE,BIRTH,VOTERS,KILLER
+  DisplayedMasks: 6,17,3,5
+  MaskedWords: _LS_, B___H, VO____, K_L___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: OREKMASRNTISREUK
+  ActiveWords: MASK,SISTER,ROMAN,ENTIRE
+  DisplayedMasks: 9,42,4,6
+  MaskedWords: M__K, _I_T_R, __M__, _NT___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: RPHRCISEEMTASOVF
+  ActiveWords: VOTERS,FAST,PRICE
+  DisplayedMasks: 7,9,9
+  MaskedWords: VOT___, F__T, P__C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: SEILKAEDPTFNRISO
+  ActiveWords: PRISON,TAKES,IDEA
+  DisplayedMasks: 17,5,10
+  MaskedWords: P___O_, T_K__, _D_A
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: LRAHEEDPNRESOFBG
+  ActiveWords: BEFORE,ORDER,LEAP
+  DisplayedMasks: 13,5,9
+  MaskedWords: B_FO__, O_D__, L__P
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: NUNSMFKAATECSRYO
+  ActiveWords: MARY,CAKE,FASTER,SNAKE
+  DisplayedMasks: 9,5,9,10
+  MaskedWords: M__Y, C_K_, F__T__, _N_K_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: NSOTDENNEASOCDLF
+  ActiveWords: CANNOT,SEASON,FOLDS,NEED,SENDS
+  DisplayedMasks: 49,52,9,9,12
+  MaskedWords: C___OT, __A_ON, F__D_, N__D, __ND_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 26/26
+
+Board: FCAROLKESDATEMTF
+  ActiveWords: CLOSED,CAKE,AFTER,FOLDS,MAKE
+  DisplayedMasks: 33,5,2,9,5
+  MaskedWords: C____D, C_K_, _F___, F__D_, M_K_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 24/24
+
+Board: OGTSDEHNIRETLAOV
+  ActiveWords: ENTER,DROVE,GETS
+  DisplayedMasks: 6,9,5
+  MaskedWords: _NT__, D__V_, G_T_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: HAROEDRSGYEUIVTL
+  ActiveWords: YEAR,RESULT,ORDER
+  DisplayedMasks: 9,8,5
+  MaskedWords: Y__R, ___U__, O_D__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: GRLPNUEMTTASREBY
+  ActiveWords: SAMPLE,RETURN,GREASY
+  DisplayedMasks: 28,44,33
+  MaskedWords: __MPL_, __TU_N, G____Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: FFSLBHITERENOVDR
+  ActiveWords: BEHIND,LISTEN,STIFF,SHRINE
+  DisplayedMasks: 5,41,24,22
+  MaskedWords: B_H___, L__T_N, ___FF, _HR_N_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 23/23
+
+Board: FRAHEODNWLUSANJT
+  ActiveWords: FOUND,DOWN,HANDLE
+  DisplayedMasks: 5,5,1
+  MaskedWords: F_U__, D_W_, H_____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: FEUHRVODYAELTODE
+  ActiveWords: TODAY,OVER,FREUD
+  DisplayedMasks: 20,3,1
+  MaskedWords: __D_Y, OV__, F____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: RINNHNWATOVCSERN
+  ActiveWords: CROWN,WINTER,CANNOT
+  DisplayedMasks: 8,9,17
+  MaskedWords: ___W_, W__T__, C___O_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: UPEMSAMRLSGOYLZO
+  ActiveWords: ZOOM,SUPER,SMALL,GREASY
+  DisplayedMasks: 1,6,10,33
+  MaskedWords: Z___, _UP__, _M_L_, G____Y
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: HSAEKCEEOITRVMTI
+  ActiveWords: TIRE,OK,MOVIE
+  DisplayedMasks: 5,2,4
+  MaskedWords: T_R_, _K, __V__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 11/11
+
+Board: AAEGSLHIVEHTMARD
+  ActiveWords: TRAVEL,DREAM,LASER,HIGHER
+  DisplayedMasks: 40,17,17,13
+  MaskedWords: ___V_L, D___M, L___R, H_GH__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: TGAMCREIELDNELSR
+  ActiveWords: AGREE,TRAIN,CREAM,CELLS
+  DisplayedMasks: 2,17,17,5
+  MaskedWords: _G___, T___N, C___M, C_L__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: AWWWARCMESIEYFRN
+  ActiveWords: EASY,AWARE,FINER,MICE
+  DisplayedMasks: 8,2,5,5
+  MaskedWords: ___Y, _W___, F_N__, M_C_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: RLPCAELOHDROSIOW
+  ActiveWords: PERIOD,HEAR,COOLED
+  DisplayedMasks: 49,9,41
+  MaskedWords: P___OD, H__R, C__L_D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: UUYMSEASRRFGTHIN
+  ActiveWords: SMART,THINGS,YEARS,USER
+  DisplayedMasks: 2,18,9,1
+  MaskedWords: _M___, _H__G_, Y__R_, U___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: TUCYSROOHDAMELSE
+  ActiveWords: ELSE,YOUR,SHEDS,COURTS
+  DisplayedMasks: 6,5,10,5
+  MaskedWords: _LS_, Y_U_, _H_D_, C_U___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: ATIPSLSYOLAEMNGR
+  ActiveWords: EASY,ALMOST,YEAR
+  DisplayedMasks: 10,4,9
+  MaskedWords: _A_Y, __M___, Y__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: LDOXNIEPSSRDMIGU
+  ActiveWords: DRUGS,MISSED,PERIOD
+  DisplayedMasks: 12,33,49
+  MaskedWords: __UG_, M____D, P___OD
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: PELYVATIROLTDCUR
+  ActiveWords: LOVELY,LEAP,COURT
+  DisplayedMasks: 4,9,5
+  MaskedWords: __V___, L__P, C_U__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: ENEBINUSEGTYHARL
+  ActiveWords: BE,ENGINE,EARLY
+  DisplayedMasks: 1,6,24
+  MaskedWords: B_, _NG___, ___LY
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: OBLSALANTMIFCHXE
+  ActiveWords: ANIMAL,BATMAN,CHILLS,LIFE
+  DisplayedMasks: 40,9,11,5
+  MaskedWords: ___M_L, B__M__, CH_L__, L_F_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: AEWHREHCYNEIWSLM
+  ActiveWords: SEEN,WERE,MICE,YEAR
+  DisplayedMasks: 9,5,5,9
+  MaskedWords: S__N, W_R_, M_C_, Y__R
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 16/16
+
+Board: RDTBEARYHNECTOMI
+  ActiveWords: MOTHER,MICE,NEARBY
+  DisplayedMasks: 9,5,48
+  MaskedWords: M__H__, M_C_, ____BY
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: STIDENRSGMIHWATC
+  ActiveWords: THING,SHIRTS,WATCH
+  DisplayedMasks: 18,26,17
+  MaskedWords: _H__G, _H_RT_, W___H
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: OKEVSTIUWDHSEORT
+  ActiveWords: VIDEO,KIDS,WORDS
+  DisplayedMasks: 5,5,9
+  MaskedWords: V_D__, K_D_, W__D_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: IDEAUNLROCIHFSET
+  ActiveWords: FOUND,IDEA,SECOND
+  DisplayedMasks: 5,10,44
+  MaskedWords: F_U__, _D_A, __CO_D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: ATNMNOIESDOVXIRD
+  ActiveWords: TIME,NATION,SIX,IDIOT,DROVE
+  DisplayedMasks: 5,20,4,2,8
+  MaskedWords: T_M_, __T_O_, __X, _D___, ___V_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 23/23
+
+Board: AAOFWRAFCIEHHNGI
+  ActiveWords: HIGH,OFFER,AWARE
+  DisplayedMasks: 9,6,10
+  MaskedWords: H__H, _FF__, _W_R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: EWOSAFJBRTIEEMHR
+  ActiveWords: TIME,THE,WATER
+  DisplayedMasks: 5,2,1
+  MaskedWords: T_M_, _H_, W____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 12/12
+
+Board: CAPNUTEDSIRILGTB
+  ActiveWords: LISTEN,CAPE,SUITE
+  DisplayedMasks: 41,5,10
+  MaskedWords: L__T_N, C_P_, _U_T_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: PETSLREKATICDOYA
+  ActiveWords: PERIOD,STRIKE,CITY,LATER
+  DisplayedMasks: 33,18,9,5
+  MaskedWords: P____D, _T__K_, C__Y, L_T__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: TENJCKOYIQFLPUEJ
+  ActiveWords: QUICK,PICKET,ENJOY,FUEL
+  DisplayedMasks: 1,8,20,3
+  MaskedWords: Q____, ___K__, __J_Y, FU__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: RSRPEAYMKNTEGIRR
+  ActiveWords: MET,PRAYER,TAKING
+  DisplayedMasks: 1,8,37
+  MaskedWords: M__, ___Y__, T_K__G
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: IEMTRDESKINGBALA
+  ActiveWords: BAKING,DENIAL,MEET
+  DisplayedMasks: 37,33,9
+  MaskedWords: B_K__G, D____L, M__T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: DIFSREPHSTGORMES
+  ActiveWords: SHOP,FIRST,GOES
+  DisplayedMasks: 10,17,3
+  MaskedWords: _H_P, F___T, GO__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: LISOCLNIEAMRFALP
+  ActiveWords: PRISON,ANIMAL,PLACE
+  DisplayedMasks: 49,42,9
+  MaskedWords: P___ON, _N_M_L, P__C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: CEVEALGEUNIHSNTS
+  ActiveWords: UNTIL,CLAUS,LEVEE
+  DisplayedMasks: 17,9,4
+  MaskedWords: U___L, C__U_, __V__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: NPLLOESSCHYAAVEF
+  ActiveWords: HOPES,CELLS,SAFE,HAVE
+  DisplayedMasks: 5,5,4,5
+  MaskedWords: H_P__, C_L__, __F_, H_V_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: ATNOSREEITDVHSED
+  ActiveWords: SISTER,NEEDED,EVER,SHIRTS
+  DisplayedMasks: 42,41,10,18
+  MaskedWords: _I_T_R, N__D_D, _V_R, _H__T_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: DOWERSEIUVKDCELS
+  ActiveWords: CURVE,LEVEE,SWORD,KIDS
+  DisplayedMasks: 8,5,2,1
+  MaskedWords: ___V_, L_V__, _W___, K___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: PNTIEESHARROSTDI
+  ActiveWords: PERIOD,ENTER,EAST
+  DisplayedMasks: 1,4,10
+  MaskedWords: P_____, __T__, _A_T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: IYOJNGLNEIFERSAP
+  ActiveWords: ENJOY,LEAP,FLYING
+  DisplayedMasks: 4,9,5
+  MaskedWords: __J__, L__P, F_Y___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: MPMTEIOCNFROSSED
+  ActiveWords: EMPIRE,DOCTOR,FROM
+  DisplayedMasks: 2,5,9
+  MaskedWords: _M____, D_C___, F__M
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: STILENSLMOPHUTRA
+  ActiveWords: TUMOR,SHARP,STILL
+  DisplayedMasks: 6,2,24
+  MaskedWords: _UM__, _H___, ___LL
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: FGKMOSAEERTLRNEB
+  ActiveWords: ENTER,GAME,SKATE,FOREST
+  DisplayedMasks: 6,5,2,35
+  MaskedWords: _NT__, G_M_, _K___, FO___T
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: TFSYEAETCPRSHILL
+  ActiveWords: SAFETY,YEAR,CHILLS
+  DisplayedMasks: 36,9,2
+  MaskedWords: __F__Y, Y__R, _H____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: EKAEDNVTLACIHENL
+  ActiveWords: NICE,LEAVE,HANDLE,TAKE
+  DisplayedMasks: 5,9,9,4
+  MaskedWords: N_C_, L__V_, H__D__, __K_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: THCLHRATOESUWNPO
+  ActiveWords: CROWN,POSTAL,SUPER
+  DisplayedMasks: 8,1,6
+  MaskedWords: ___W_, P_____, _UP__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: WSEDIELOPSRWSEAE
+  ActiveWords: SPEED,IS,WEAR
+  DisplayedMasks: 18,1,9
+  MaskedWords: _P__D, I_, W__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 11/11
+
+Board: EBIPVEUDLASTFPRY
+  ActiveWords: STUPID,LEAVE,BEARS
+  DisplayedMasks: 12,9,9
+  MaskedWords: __UP__, L__V_, B__R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: CRESALUDBLIPTROS
+  ActiveWords: BARE,CALLED,USER
+  DisplayedMasks: 5,37,9
+  MaskedWords: B_R_, C_L__D, U__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: ZIPYZLLTAHABKERD
+  ActiveWords: REALLY,PIZZA,BREAK,AHEAD
+  DisplayedMasks: 56,4,16,2
+  MaskedWords: ___LLY, __Z__, ____K, _H___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: HDLCREESOIEFCNTS
+  ActiveWords: NEED,HEROIC,ENTIRE
+  DisplayedMasks: 9,41,4
+  MaskedWords: N__D, H__O_C, __T___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: ESJWDROBAAYNHEES
+  ActiveWords: JONES,BOYS,AHEAD
+  DisplayedMasks: 1,5,2
+  MaskedWords: J____, B_Y_, _H___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: NURAHEEIPMDLSURY
+  ActiveWords: SPEED,NEED,MURDER,LYDIA,HERE
+  DisplayedMasks: 18,9,3,2,5
+  MaskedWords: _P__D, N__D, MU____, _Y___, H_R_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 24/24
+
+Board: MBYLUREVTNAMWIDY
+  ActiveWords: NUMBER,MARY,TRAVEL
+  DisplayedMasks: 8,9,8
+  MaskedWords: ___B__, M__Y, ___V__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: RALGTEVIRSFSHOUR
+  ActiveWords: USER,GIVE,TRAVEL
+  DisplayedMasks: 1,5,40
+  MaskedWords: U___, G_V_, ___V_L
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: IASETMHFEEADTSKC
+  ActiveWords: AHEAD,SHACK,FAST
+  DisplayedMasks: 18,18,9
+  MaskedWords: _H__D, _H__K, F__T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: PSVSTERBCULLIKBU
+  ActiveWords: STEP,VERBS,BUCKLE
+  DisplayedMasks: 8,9,9
+  MaskedWords: ___P, V__B_, B__K__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: PMCVIEOISWDPSELL
+  ActiveWords: MISSED,VOICE,PEOPLE
+  DisplayedMasks: 35,9,9
+  MaskedWords: MI___D, V__C_, P__P__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: EAVELPCKOAISSTRD
+  ActiveWords: KIDS,LEAVE,TRIPLE,POSTAL
+  DisplayedMasks: 5,8,25,33
+  MaskedWords: K_D_, ___V_, T__PL_, P____L
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: RRMSPIEACRXYEEAE
+  ActiveWords: PRAYER,EXAM,CREAM
+  DisplayedMasks: 8,10,17
+  MaskedWords: ___Y__, _X_M, C___M
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: QUESCALESKTVLGIS
+  ActiveWords: GIVES,QUACKS,ELSE
+  DisplayedMasks: 5,1,6
+  MaskedWords: G_V__, Q_____, _LS_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: ETDEWVHTIDKARNEM
+  ActiveWords: WIND,MAKE,DRIVE
+  DisplayedMasks: 9,5,8
+  MaskedWords: W__D, M_K_, ___V_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: NBCUDEROSSRVMATE
+  ActiveWords: SMART,CURVE,BEST
+  DisplayedMasks: 18,10,9
+  MaskedWords: _M__T, _U_V_, B__T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: TOSKNTSCPHRUOIAD
+  ActiveWords: HARD,TRUCKS,SHIRTS
+  DisplayedMasks: 9,16,18
+  MaskedWords: H__D, ____K_, _H__T_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: RHWCIORNSELSSNID
+  ActiveWords: CROWN,HOLD,LOSERS
+  DisplayedMasks: 8,9,19
+  MaskedWords: ___W_, H__D, LO__R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: DNRCIEBLKAVOSMGA
+  ActiveWords: LOVE,BREAKS,CREAM,AGAIN
+  DisplayedMasks: 5,17,17,18
+  MaskedWords: L_V_, B___K_, C___M, _G__N
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: EZLBDHASNRETUOCK
+  ActiveWords: AROUND,BLAZED,HECK
+  DisplayedMasks: 8,9,9
+  MaskedWords: ___U__, B__Z__, H__K
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: RODSUNARITEBWOWY
+  ActiveWords: TOWER,WINTER,ROADS,NEARBY,RETURN
+  DisplayedMasks: 4,9,10,48,8
+  MaskedWords: __W__, W__T__, _O_D_, ____BY, ___U__
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 28/28
+
+Board: RLDCUNONTOKGSAIN
+  ActiveWords: SATURN,SOUND,KING,COLD
+  DisplayedMasks: 12,20,9,9
+  MaskedWords: __TU__, __U_D, K__G, C__D
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: WENDOEUBMORAGNIB
+  ActiveWords: BRING,AROUND,WOMEN
+  DisplayedMasks: 17,40,5
+  MaskedWords: B___G, ___U_D, W_M__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: MMOCOTASHNNDSEWE
+  ActiveWords: CANNOT,WENT,MONTHS
+  DisplayedMasks: 49,9,17
+  MaskedWords: C___OT, W__T, M___H_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: HPESONDRCLETPYAF
+  ActiveWords: PLAYED,AFTER,LENDER
+  DisplayedMasks: 41,2,9
+  MaskedWords: P__Y_D, _F___, L__D__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: MKPNIEAWLNBOGURG
+  ActiveWords: BAKING,BROWN,PANEL
+  DisplayedMasks: 5,9,17
+  MaskedWords: B_K___, B__W_, P___L
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: BLAPEIBDDEOUNESR
+  ActiveWords: LABOUR,BEEN,PAID,DOUBLE
+  DisplayedMasks: 20,9,9,13
+  MaskedWords: __B_U_, B__N, P__D, D_UB__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: ERVETAELNEILWSKH
+  ActiveWords: WENT,TRAVEL,KILLER
+  DisplayedMasks: 9,40,1
+  MaskedWords: W__T, ___V_L, K_____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: BRTLESAYVOUWPTBA
+  ActiveWords: AWARE,STAY,ABOUT,VERBS,POSTAL
+  DisplayedMasks: 2,10,10,9,1
+  MaskedWords: _W___, _T_Y, _B_U_, V__B_, P_____
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 25/25
+
+Board: LDEKIEDAVENMSIWG
+  ActiveWords: NEEDED,LIVING,MAKE
+  DisplayedMasks: 41,37,4
+  MaskedWords: N__D_D, L_V__G, __K_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: FPYSIUEDGBRADOIC
+  ActiveWords: FIGURE,YEAR,PERIOD,CARDS,OBEY
+  DisplayedMasks: 5,1,33,9,8
+  MaskedWords: F_G___, Y___, P____D, C__D_, ___Y
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 25/25
+
+Board: YETFOHIEESURMPIQ
+  ActiveWords: THOSE,EMPIRE,THEY
+  DisplayedMasks: 6,2,8
+  MaskedWords: _HO__, _M____, ___Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: MAFYLHNGLSIERDEN
+  ActiveWords: SHALL,MANY,NEEDS,ENGINE
+  DisplayedMasks: 10,8,9,6
+  MaskedWords: _H_L_, ___Y, N__D_, _NG___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: ZACHMZPEAUIEZKES
+  ActiveWords: CHEESE,MAKEUP,IS,PIZZA
+  DisplayedMasks: 2,4,1,12
+  MaskedWords: _H____, __K___, I_, __ZZ_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: SRLVIHELPFISLUGF
+  ActiveWords: RIFE,SHIP,SILVER,PLUG
+  DisplayedMasks: 5,10,8,8
+  MaskedWords: R_F_, _H_P, ___V__, ___G
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: UMHTMSIBNLLMWOII
+  ActiveWords: SUMMIT,BILLS,THIS
+  DisplayedMasks: 12,5,3
+  MaskedWords: __MM__, B_L__, TH__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: EVDELARRNUOTKOTC
+  ActiveWords: TRAVEL,COTTON,COURT,ORDER
+  DisplayedMasks: 8,19,5,5
+  MaskedWords: ___V__, CO__O_, C_U__, O_D__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: TCHEEATIESBOPNKJ
+  ActiveWords: JOBS,SPEECH,KNEES
+  DisplayedMasks: 5,32,1
+  MaskedWords: J_B_, _____H, K____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: IRBSETEOVTNDNGIS
+  ActiveWords: BETTER,VERBS,BENIGN
+  DisplayedMasks: 5,1,17
+  MaskedWords: B_T___, V____, B___G_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: OFILERTEONNMCISU
+  ActiveWords: FILE,UNIONS,ENTIRE
+  DisplayedMasks: 5,9,22
+  MaskedWords: F_L_, U__O__, _NT_R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: WVUURROSEOTAPEEE
+  ActiveWords: SURE,WROTE,VOTE
+  DisplayedMasks: 6,1,3
+  MaskedWords: _UR_, W____, VO__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: DKEGONBLIRURDEAO
+  ActiveWords: AROUND,BURIED,BROKEN
+  DisplayedMasks: 8,35,8
+  MaskedWords: ___U__, BU___D, ___K__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: DEESTDUTHOVRCEKI
+  ActiveWords: VOTE,DEED,STRIKE
+  DisplayedMasks: 1,9,22
+  MaskedWords: V___, D__D, _TR_K_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: DZRTSAZIIHOPNREL
+  ActiveWords: PIZZA,TRAIN,SHOP,TRIPLE
+  DisplayedMasks: 12,17,10,8
+  MaskedWords: __ZZ_, T___N, _H_P, ___P__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: NBESSEUCNNAHGIUR
+  ActiveWords: SUCH,BENIGN,NEAR,RACE
+  DisplayedMasks: 10,1,9,5
+  MaskedWords: _U_H, B_____, N__R, R_C_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: LNRGEAOHKSTIAMNG
+  ActiveWords: MASK,HONEST,GOING,LEARN
+  DisplayedMasks: 9,1,17,17
+  MaskedWords: M__K, H_____, G___G, L___N
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: ERMFCHOXYTIERVND
+  ActiveWords: VIDEO,FORCE,INDEX,MOTHER
+  DisplayedMasks: 5,9,16,9
+  MaskedWords: V_D__, F__C_, ____X, M__H__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: ENULHCESOLIAYURP
+  ActiveWords: EARLY,LUNCH,YOUR,RAISE
+  DisplayedMasks: 24,16,5,3
+  MaskedWords: ___LY, ____H, Y_U_, RA___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: TFSESAKONDCUAART
+  ActiveWords: CANADA,COURT,FANS,TAKES
+  DisplayedMasks: 16,5,5,5
+  MaskedWords: ____D_, C_U__, F_N_, T_K__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: SMECHARIOUBFWDLE
+  ActiveWords: RIFE,WOULD,SHOULD,CREAM,DOUBLE
+  DisplayedMasks: 4,1,10,17,12
+  MaskedWords: __F_, W____, _H_U__, C___M, __UB__
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 26/26
+
+Board: WNRGHOFDMTSOELRU
+  ActiveWords: WORDS,HOME,FOURTH
+  DisplayedMasks: 9,5,33
+  MaskedWords: W__D_, H_M_, F____H
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: NHTIADSOTELIGRCV
+  ActiveWords: DATE,GREAT,CLOSED,VISIT
+  DisplayedMasks: 5,17,33,17
+  MaskedWords: D_T_, G___T, C____D, V___T
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: WNRHCOEDIYAITSLV
+  ActiveWords: SIT,VIDEO,DAILY,OWNED,HEROIC
+  DisplayedMasks: 4,5,17,18,1
+  MaskedWords: __T, V_D__, D___Y, _W__D, H_____
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 24/24
+
+Board: TSAHHLFTMCETITEO
+  ActiveWords: MICE,HATE,TO
+  DisplayedMasks: 5,5,2
+  MaskedWords: M_C_, H_T_, _O
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 10/10
+
+Board: OSRRWOIYNTNUPAES
+  ActiveWords: WORRY,SUITE,UNION
+  DisplayedMasks: 1,10,9
+  MaskedWords: W____, _U_T_, U__O_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: WRSEORPANATUSHBO
+  ActiveWords: SHARP,THAN,ABOUT
+  DisplayedMasks: 18,3,2
+  MaskedWords: _H__P, TH__, _B___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: NMHROTEPECALKPBJ
+  ActiveWords: JACKET,BATH,MONTH
+  DisplayedMasks: 1,9,17
+  MaskedWords: J_____, B__H, M___H
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: HEFETDRRKNIPIELM
+  ActiveWords: DRINK,PREFER,THERE,MIND
+  DisplayedMasks: 17,8,2,9
+  MaskedWords: D___K, ___F__, _H___, M__D
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: HSITEZOPSMNOIHWS
+  ActiveWords: SHE,SNOW,SIZE
+  DisplayedMasks: 2,8,6
+  MaskedWords: _H_, ___W, _IZ_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 11/11
+
+Board: UICTQKAPOIEFLDRT
+  ActiveWords: PERIOD,AFTER,QUICK,LIKE,TREAT
+  DisplayedMasks: 49,2,1,5,17
+  MaskedWords: P___OD, _F___, Q____, L_K_, T___T
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 25/25
+
+Board: EESDWJULLEHOSIFW
+  ActiveWords: JEWELS,HOUSE,WHILE
+  DisplayedMasks: 1,5,3
+  MaskedWords: J_____, H_U__, WH___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: TLSEPREUITOPTYAC
+  ActiveWords: TRIPLE,SUPER,ELSE
+  DisplayedMasks: 24,6,2
+  MaskedWords: ___PL_, _UP__, _L__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: DOIOKROWOTEUFFPS
+  ActiveWords: PERIOD,EFFORT,OK,SUPER
+  DisplayedMasks: 1,2,2,4
+  MaskedWords: P_____, _F____, _K, __P__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: TIRLOAEPBESDYJEI
+  ActiveWords: JEDI,OBEY,PLEASE
+  DisplayedMasks: 5,10,1
+  MaskedWords: J_D_, _B_Y, P_____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: WENDMILUFATFDRAY
+  ActiveWords: YARD,EMAIL,FUTILE
+  DisplayedMasks: 1,18,3
+  MaskedWords: Y___, _M__L, FU____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: PADEECTSHRCOSONL
+  ActiveWords: CAPE,HORN,HEAT,CLOSED
+  DisplayedMasks: 5,3,9,35
+  MaskedWords: C_P_, HO__, H__T, CL___D
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: REVPIOPLMCAEEFDY
+  ActiveWords: PLAYED,APPLE,FACE
+  DisplayedMasks: 8,2,5
+  MaskedWords: ___Y__, _P___, F_C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: WDPOFEITEOVLDGAR
+  ActiveWords: DEPOT,VALID,RAGED,VIDEO
+  DisplayedMasks: 5,17,20,5
+  MaskedWords: D_P__, V___D, __G_D, V_D__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: LSAGVERTENINSEUO
+  ActiveWords: GREAT,SEES,LENS,UNION
+  DisplayedMasks: 17,9,5,9
+  MaskedWords: G___T, S__S, L_N_, U__O_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: EMRWSFATKSNAEAUQ
+  ActiveWords: SNAKE,SMART,QUAKES,SAFE
+  DisplayedMasks: 10,2,9,6
+  MaskedWords: _N_K_, _M___, Q__K__, _AF_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: MAFAAILEDNSTOEER
+  ActiveWords: LISTEN,TREE,ANIMAL
+  DisplayedMasks: 41,3,8
+  MaskedWords: L__T_N, TR__, ___M__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: GOADREHSATIGIIHF
+  ActiveWords: FISH,THIGH,GREAT
+  DisplayedMasks: 9,18,17
+  MaskedWords: F__H, _H__H, G___T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: THFSRGOIIUNNHSYE
+  ActiveWords: ENOUGH,FOURTH,HIGH
+  DisplayedMasks: 48,33,9
+  MaskedWords: ____GH, F____H, H__H
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: IONITFSIAEIURPRG
+  ActiveWords: PRISON,USER,PATIO,FIGURE
+  DisplayedMasks: 49,9,17,1
+  MaskedWords: P___ON, U__R, P___O, F_____
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: CSSTHYDEEVAMFIOI
+  ActiveWords: CHEVY,SYSTEM,FIVE
+  DisplayedMasks: 24,2,5
+  MaskedWords: ___VY, _Y____, F_V_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: RPOGMLPOMAESSTIM
+  ActiveWords: SAMPLE,GOSPEL,TIMES
+  DisplayedMasks: 12,9,4
+  MaskedWords: __MP__, G__P__, __M__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: MAETDRTLLIASKCWH
+  ActiveWords: WATER,DREAM,LAST,LITTLE
+  DisplayedMasks: 5,17,9,17
+  MaskedWords: W_T__, D___M, L__T, L___L_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: DCTBOOAMURAEENRH
+  ActiveWords: BATMAN,CAMERA,DOCTOR
+  DisplayedMasks: 1,5,5
+  MaskedWords: B_____, C_M___, D_C___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: PEFLTPKIEFRCFROA
+  ActiveWords: LIKE,CARPET,LIFE
+  DisplayedMasks: 4,41,5
+  MaskedWords: __K_, C__P_T, L_F_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: HCUWREESFAWNPECA
+  ActiveWords: CAPE,NEWS,SUCH,HEAR
+  DisplayedMasks: 5,5,10,9
+  MaskedWords: C_P_, N_W_, _U_H, H__R
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 16/16
+
+Board: DOMESAHJLIWEBETS
+  ActiveWords: WISDOM,BITES,EMAIL,JEWELS
+  DisplayedMasks: 33,5,2,5
+  MaskedWords: W____M, B_T__, _M___, J_W___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: FUEPJLEWNSTJOSBI
+  ActiveWords: FUEL,BITES,SONS,STEEP,JEWELS
+  DisplayedMasks: 3,1,6,18,1
+  MaskedWords: FU__, B____, _ON_, _T__P, J_____
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 24/24
+
+Board: SWMPDAOTERHHHMEZ
+  ActiveWords: SWAMP,ZERO,POWDER
+  DisplayedMasks: 10,9,13
+  MaskedWords: _W_M_, Z__O, P_WD__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: NEERRBAOYGRDNIED
+  ActiveWords: NEARBY,BRING,RAGED
+  DisplayedMasks: 32,17,20
+  MaskedWords: _____Y, B___G, __G_D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: LOTJEINPRMOEACAR
+  ActiveWords: ENTIRE,CRIME,OPERA
+  DisplayedMasks: 22,9,2
+  MaskedWords: _NT_R_, C__M_, _P___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: SERDNASIBMTOPAIN
+  ActiveWords: BATMAN,RID,PATIO
+  DisplayedMasks: 9,4,17
+  MaskedWords: B__M__, __D, P___O
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: ACCXFSWEETPFRMOH
+  ActiveWords: FAST,ACCEPT,HOME,AFTER
+  DisplayedMasks: 9,18,5,2
+  MaskedWords: F__T, _C__P_, H_M_, _F___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: HHGLEIOSRDEARRSM
+  ActiveWords: HIGHER,DREAMS,LOSERS
+  DisplayedMasks: 9,17,19
+  MaskedWords: H__H__, D___M_, LO__R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: KVAMESLULAIFTTHR
+  ActiveWords: MASK,HAIR,LITTLE,VALIUM
+  DisplayedMasks: 9,9,17,33
+  MaskedWords: M__K, H__R, L___L_, V____M
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: SPYJKEROVENGAMTE
+  ActiveWords: JONES,KEEP,TEAM
+  DisplayedMasks: 1,9,9
+  MaskedWords: J____, K__P, T__M
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: SGNBEIREHNULTBCK
+  ActiveWords: BRING,BUCKLE,THING,THINGS,ENGINE
+  DisplayedMasks: 17,9,18,18,6
+  MaskedWords: B___G, B__K__, _H__G, _H__G_, _NG___
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 28/28
+
+Board: LVERISKYSCTEBOWN
+  ActiveWords: SOCKET,LISTEN,SILVER
+  DisplayedMasks: 14,9,44
+  MaskedWords: _OCK__, L__T__, __LV_R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: AIDXWTNEOEHTMRSS
+  ActiveWords: MOTHER,INDEX,WITH,WOMEN
+  DisplayedMasks: 11,16,9,5
+  MaskedWords: MO_H__, ____X, W__H, W_M__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: LATALYEVFYRAOCGM
+  ActiveWords: REALLY,OF,GREAT,CREAM
+  DisplayedMasks: 40,2,17,16
+  MaskedWords: ___L_Y, _F, G___T, ____M
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: NERBJTSAOKEIRMLP
+  ActiveWords: JOKE,RAISE,PLEASE
+  DisplayedMasks: 5,3,3
+  MaskedWords: J_K_, RA___, PL____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: VTCMSAEHLRDCPISK
+  ActiveWords: CHECKS,VALID,SLIP,LAST
+  DisplayedMasks: 18,1,10,9
+  MaskedWords: _H__K_, V____, _L_P, L__T
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: EHSKTMEIAOVRLIAY
+  ActiveWords: RISK,MOTHER,LIAR
+  DisplayedMasks: 8,9,9
+  MaskedWords: ___K, M__H__, L__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: PLPDYAOCNTTUODRS
+  ActiveWords: LAND,COURTS,COTTON
+  DisplayedMasks: 9,4,19
+  MaskedWords: L__D, __U___, CO__O_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: ECTSMIRPHALIISKF
+  ActiveWords: PRICE,SHIRTS,EMAIL
+  DisplayedMasks: 9,18,18
+  MaskedWords: P__C_, _H__T_, _M__L
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: UCKDBLHRESOETMSW
+  ActiveWords: HOME,SWORD,BUCKLE
+  DisplayedMasks: 5,18,8
+  MaskedWords: H_M_, _W__D, ___K__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: MBGRAERETCKOISIV
+  ActiveWords: CREAM,VISIT,MERGER,VOICE
+  DisplayedMasks: 17,17,8,9
+  MaskedWords: C___M, V___T, ___G__, V__C_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: YRALNUMEESREWIDM
+  ActiveWords: WIDER,MARY,DREAM,NEWS
+  DisplayedMasks: 5,8,17,4
+  MaskedWords: W_D__, ___Y, D___M, __W_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: SEESMUSBPEAYBKPS
+  ActiveWords: SPEAK,BYPASS,UP,SEEMS
+  DisplayedMasks: 16,2,2,8
+  MaskedWords: ____K, _Y____, _P, ___M_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: IESPHDCOFKANROMD
+  ActiveWords: ROADS,SECOND,HECK,ROMAN,IDES
+  DisplayedMasks: 10,36,9,4,2
+  MaskedWords: _O_D_, __C__D, H__K, __M__, _D__
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 24/24
+
+Board: TNEIIRAESOELTDRW
+  ActiveWords: ENTIRE,LEARN,WEAR
+  DisplayedMasks: 22,17,9
+  MaskedWords: _NT_R_, L___N, W__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: OIWGJRNTNEADEAHL
+  ActiveWords: DARING,JOIN,LAND,WIN,AHEAD
+  DisplayedMasks: 33,3,9,1,2
+  MaskedWords: D____G, JO__, L__D, W__, _H___
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 22/22
+
+Board: HUSELOBIVRNSETAK
+  ActiveWords: SKATE,HOUSE,VERBS,OVER
+  DisplayedMasks: 2,5,1,2
+  MaskedWords: _K___, H_U__, V____, _V__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: BASKLUEAAWRNYSBY
+  ActiveWords: BREAKS,ALWAYS,NEARBY
+  DisplayedMasks: 17,4,48
+  MaskedWords: B___K_, __W___, ____BY
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: VCESAKUFMRPOEVTH
+  ActiveWords: MAKEUP,FOURTH,CURVE
+  DisplayedMasks: 4,1,10
+  MaskedWords: __K___, F_____, _U_V_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: ISAVTLNMREIUGADR
+  ActiveWords: TRAINS,GETS,MURDER
+  DisplayedMasks: 19,5,11
+  MaskedWords: TR__N_, G_T_, MU_D__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: GSITUESFRDEHEOWB
+  ActiveWords: BEST,USER,DRUGS,FISH
+  DisplayedMasks: 9,9,12,9
+  MaskedWords: B__T, U__R, __UG_, F__H
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 17/17
+
+Board: YSALTBECIAORCNSU
+  ActiveWords: CITY,LABOUR,OCEANS
+  DisplayedMasks: 9,21,2
+  MaskedWords: C__Y, L_B_U_, _C____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: DNOYSJEUTSREIFOP
+  ActiveWords: ENJOY,YOUR,PROFIT
+  DisplayedMasks: 4,5,8
+  MaskedWords: __J__, Y_U_, ___F__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: TRDFEPICUSPETSDL
+  ActiveWords: TESTS,PRICE,FIELD
+  DisplayedMasks: 9,9,17
+  MaskedWords: T__T_, P__C_, F___D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: NIDEERDLOEYLHKAT
+  ActiveWords: REALLY,NEEDED,IDEA
+  DisplayedMasks: 56,41,10
+  MaskedWords: ___LLY, N__D_D, _D_A
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: REPORAHUNECRFULS
+  ActiveWords: HOURS,FUEL,OPERA,PANEL
+  DisplayedMasks: 5,3,2,17
+  MaskedWords: H_U__, FU__, _P___, P___L
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: EROFEZGESIPBHTVE
+  ActiveWords: BEFORE,GIVE,FOREST,SIZE
+  DisplayedMasks: 4,5,35,4
+  MaskedWords: __F___, G_V_, FO___T, __Z_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: HSYTKCAPICERLLON
+  ActiveWords: ACCEPT,KILLER,LEARN
+  DisplayedMasks: 18,1,17
+  MaskedWords: _C__P_, K_____, L___N
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: WGRBNOEIESTVLNHA
+  ActiveWords: HAVE,BROWN,ENTIRE
+  DisplayedMasks: 5,9,6
+  MaskedWords: H_V_, B__W_, _NT___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: MNALAYEVJCESKETN
+  ActiveWords: JACKET,LEAVE,SEVEN
+  DisplayedMasks: 1,9,20
+  MaskedWords: J_____, L__V_, __V_N
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: COINPATSGSRHADII
+  ActiveWords: CARDS,AGAIN,SPOT,SHIRTS,PATIO
+  DisplayedMasks: 9,18,6,18,17
+  MaskedWords: C__D_, _G__N, _PO_, _H__T_, P___O
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 25/25
+
+Board: LUFLESUTEABIRSET
+  ActiveWords: RESULT,BITES,BEARS
+  DisplayedMasks: 8,5,9
+  MaskedWords: ___U__, B_T__, B__R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: FORTPHUMESIESDRV
+  ActiveWords: DRIVE,MISSED,SHOP,FOUR
+  DisplayedMasks: 9,35,10,5
+  MaskedWords: D__V_, MI___D, _H_P, F_U_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: GALORTSPEYIEATHT
+  ActiveWords: POSTAL,THIS,GREAT
+  DisplayedMasks: 33,2,17
+  MaskedWords: P____L, _H__, G___T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: NIMIGLKTPEAVHHSE
+  ActiveWords: LIMIT,TAKING,PLEASE,HELP,LEAVE
+  DisplayedMasks: 4,37,1,9,9
+  MaskedWords: __M__, T_K__G, P_____, H__P, L__V_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 26/26
+
+Board: EIRATNELWMDONOKO
+  ActiveWords: WOMEN,ENTIRE,LOOK,DOWN
+  DisplayedMasks: 1,4,8,5
+  MaskedWords: W____, __T___, ___K, D_W_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: SNIFPNOTSRUXAKED
+  ActiveWords: UNIONS,PROFIT,FOUR
+  DisplayedMasks: 1,8,5
+  MaskedWords: U_____, ___F__, F_U_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: BDSIEWEZCAHSKTRE
+  ActiveWords: SIZE,BEWARE,SHEDS
+  DisplayedMasks: 4,21,10
+  MaskedWords: __Z_, B_W_R_, _H_D_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: CMBMORAATPEDOHIW
+  ActiveWords: MOTHER,OPERA,WIDER
+  DisplayedMasks: 9,3,5
+  MaskedWords: M__H__, OP___, W_D__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: POESRDUHWELBFERL
+  ActiveWords: SHE,DOUBLE,PREFER
+  DisplayedMasks: 2,13,8
+  MaskedWords: _H_, D_UB__, ___F__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: MUNSOETPRLENGANC
+  ActiveWords: GLANCE,STEEP,TUMOR
+  DisplayedMasks: 17,16,4
+  MaskedWords: G___C_, ____P, __M__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: SSTHMARGLEIUEBEF
+  ActiveWords: THREE,SMART,FIGURE
+  DisplayedMasks: 2,18,13
+  MaskedWords: _H___, _M__T, F_GU__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: OUSKCSROUEOSNIBN
+  ActiveWords: BOOKS,USER,COURSE,UNIONS
+  DisplayedMasks: 9,1,4,1
+  MaskedWords: B__K_, U___, __U___, U_____
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: KMASHCPPELNEHOUR
+  ActiveWords: SAMPLE,LUNCH,HECK
+  DisplayedMasks: 28,18,9
+  MaskedWords: __MPL_, _U__H, H__K
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: CSHIIENMFILEASAD
+  ActiveWords: SAFE,ICE,FISH,DENIAL
+  DisplayedMasks: 6,2,9,37
+  MaskedWords: _AF_, _C_, F__H, D_N__L
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 17/17
+
+Board: SITSUWENCKAUOEMP
+  ActiveWords: MAKEUP,OCEANS,WANTS
+  DisplayedMasks: 5,2,9
+  MaskedWords: M_K___, _C____, W__T_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: CEAMSKPSHWLSBEEL
+  ActiveWords: MAKES,HELP,WELL
+  DisplayedMasks: 5,9,5
+  MaskedWords: M_K__, H__P, W_L_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: POEPILELYLTISYUF
+  ActiveWords: SLIP,FUTILE,PEOPLE
+  DisplayedMasks: 10,3,9
+  MaskedWords: _L_P, FU____, P__P__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: PEIPMLUOASNAYLDY
+  ActiveWords: SAMPLE,SUNDAY,ONLY
+  DisplayedMasks: 4,32,12
+  MaskedWords: __M___, _____Y, __LY
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: KARLENOEGASDFTER
+  ActiveWords: LONG,SNAKE,AFTER,STAGE
+  DisplayedMasks: 9,10,2,10
+  MaskedWords: L__G, _N_K_, _F___, _T_G_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: WDLENOPCVERIRABS
+  ActiveWords: BEARS,DOWN,LOVE,OPERA,PRICE
+  DisplayedMasks: 9,5,5,2,9
+  MaskedWords: B__R_, D_W_, L_V_, _P___, P__C_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 23/23
+
+Board: GDGVOOVEESAELEKM
+  ActiveWords: GO,MAKES,ELSE
+  DisplayedMasks: 1,4,2
+  MaskedWords: G_, __K__, _L__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 11/11
+
+Board: GTLFESLAUDEHERNO
+  ActiveWords: ELSE,LENDER,FALL,HONEST
+  DisplayedMasks: 6,9,5,35
+  MaskedWords: _LS_, L__D__, F_L_, HO___T
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: RBSDIPRWEAOYHTEK
+  ActiveWords: THEIR,BROKE,WORDS,YEAR
+  DisplayedMasks: 2,9,9,9
+  MaskedWords: _H___, B__K_, W__D_, Y__R
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: EIBNROHIWMUCONSE
+  ActiveWords: MUCH,ROBIN,HOUSE
+  DisplayedMasks: 9,6,5
+  MaskedWords: M__H, _OB__, H_U__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: ULETNASPCORNWHAE
+  ActiveWords: NOSE,CARPET,NEAR
+  DisplayedMasks: 3,41,9
+  MaskedWords: NO__, C__P_T, N__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: NRDATUABQAKOSENW
+  ActiveWords: ABOARD,KNOW,QUAKES,SATURN
+  DisplayedMasks: 34,9,1,8
+  MaskedWords: _B___D, K__W, Q_____, ___U__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: OBNITEOFRYFUSOES
+  ActiveWords: FINER,REFUSE,OFFER
+  DisplayedMasks: 5,13,2
+  MaskedWords: F_N__, R_FU__, _F___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: INEILADJCROSGWIM
+  ActiveWords: DENIAL,WISDOM,JEDI,GROW
+  DisplayedMasks: 1,1,5,9
+  MaskedWords: D_____, W_____, J_D_, G__W
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: LPCOIMRUZEASBZNE
+  ActiveWords: COURSE,PIZZA,BEARS
+  DisplayedMasks: 4,12,9
+  MaskedWords: __U___, __ZZ_, B__R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: TRELPTTDSANIKRWO
+  ActiveWords: WIDER,SKATE,PATIO
+  DisplayedMasks: 5,2,17
+  MaskedWords: W_D__, _K___, P___O
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: ESBICLLEFAKWRSEN
+  ActiveWords: CAKE,WEARS,FACE
+  DisplayedMasks: 5,9,5
+  MaskedWords: C_K_, W__R_, F_C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: EGNIRNPSAIOHMLRA
+  ActiveWords: SHOP,LONGER,MAIL
+  DisplayedMasks: 10,11,9
+  MaskedWords: _H_P, LO_G__, M__L
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: OLIFVEDNRYLEIPAC
+  ActiveWords: OVER,PLACE,FIND,PLAYED,LENDER
+  DisplayedMasks: 2,9,9,41,9
+  MaskedWords: _V__, P__C_, F__D, P__Y_D, L__D__
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 25/25
+
+Board: DOATFLDOEISERHNL
+  ActiveWords: SHRINE,FOLDS,FLAT,LIFE
+  DisplayedMasks: 18,9,3,5
+  MaskedWords: _H__N_, F__D_, FL__, L_F_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: AFGPYARAITEFWHSA
+  ActiveWords: SAFETY,WITH,PARTY,GREAT
+  DisplayedMasks: 4,9,17,17
+  MaskedWords: __F___, W__H, P___Y, G___T
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: BFLETAWNEOTHKRMG
+  ActiveWords: WORK,AFTER,WORM
+  DisplayedMasks: 9,2,9
+  MaskedWords: W__K, _F___, W__M
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: DEZLDRLSRLOTYCAW
+  ActiveWords: ZERO,WORRY,CALLED
+  DisplayedMasks: 1,17,37
+  MaskedWords: Z___, W___Y, C_L__D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: ALSGPWEOANUUYSDN
+  ActiveWords: SOUNDS,ALWAYS,GOES,SOUND,PANEL
+  DisplayedMasks: 20,20,3,20,17
+  MaskedWords: __U_D_, __W_Y_, GO__, __U_D, P___L
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 26/26
+
+Board: KGNISIBRDWMOREHT
+  ActiveWords: ROBIN,MOTHER,SWIM,KIDS
+  DisplayedMasks: 4,11,10,5
+  MaskedWords: __B__, MO_H__, _W_M, K_D_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: PBNRMEBUAATESRKS
+  ActiveWords: BEARS,SATURN,NEAR,TAKES
+  DisplayedMasks: 9,12,9,5
+  MaskedWords: B__R_, __TU__, N__R, T_K__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: SEVESRYRIEHATTKN
+  ActiveWords: EVERY,THANK,VERY
+  DisplayedMasks: 2,16,9
+  MaskedWords: _V___, ____K, V__Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: BPTSSEWIANMLHKDS
+  ActiveWords: LISTEN,HANDS,TIMES,SPEAK
+  DisplayedMasks: 9,9,5,18
+  MaskedWords: L__T__, H__D_, T_M__, _P__K
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: TSMAIEGRXPTDSGUR
+  ActiveWords: AGES,STEP,SMART
+  DisplayedMasks: 2,8,2
+  MaskedWords: _G__, ___P, _M___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: UIFEGRNEHIELNTSI
+  ActiveWords: FEEL,FIGURE,LISTEN
+  DisplayedMasks: 9,13,41
+  MaskedWords: F__L, F_GU__, L__T_N
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: HFRDCILNONEAKURS
+  ActiveWords: FRIEND,DRINK,CHILD,COURSE
+  DisplayedMasks: 33,17,18,5
+  MaskedWords: F____D, D___K, _H__D, C_U___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: VEOPPELWAREIYTSN
+  ActiveWords: PEOPLE,EVERY,POWER
+  DisplayedMasks: 9,18,5
+  MaskedWords: P__P__, _V__Y, P_W__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: IEDGDSENHVIERACT
+  ActiveWords: NEEDED,NICE,IDES,HAVING
+  DisplayedMasks: 41,5,3,5
+  MaskedWords: N__D_D, N_C_, ID__, H_V___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: PKREEPITNBANEIGE
+  ActiveWords: KING,ENGINE,TAPE
+  DisplayedMasks: 9,22,5
+  MaskedWords: K__G, _NG_N_, T_P_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: NEWSYADNLRIAPTEV
+  ActiveWords: TRAINS,EARLY,DRIVE
+  DisplayedMasks: 19,24,9
+  MaskedWords: TR__N_, ___LY, D__V_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: VERYEIIFLNDONGUR
+  ActiveWords: VERY,FOUR,NEVER,RIDING
+  DisplayedMasks: 9,5,5,36
+  MaskedWords: V__Y, F_U_, N_V__, __D__G
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: VLOBFOLAFSTHREUO
+  ActiveWords: OFFER,VOTERS,HOUSE
+  DisplayedMasks: 6,7,5
+  MaskedWords: _FF__, VOT___, H_U__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: BCODCUREBEWALHNM
+  ActiveWords: DOUBLE,BEWARE,OCCUR
+  DisplayedMasks: 13,5,8
+  MaskedWords: D_UB__, B_W___, ___U_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: NSTRAKESMCRTINDU
+  ActiveWords: MIND,RETURN,SNAKE
+  DisplayedMasks: 9,8,10
+  MaskedWords: M__D, ___U__, _N_K_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: FECIOYBLRUSODEWT
+  ActiveWords: YOU,CLOSED,BEFORE,BLOW
+  DisplayedMasks: 1,33,5,9
+  MaskedWords: Y__, C____D, B_F___, B__W
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: OBMECRICHNSPSELS
+  ActiveWords: HELPS,SHRINE,CRIME,ROBIN,NICE
+  DisplayedMasks: 1,2,8,4,5
+  MaskedWords: H____, _H____, ___M_, __B__, N_C_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 25/25
+
+Board: PIFCRSDOWONLTELF
+  ActiveWords: PRISON,COLD,WROTE,FOLLOW
+  DisplayedMasks: 17,9,5,33
+  MaskedWords: P___O_, C__D, W_O__, F____W
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: BRACAKNELELFLENT
+  ActiveWords: NEAR,LEFT,RACE,CAKE
+  DisplayedMasks: 9,5,4,5
+  MaskedWords: N__R, L_F_, __C_, C_K_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 16/16
+
+Board: NOWYTEABHDSRGEUF
+  ActiveWords: NOTE,NEARBY,FUDGE,WEARS
+  DisplayedMasks: 6,32,9,9
+  MaskedWords: _OT_, _____Y, F__G_, W__R_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: IUSNULTMSEACVBRA
+  ActiveWords: TEAM,RESULT,VERBS
+  DisplayedMasks: 9,24,9
+  MaskedWords: T__M, ___UL_, V__B_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: MNELIFTICUERKLBR
+  ActiveWords: FUTILE,ENTIRE,BE,BUCKLE
+  DisplayedMasks: 3,22,1,9
+  MaskedWords: FU____, _NT_R_, B_, B__K__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: RHYAEAWODEUEBLAV
+  ActiveWords: WOULD,LEAVE,BEWARE
+  DisplayedMasks: 5,9,4
+  MaskedWords: W_U__, L__V_, __W___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: DEIUSTRBROCAFAWF
+  ActiveWords: FACTS,BURIED,FOREST
+  DisplayedMasks: 5,35,35
+  MaskedWords: F_C__, BU___D, FO___T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: CPRPLAEBETESOVSD
+  ActiveWords: LEVEE,CARPET,VOTE
+  DisplayedMasks: 5,41,3
+  MaskedWords: L_V__, C__P_T, VO__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: BEEROTNSVIDWERFO
+  ActiveWords: BEEN,DRIVE,VOTERS,DOW
+  DisplayedMasks: 9,8,3,4
+  MaskedWords: B__N, ___V_, VO____, __W
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: LMARYEONTYKCSRIS
+  ActiveWords: STRIKE,TEAM,MONKEY
+  DisplayedMasks: 22,9,41
+  MaskedWords: _TR_K_, T__M, M__K_Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: AVESWSKNOFTABATM
+  ActiveWords: BATMAN,OF,SNAKE,WAVES
+  DisplayedMasks: 9,2,10,1
+  MaskedWords: B__M__, _F, _N_K_, W____
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: SGLKURIBELITLPTS
+  ActiveWords: PLUG,LITTLE,KILLER
+  DisplayedMasks: 8,21,5
+  MaskedWords: ___G, L_T_L_, K_L___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: MOZAGOTZINIMLVEP
+  ActiveWords: TIME,PIZZA,LIVING,ZOOM
+  DisplayedMasks: 4,4,4,9
+  MaskedWords: __M_, __Z__, __V___, Z__M
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: OMANSRWEEDORRPIK
+  ActiveWords: WORK,POWER,IDES,ROMAN,DOWN
+  DisplayedMasks: 9,5,3,4,5
+  MaskedWords: W__K, P_W__, ID__, __M__, D_W_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 22/22
+
+Board: ESEICPTLCUROFANN
+  ActiveWords: CARPET,ACCEPT,FUTILE
+  DisplayedMasks: 41,18,3
+  MaskedWords: C__P_T, _C__P_, FU____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: AUAELCSFBTEUUGAR
+  ActiveWords: REFUSE,STAGE,CLAUS
+  DisplayedMasks: 4,8,9
+  MaskedWords: __F___, ___G_, C__U_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: TIHTOEXSPNDINSNE
+  ActiveWords: INDEX,TENNIS,SPOT
+  DisplayedMasks: 16,1,6
+  MaskedWords: ____X, T_____, _PO_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: HOUSFIRPTCHEXEED
+  ActiveWords: PROFIT,HEROIC,EXCEED,SPEED,HOUR
+  DisplayedMasks: 8,33,2,18,5
+  MaskedWords: ___F__, H____C, _X____, _P__D, H_U_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 27/27
+
+Board: EAOAMRBKASETCWKA
+  ActiveWords: BEWARE,SKATE,CAMERA
+  DisplayedMasks: 4,10,4
+  MaskedWords: __W___, _K_T_, __M___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: RVTKIDEANTSGUOPD
+  ActiveWords: TAKES,DRIVE,STOP
+  DisplayedMasks: 5,8,12
+  MaskedWords: T_K__, ___V_, __OP
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: ONSSTUIWESTMZIEH
+  ActiveWords: SIZE,WITH,NOTE,MINUTE,SWIM
+  DisplayedMasks: 6,9,6,25,10
+  MaskedWords: _IZ_, W__H, _OT_, M__UT_, _W_M
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 22/22
+
+Board: WLACSILPTRDEOKEV
+  ActiveWords: WIDER,EVER,CALLED,KEEP
+  DisplayedMasks: 5,2,33,9
+  MaskedWords: W_D__, _V__, C____D, K__P
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: ZEFOIFPLNREGCMAS
+  ActiveWords: PRIZE,CREAM,OFFER
+  DisplayedMasks: 9,17,6
+  MaskedWords: P__Z_, C___M, _FF__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: SCHPUCETKEOIZSRI
+  ActiveWords: KEEP,SUCKER,ZERO
+  DisplayedMasks: 9,10,9
+  MaskedWords: K__P, _U_K__, Z__O
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: AYEDPLRSSEONNTVE
+  ActiveWords: VOTERS,PLAYED,PERSON,STEP,EVERY
+  DisplayedMasks: 7,41,49,10,18
+  MaskedWords: VOT___, P__Y_D, P___ON, _T_P, _V__Y
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 27/27
+
+Board: HNDTASLRCLFEEKAT
+  ActiveWords: SHACK,TAKE,AFTER
+  DisplayedMasks: 18,5,2
+  MaskedWords: _H__K, T_K_, _F___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: ICSDDNETWRPFOVER
+  ActiveWords: OWNED,PREFER,DROVE,STEP,NICE
+  DisplayedMasks: 18,8,9,8,5
+  MaskedWords: _W__D, ___F__, D__V_, ___P, N_C_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 24/24
+
+Board: NVEYEPFRSEKUBVLI
+  ActiveWords: EVERY,BEEN,RULES
+  DisplayedMasks: 2,9,2
+  MaskedWords: _V___, B__N, _U___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: OEYDTIARAPHSWNTA
+  ActiveWords: PATIO,SHIP,YARD,YEARS,WANTS
+  DisplayedMasks: 17,10,9,9,1
+  MaskedWords: P___O, _H_P, Y__D, Y__R_, W____
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 23/23
+
+Board: EWSGAOAMRJWMSDEP
+  ActiveWords: SWAMP,WEARS,JAMMED
+  DisplayedMasks: 10,9,5
+  MaskedWords: _W_M_, W__R_, J_M___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: COOWEKSRATRFNSYI
+  ActiveWords: WORRY,SOCKET,EASY,SNAKE
+  DisplayedMasks: 17,8,8,10
+  MaskedWords: W___Y, ___K__, ___Y, _N_K_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: MNCSOITKREAHDPSS
+  ActiveWords: SKATE,STEP,MONTHS
+  DisplayedMasks: 10,10,17
+  MaskedWords: _K_T_, _T_P, M___H_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: WTAEEEWRSEEYNOJV
+  ActiveWords: WE,JONES,VERY
+  DisplayedMasks: 1,3,9
+  MaskedWords: W_, JO___, V__Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 11/11
+
+Board: NASPHTETCEAYOBYD
+  ActiveWords: AHEAD,OBEY,SPEECH
+  DisplayedMasks: 18,10,32
+  MaskedWords: _H__D, _B_Y, _____H
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: TBYBOUADSENLMCLS
+  ActiveWords: MEANS,ABOUT,SUNDAY
+  DisplayedMasks: 9,10,32
+  MaskedWords: M__N_, _B_U_, _____Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: DTSNYEOMCLALMNGI
+  ActiveWords: MAIL,GLANCE,CLOSED,STYLE
+  DisplayedMasks: 9,17,33,12
+  MaskedWords: M__L, G___C_, C____D, __YL_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: FSOHREKTUOSSDETY
+  ActiveWords: THOSE,TESTS,OK,FREUD
+  DisplayedMasks: 2,9,2,9
+  MaskedWords: _H___, T__T_, _K, F__U_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 17/17
+
+Board: LEDCCLOEPAOMWIRT
+  ActiveWords: TRIPLE,WARM,CALLED
+  DisplayedMasks: 8,9,37
+  MaskedWords: ___P__, W__M, C_L__D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: WRAEYESNAUECDNAH
+  ActiveWords: SUNDAY,WEAR,HAND
+  DisplayedMasks: 34,9,9
+  MaskedWords: _U___Y, W__R, H__D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: GIOEDNVMTREASHCH
+  ActiveWords: HAVING,DREAM,CREAM,MONTHS
+  DisplayedMasks: 37,17,17,16
+  MaskedWords: H_V__G, D___M, C___M, ____H_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: ENYLSTEEIRODFFSP
+  ActiveWords: SPOT,FIRST,NEEDS,STYLE
+  DisplayedMasks: 2,17,9,12
+  MaskedWords: _P__, F___T, N__D_, __YL_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: AILSPGEEAOHRYATS
+  ActiveWords: SLIP,STAY,TREE
+  DisplayedMasks: 10,10,3
+  MaskedWords: _L_P, _T_Y, TR__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 12/12
+
+Board: NALGRTERUOSTFAVN
+  ActiveWords: GREAT,VOTERS,LEARN,FOUR
+  DisplayedMasks: 17,3,17,5
+  MaskedWords: G___T, VO____, L___N, F_U_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: IRDISFAETEOLRMVG
+  ActiveWords: LOVE,OVER,IDEA,FIRST
+  DisplayedMasks: 5,2,2,17
+  MaskedWords: L_V_, _V__, _D__, F___T
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 17/17
+
+Board: HNMSEAONRYIBDOEC
+  ActiveWords: OBEY,HEROIC,YEAR,DREAMS
+  DisplayedMasks: 10,33,9,16
+  MaskedWords: _B_Y, H____C, Y__R, ____M_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: OUKYBOSVSREDSISH
+  ActiveWords: RISES,VERBS,SHEDS
+  DisplayedMasks: 3,9,2
+  MaskedWords: RI___, V__B_, _H___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: ECHNEAIGRPNRSEEB
+  ActiveWords: RAIN,BRING,SPEECH
+  DisplayedMasks: 9,17,34
+  MaskedWords: R__N, B___G, _P___H
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: HTRSEADECIINSILE
+  ActiveWords: DATE,LENDER,EARTH
+  DisplayedMasks: 5,13,16
+  MaskedWords: D_T_, L_ND__, ____H
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: GRENESEDACLSDTHO
+  ActiveWords: REACH,LOSERS,NEED
+  DisplayedMasks: 24,3,9
+  MaskedWords: ___CH, LO____, N__D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: IDSESETLRROCYUCW
+  ActiveWords: SIDES,OCCUR,WORRY
+  DisplayedMasks: 4,10,17
+  MaskedWords: __D__, _C_U_, W___Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: YLLKEYSIFRESGTAB
+  ActiveWords: GREAT,FELL,KILLER,YEARS
+  DisplayedMasks: 17,5,5,9
+  MaskedWords: G___T, F_L_, K_L___, Y__R_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: RPOTHAEDUHIMSMOV
+  ActiveWords: HEAR,MOVIE,DEPOT
+  DisplayedMasks: 9,4,5
+  MaskedWords: H__R, __V__, D_P__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: GDRUUESOAFRCMVEU
+  ActiveWords: COURSE,AM,CURVE,FUDGE
+  DisplayedMasks: 5,2,10,9
+  MaskedWords: C_U___, _M, _U_V_, F__G_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: DYREANEMIURTSACU
+  ActiveWords: SUNDAY,RETURN,TRAIN,MEET
+  DisplayedMasks: 34,12,17,9
+  MaskedWords: _U___Y, __TU__, T___N, M__T
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: DTBOEAOSHGKAUALI
+  ActiveWords: BOOKS,SKATE,LAUGH
+  DisplayedMasks: 9,10,16
+  MaskedWords: B__K_, _K_T_, ____H
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: UNIFXTEAHIXRLATI
+  ActiveWords: FINER,UNTIL,EXTRA,THAT
+  DisplayedMasks: 5,17,6,3
+  MaskedWords: F_N__, U___L, _XT__, TH__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: LVAWSERTPOSEEFGH
+  ActiveWords: GOSPEL,FOREST,SHE
+  DisplayedMasks: 41,35,2
+  MaskedWords: G__P_L, FO___T, _H_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: CYSTDODULMBRSAET
+  ActiveWords: BOYS,COLD,DREAMS
+  DisplayedMasks: 5,9,17
+  MaskedWords: B_Y_, C__D, D___M_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: LIUGTZNSTEIHLVAS
+  ActiveWords: SUITE,LITTLE,SIZE
+  DisplayedMasks: 10,17,4
+  MaskedWords: _U_T_, L___L_, __Z_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: RSNPGFACILEZVDOR
+  ActiveWords: GLANCE,LEAP,VIDEO,ZERO
+  DisplayedMasks: 17,9,5,9
+  MaskedWords: G___C_, L__P, V_D__, Z__O
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: ITSERKNOIEESSAPL
+  ActiveWords: ENTIRE,PLEASE,STRIKE
+  DisplayedMasks: 22,11,18
+  MaskedWords: _NT_R_, PL_A__, _T__K_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: DPADNVIFAERSHKCU
+  ActiveWords: FRIEND,SUCKER,HAVE,PAID
+  DisplayedMasks: 33,8,5,9
+  MaskedWords: F____D, ___K__, H_V_, P__D
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: EIYSNSAEPORTDEOG
+  ActiveWords: GOOD,TRAINS,GREASY
+  DisplayedMasks: 9,17,32
+  MaskedWords: G__D, T___N_, _____Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: ESUWLPONOLDHOFEA
+  ActiveWords: FOLLOW,HOPES,HELPS
+  DisplayedMasks: 33,5,9
+  MaskedWords: F____W, H_P__, H__P_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: FEOFRFEIMISVPETR
+  ActiveWords: EMPIRE,VISIT,OFFER
+  DisplayedMasks: 2,1,2
+  MaskedWords: _M____, V____, _F___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: JWELRETSAESITDEE
+  ActiveWords: DATE,WERE,WE,JEWELS,SISTER
+  DisplayedMasks: 5,5,1,5,42
+  MaskedWords: D_T_, W_R_, W_, J_W___, _I_T_R
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 22/22
+
+Board: CEORAFKBNTWANOYT
+  ActiveWords: CANNOT,BROKE,FACE
+  DisplayedMasks: 49,8,5
+  MaskedWords: C___OT, ___K_, F_C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: INRLFELAETWPOORI
+  ActiveWords: WALLET,TRIPLE,FINER
+  DisplayedMasks: 5,8,5
+  MaskedWords: W_L___, ___P__, F_N__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: IGACNRRDEUSEFAYT
+  ActiveWords: GREASY,DARING,FASTER
+  DisplayedMasks: 33,33,41
+  MaskedWords: G____Y, D____G, F__T_R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: ELTHPSEYADGOCEAR
+  ActiveWords: RAGED,THESE,SPACE
+  DisplayedMasks: 20,2,10
+  MaskedWords: __G_D, _H___, _P_C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: VTHCROMTTEAWEFLL
+  ActiveWords: LEFT,WATCH,VOTE
+  DisplayedMasks: 5,17,1
+  MaskedWords: L_F_, W___H, V___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: EREDHWKRTCIUSUMS
+  ActiveWords: STUCK,WHERE,MURDER
+  DisplayedMasks: 20,3,11
+  MaskedWords: __U_K, WH___, MU_D__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: GSCWINEAEERFOVNS
+  ActiveWords: SING,NEVER,WE
+  DisplayedMasks: 8,4,1
+  MaskedWords: ___G, __V__, W_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 11/11
+
+Board: YEBRLVATLEAMUFDN
+  ActiveWords: MADE,BATMAN,TRAVEL
+  DisplayedMasks: 5,13,40
+  MaskedWords: M_D_, B_TM__, ___V_L
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: UBPSMNEMAROAEDKN
+  ActiveWords: NUMBER,SPEAK,DREAMS
+  DisplayedMasks: 8,18,17
+  MaskedWords: ___B__, _P__K, D___M_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: DBUKEELCDERSNUOF
+  ActiveWords: BEER,BUCKLE,FREUD,NEEDED
+  DisplayedMasks: 9,8,9,41
+  MaskedWords: B__R, ___K__, F__U_, N__D_D
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: HAETEDARRTKMOWRS
+  ActiveWords: WROTE,SMART,TREAT
+  DisplayedMasks: 5,2,17
+  MaskedWords: W_O__, _M___, T___T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: SAKGETINRSORIDCP
+  ActiveWords: PRISON,EAST,TAKING
+  DisplayedMasks: 17,10,4
+  MaskedWords: P___O_, _A_T, __K___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: OENDGKEIPEAMULMJ
+  ActiveWords: DENIAL,MAKEUP,JAMMED
+  DisplayedMasks: 1,5,1
+  MaskedWords: D_____, M_K___, J_____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: UIYSFLYIEIGNEMAR
+  ActiveWords: LIFE,FLYING,EMAIL
+  DisplayedMasks: 4,1,2
+  MaskedWords: __F_, F_____, _M___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: ITEDHRNLEALOWGOE
+  ActiveWords: HAND,LAGOON,ENTIRE
+  DisplayedMasks: 9,13,22
+  MaskedWords: H__D, L_GO__, _NT_R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: SECMDERNECAWXHTE
+  ActiveWords: WARM,EXCEED,CHEESE,CANCER,HATE
+  DisplayedMasks: 9,2,19,13,5
+  MaskedWords: W__M, _X____, CH__S_, C_NC__, H_T_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 26/26
+
+Board: HRNMTEAPSEUKDMIE
+  ActiveWords: MAKEUP,PARTS,NEEDS
+  DisplayedMasks: 4,9,9
+  MaskedWords: __K___, P__T_, N__D_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: UHGLITAMFSNOECKU
+  ActiveWords: FIT,AMOUNT,THANK,GLANCE
+  DisplayedMasks: 1,2,18,1
+  MaskedWords: F__, _M____, _H__K, G_____
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: RNEBEGARPMKOUSWG
+  ActiveWords: SUPER,NEAR,BREAK
+  DisplayedMasks: 4,9,16
+  MaskedWords: __P__, N__R, ____K
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: AZISRETWPISANOPM
+  ActiveWords: PRISON,SIZE,PATIO,SWAMP
+  DisplayedMasks: 49,6,17,10
+  MaskedWords: P___ON, _IZ_, P___O, _W_M_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: FUEVDRTOOSGEWBIT
+  ActiveWords: WORDS,VOTERS,FREUD,GETS,BITE
+  DisplayedMasks: 9,3,9,5,5
+  MaskedWords: W__D_, VO____, F__U_, G_T_, B_T_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 24/24
+
+Board: LEFRKLSIATPUMERI
+  ActiveWords: SUPER,FIRST,MAKES
+  DisplayedMasks: 6,17,5
+  MaskedWords: _UP__, F___T, M_K__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: SPCKTOEARDEMFRUT
+  ActiveWords: MAKE,ORDER,FREUD
+  DisplayedMasks: 5,5,9
+  MaskedWords: M_K_, O_D__, F__U_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: TIGNNERDABLRMLIK
+  ActiveWords: BIRD,TEAM,KILLER,BENIGN
+  DisplayedMasks: 9,9,1,17
+  MaskedWords: B__D, T__M, K_____, B___G_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: MGESEAKTNRROBNIW
+  ActiveWords: BREAKS,WINNER,WROTE
+  DisplayedMasks: 17,5,5
+  MaskedWords: B___K_, W_N___, W_O__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: ULAMFDXDEGNRSSIW
+  ActiveWords: MADE,WIND,FUDGE
+  DisplayedMasks: 5,9,1
+  MaskedWords: M_D_, W__D, F____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: DEJSMOBDFIRETNKP
+  ActiveWords: PERIOD,TIME,PROFIT,DRINK,JOBS
+  DisplayedMasks: 49,5,8,17,5
+  MaskedWords: P___OD, T_M_, ___F__, D___K, J_B_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 25/25
+
+Board: ROUPNMIUCANTRCEP
+  ActiveWords: NEAR,ROMAN,ACCEPT,UNION
+  DisplayedMasks: 9,6,18,9
+  MaskedWords: N__R, _OM__, _C__P_, U__O_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: IRPZZRSNAEHOMLSS
+  ActiveWords: PRIZE,LESSON,HEAR
+  DisplayedMasks: 9,1,9
+  MaskedWords: P__Z_, L_____, H__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: HBFELDRKOAOPHCTS
+  ActiveWords: DOCTOR,POSTAL,BROKE
+  DisplayedMasks: 1,1,9
+  MaskedWords: D_____, P_____, B__K_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: REHNTVADNUILMRCH
+  ActiveWords: RETURN,VALIUM,HAIR,CHILD
+  DisplayedMasks: 8,1,9,18
+  MaskedWords: ___U__, V_____, H__R, _H__D
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: ATEHDYTOLOEPKEAS
+  ActiveWords: KEEPS,LEAP,THEY,TODAY
+  DisplayedMasks: 1,9,10,20
+  MaskedWords: K____, L__P, _H_Y, __D_Y
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: GVUWIMESLORAATSN
+  ActiveWords: WEARS,GIVE,ALMOST
+  DisplayedMasks: 9,5,4
+  MaskedWords: W__R_, G_V_, __M___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: MCEKDAREROWHHIGH
+  ActiveWords: CARD,CREAM,HIGHER
+  DisplayedMasks: 9,17,1
+  MaskedWords: C__D, C___M, H_____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: SWOEAYRCSDNAKEPT
+  ActiveWords: CAPE,ASKED,SWORD
+  DisplayedMasks: 5,20,18
+  MaskedWords: C_P_, __K_D, _W__D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: LCAPIBREAESEMSFR
+  ActiveWords: CAPE,PREFER,EMAIL
+  DisplayedMasks: 5,9,18
+  MaskedWords: C_P_, P__F__, _M__L
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: RAORCETAURWLPWLE
+  ActiveWords: WATER,RACE,UP
+  DisplayedMasks: 1,5,2
+  MaskedWords: W____, R_C_, _P
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 11/11
+
+Board: TRSNRXAECEESVOMD
+  ActiveWords: EXTRA,COVER,NEEDS,MEANS
+  DisplayedMasks: 6,5,9,9
+  MaskedWords: _XT__, C_V__, N__D_, M__N_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: CKMSHOETUSNHCRFA
+  ActiveWords: SOCKET,MONTH,HONEST
+  DisplayedMasks: 12,17,35
+  MaskedWords: __CK__, M___H, HO___T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: AWSLSEMSYENTIAGO
+  ActiveWords: WENT,SEEMS,EASY
+  DisplayedMasks: 9,9,8
+  MaskedWords: W__T, S__M_, ___Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: ARIVORECUDKMSCAG
+  ActiveWords: GAME,ORDER,CAMERA,DRIVE
+  DisplayedMasks: 5,5,5,9
+  MaskedWords: G_M_, O_D__, C_M___, D__V_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: TLLMISOAARFUEBED
+  ActiveWords: BEFORE,FREUD,ALMOST
+  DisplayedMasks: 13,9,4
+  MaskedWords: B_FO__, F__U_, __M___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: MSTLLADUOREVOSBS
+  ActiveWords: ADULT,DREAM,VERBS
+  DisplayedMasks: 6,17,9
+  MaskedWords: _DU__, D___M, V__B_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: CLFUAHOGSENSWARM
+  ActiveWords: EACH,NEAR,WARM
+  DisplayedMasks: 12,9,9
+  MaskedWords: __CH, N__R, W__M
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 12/12
+
+Board: TILPNRAEBYONSHRI
+  ActiveWords: TRAIN,PLAY,SHRINE,NEARBY
+  DisplayedMasks: 17,9,18,48
+  MaskedWords: T___N, P__Y, _H__N_, ____BY
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: SEPTVGCCOXAFRDME
+  ActiveWords: GAME,DROVE,ACCEPT,AGES
+  DisplayedMasks: 1,8,16,3
+  MaskedWords: G___, ___V_, ____P_, AG__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: EKEPDNESEDWDSLOH
+  ActiveWords: KEEPS,NEEDED,WHOLE
+  DisplayedMasks: 9,41,3
+  MaskedWords: K__P_, N__D_D, WH___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: NYYRAEAALVSROLIF
+  ActiveWords: FIVE,YEARS,NEAR
+  DisplayedMasks: 5,9,9
+  MaskedWords: F_V_, Y__R_, N__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: JANCCELETSWRPOEB
+  ActiveWords: BEST,SPOT,JEWELS
+  DisplayedMasks: 9,6,1
+  MaskedWords: B__T, _PO_, J_____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: TLEEEPAHRCTRIAYE
+  ActiveWords: EARTH,CARPET,PRAYER
+  DisplayedMasks: 16,41,8
+  MaskedWords: ____H, C__P_T, ___Y__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: EWEJLSACIRBAAECN
+  ActiveWords: JEWELS,CANCER,BEARS
+  DisplayedMasks: 1,9,9
+  MaskedWords: J_____, C__C__, B__R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: OJEIWNDHIROYTSEN
+  ActiveWords: JEDI,WINDY,HONEST
+  DisplayedMasks: 1,17,35
+  MaskedWords: J___, W___Y, HO___T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: LEYGASRFVTOREWEP
+  ActiveWords: GREASY,POWER,WORRY,FOREST,LEAVE
+  DisplayedMasks: 33,5,17,35,9
+  MaskedWords: G____Y, P_W__, W___Y, FO___T, L__V_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 27/27
+
+Board: IPIZSRELEEVOSALY
+  ActiveWords: PILE,RISES,PRIZE,LOVELY
+  DisplayedMasks: 5,3,8,36
+  MaskedWords: P_L_, RI___, ___Z_, __V__Y
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: YAISTHTSSIEVKRLL
+  ActiveWords: STAY,SILVER,KILLER
+  DisplayedMasks: 10,8,5
+  MaskedWords: _T_Y, ___V__, K_L___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: ATSRYAEALENOVEBE
+  ActiveWords: SEEN,NEAR,LEVEE,OBEY
+  DisplayedMasks: 9,9,5,10
+  MaskedWords: S__N, N__R, L_V__, _B_Y
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 17/17
+
+Board: POLDCETSWEDUSGJM
+  ActiveWords: JUDGES,JEWELS,STEEP
+  DisplayedMasks: 9,5,18
+  MaskedWords: J__G__, J_W___, _T__P
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: RTHNUKIGCAMLSKEP
+  ActiveWords: THING,TRUCKS,SAMPLE
+  DisplayedMasks: 2,20,4
+  MaskedWords: _H___, __U_K_, __M___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: DNCFUORLVRSAEPET
+  ActiveWords: COURSE,AROUND,FLAT
+  DisplayedMasks: 7,44,3
+  MaskedWords: COU___, __OU_D, FL__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: NGIRIHCETIDSNTOP
+  ActiveWords: IDES,IT,THING,NICE,SPOT
+  DisplayedMasks: 3,2,18,5,2
+  MaskedWords: ID__, _T, _H__G, N_C_, _P__
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 19/19
+
+Board: AGESTIHKSRADTLLM
+  ActiveWords: MAKES,STAGE,SHIRTS
+  DisplayedMasks: 5,10,18
+  MaskedWords: M_K__, _T_G_, _H__T_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: TINLEHRESEOADRVW
+  ActiveWords: SHRINE,LEARN,ORDER
+  DisplayedMasks: 22,17,4
+  MaskedWords: _HR_N_, L___N, __D__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: PUNGOEVIYSENBRAB
+  ActiveWords: YOUNG,NEARBY,BENIGN,VERBS
+  DisplayedMasks: 1,48,17,9
+  MaskedWords: Y____, ____BY, B___G_, V__B_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: ETKSYGAXNREMLOEV
+  ActiveWords: VERY,EXAM,LONGER,SKATE,AGREE
+  DisplayedMasks: 9,2,9,2,2
+  MaskedWords: V__Y, _X__, L__G__, _K___, _G___
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 24/24
+
+Board: MINUSVETITAHRHSD
+  ActiveWords: MINUTE,HEAD,SHIRTS
+  DisplayedMasks: 25,9,26
+  MaskedWords: M__UT_, H__D, _H_RT_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: PNBDAINUTOGONWRC
+  ActiveWords: NATION,CROWN,ROUND
+  DisplayedMasks: 20,9,4
+  MaskedWords: __T_O_, C__W_, __U__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: DEOWOGNTEPRISEED
+  ActiveWords: SPEED,OWNED,ENTIRE
+  DisplayedMasks: 18,2,22
+  MaskedWords: _P__D, _W___, _NT_R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: SOATEENNFORGSFTW
+  ActiveWords: GREAT,EFFORT,WRONG
+  DisplayedMasks: 17,2,1
+  MaskedWords: G___T, _F____, W____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: DRYMRFAUTEBCROHS
+  ActiveWords: AFTER,MARY,DREAM
+  DisplayedMasks: 2,9,16
+  MaskedWords: _F___, M__Y, ____M
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: SUPEHOBOLUVNDOWE
+  ActiveWords: SHOP,SHOULD,LOVE,DOWN
+  DisplayedMasks: 10,2,5,5
+  MaskedWords: _H_P, _H____, L_V_, D_W_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: BONMRSEIEETWPVAH
+  ActiveWords: VERBS,SEEN,WHAT,PERSON
+  DisplayedMasks: 9,9,3,17
+  MaskedWords: V__B_, S__N, WH__, P___O_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: ERENSCPCNONAEVLY
+  ActiveWords: CANCER,PERSON,YAP,LOVE
+  DisplayedMasks: 9,17,1,5
+  MaskedWords: C__C__, P___O_, Y__, L_V_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: FHNTAILESUDIPERO
+  ActiveWords: PERIOD,RESULT,FINE
+  DisplayedMasks: 33,24,5
+  MaskedWords: P____D, ___UL_, F_N_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: CSYOTANTREMIGPLA
+  ActiveWords: ANIMAL,GREASY,CARPET,SAMPLE
+  DisplayedMasks: 42,33,41,28
+  MaskedWords: _N_M_L, G____Y, C__P_T, __MPL_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 24/24
+
+Board: UNDRDATASEIIHALY
+  ActiveWords: UNTIL,AHEAD,LIAR,DAILY
+  DisplayedMasks: 17,18,9,17
+  MaskedWords: U___L, _H__D, L__R, D___Y
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: HINISDPAEOREXNKB
+  ActiveWords: SHIP,BROKE,INDEX
+  DisplayedMasks: 10,8,16
+  MaskedWords: _H_P, ___K_, ____X
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: STSTSOLEIDAHKNRC
+  ActiveWords: HANDLE,KIDS,TESTS
+  DisplayedMasks: 9,5,9
+  MaskedWords: H__D__, K_D_, T__T_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: RFNSSEUDTIEGSCOV
+  ActiveWords: SISTER,FUDGE,FREUD,NEEDS,VOICE
+  DisplayedMasks: 42,9,9,9,9
+  MaskedWords: _I_T_R, F__G_, F__U_, N__D_, V__C_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 26/26
+
+Board: FRONCVTEAEEDNRLS
+  ActiveWords: VOTE,NEEDS,LEARN,FRONT
+  DisplayedMasks: 3,9,17,5
+  MaskedWords: VO__, N__D_, L___N, F_O__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: NESEOTERRPGFSOFA
+  ActiveWords: ENTER,EFFORT,SENT
+  DisplayedMasks: 6,14,12
+  MaskedWords: _NT__, _FFO__, __NT
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: SDTRHANUWLOBESSA
+  ActiveWords: ABOUT,SATURN,WHAT,LESSON
+  DisplayedMasks: 2,12,3,17
+  MaskedWords: _B___, __TU__, WH__, L___O_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: OUTSCGREIAFADPYS
+  ActiveWords: PAID,GREASY,AFRAID
+  DisplayedMasks: 9,33,2
+  MaskedWords: P__D, G____Y, _F____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: RENYWISTTPEASOML
+  ActiveWords: ALMOST,EMPIRE,EASY
+  DisplayedMasks: 6,2,10
+  MaskedWords: _LM___, _M____, _A_Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: LRNYFIEDPLWMHOIA
+  ActiveWords: EMAIL,FRIEND,POWER
+  DisplayedMasks: 18,49,5
+  MaskedWords: _M__L, F___ND, P_W__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: BTIDEEHNRVLNATOG
+  ActiveWords: LONG,TRAVEL,BEHIND,BEER
+  DisplayedMasks: 9,40,37,9
+  MaskedWords: L__G, ___V_L, B_H__D, B__R
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: SEDUTNOLSNLYIAFB
+  ActiveWords: TENNIS,FALL,LOUDLY
+  DisplayedMasks: 13,5,32
+  MaskedWords: T_NN__, F_L_, _____Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: TSOLTEIUHKNDWIGH
+  ActiveWords: LISTEN,THIGH,KING,SOUND
+  DisplayedMasks: 9,18,9,20
+  MaskedWords: L__T__, _H__H, K__G, __U_D
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: OSYEATSWIYAEEDLP
+  ActiveWords: PLAYED,LYDIA,TOSS
+  DisplayedMasks: 41,6,3
+  MaskedWords: P__Y_D, _YD__, TO__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: DRSHOIEPCTNLFITO
+  ActiveWords: HELPS,COTTON,PERIOD
+  DisplayedMasks: 9,19,33
+  MaskedWords: H__P_, CO__O_, P____D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: GAFISREEKUTSCORN
+  ActiveWords: RETURN,AGREE,SAFE
+  DisplayedMasks: 12,2,4
+  MaskedWords: __TU__, _G___, __F_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: BDSXLOIDFWOINPTS
+  ActiveWords: IDIOT,SIX,BLOW
+  DisplayedMasks: 10,4,9
+  MaskedWords: _D_O_, __X, B__W
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 12/12
+
+Board: RESHUTEOBOLPOFGS
+  ActiveWords: FOUR,HELPS,STEEP,HOPES
+  DisplayedMasks: 5,9,18,5
+  MaskedWords: F_U_, H__P_, _T__P, H_P__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: TEHEAKPLOTSSDCOR
+  ActiveWords: DOCTOR,SPEAK,SKATE,HELPS
+  DisplayedMasks: 1,18,10,9
+  MaskedWords: D_____, _P__K, _K_T_, H__P_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: PNEYIASLVRHTEUCO
+  ActiveWords: CURVE,PANEL,SHRINE,EASY
+  DisplayedMasks: 10,17,22,8
+  MaskedWords: _U_V_, P___L, _HR_N_, ___Y
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: DMIGARSNHEASSBYP
+  ActiveWords: BYPASS,DARING,DREAMS,HEAR
+  DisplayedMasks: 2,33,17,9
+  MaskedWords: _Y____, D____G, D___M_, H__R
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: ADANPTUAESCSMKYO
+  ActiveWords: SOCKET,SYSTEM,CANADA
+  DisplayedMasks: 8,2,16
+  MaskedWords: ___K__, _Y____, ____D_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: IPAYELHPMOTBELSE
+  ActiveWords: BEST,PLAY,HOME,ELSE
+  DisplayedMasks: 9,8,5,6
+  MaskedWords: B__T, ___Y, H_M_, _LS_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 16/16
+
+Board: NKRIABNDSGOIAYAW
+  ActiveWords: WIND,KNOW,BOYS,AGAIN
+  DisplayedMasks: 9,8,5,2
+  MaskedWords: W__D, ___W, B_Y_, _G___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 17/17
+
+Board: ACTEHRSPMAOMEYOT
+  ActiveWords: SPORT,YEARS,MARCH
+  DisplayedMasks: 2,9,17
+  MaskedWords: _P___, Y__R_, M___H
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: SNAENETSRFVNYOWI
+  ActiveWords: WINTER,VERY,EAST
+  DisplayedMasks: 9,9,10
+  MaskedWords: W__T__, V__Y, _A_T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: IREPHAESGCNKSEIG
+  ActiveWords: NEAR,AGES,KING,SPEECH
+  DisplayedMasks: 9,2,9,32
+  MaskedWords: N__R, _G__, K__G, _____H
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: RUSCOETAHEFLLRPL
+  ActiveWords: FALL,HOUSE,LEFT,FACTS,PREFER
+  DisplayedMasks: 5,5,5,5,8
+  MaskedWords: F_L_, H_U__, L_F_, F_C__, ___F__
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 24/24
+
+Board: FDNMRIAEOWCRSMAT
+  ActiveWords: FINER,CAMERA,SMART,SWORD
+  DisplayedMasks: 5,5,18,18
+  MaskedWords: F_N__, C_M___, _M__T, _W__D
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: REPADWODKIAAVCNG
+  ActiveWords: POWDER,AGAIN,KING,CANADA,VIDEO
+  DisplayedMasks: 5,2,9,16,5
+  MaskedWords: P_W___, _G___, K__G, ____D_, V_D__
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 26/26
+
+Board: IFTAAREACLSTLWAY
+  ActiveWords: ALWAYS,CAR,TREAT
+  DisplayedMasks: 20,1,17
+  MaskedWords: __W_Y_, C__, T___T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: YABOTESYOGRFVFFE
+  ActiveWords: VOTERS,OBEY,OFFER,GREASY
+  DisplayedMasks: 1,10,2,32
+  MaskedWords: V_____, _B_Y, _F___, _____Y
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: ENESIAHNDRSABHEK
+  ActiveWords: BREAKS,DINE,SNAKE
+  DisplayedMasks: 16,5,10
+  MaskedWords: ____K_, D_N_, _N_K_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: ASDCFTHRRKNAIEMC
+  ActiveWords: STRIKE,MARCH,CARDS,FAST
+  DisplayedMasks: 16,16,9,9
+  MaskedWords: ____K_, ____H, C__D_, F__T
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: ANOTNFCRPATEROVA
+  ActiveWords: OVER,TREAT,CANNOT
+  DisplayedMasks: 3,17,49
+  MaskedWords: OV__, T___T, C___OT
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: FAERRTTNAIEIDNIF
+  ActiveWords: FRIEND,AFTER,AFRAID,FINER
+  DisplayedMasks: 33,6,2,5
+  MaskedWords: F____D, _FT__, _F____, F_N__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: VACHLIMANUERFLTX
+  ActiveWords: MINUTE,VALIUM,EXTRA
+  DisplayedMasks: 25,33,6
+  MaskedWords: M__UT_, V____M, _XT__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: YORCWJASDNHRELUO
+  ActiveWords: ENJOY,SHOULD,HOUR
+  DisplayedMasks: 4,42,5
+  MaskedWords: __J__, _H_U_D, H_U_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: NHDUTAEDNTREOIUF
+  ActiveWords: NATION,TREAT,TURFED
+  DisplayedMasks: 21,17,8
+  MaskedWords: N_T_O_, T___T, ___F__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: YOUWALOSEREKLNBY
+  ActiveWords: LOOK,NEARBY,USE
+  DisplayedMasks: 9,48,1
+  MaskedWords: L__K, ____BY, U__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: TASCVHAKDIGAMNGH
+  ActiveWords: AGAIN,HAVING,MIND
+  DisplayedMasks: 18,5,9
+  MaskedWords: _G__N, H_V___, M__D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: TEBVOSERMLKNNCAP
+  ActiveWords: PANEL,ALMOST,VERBS,CAKE
+  DisplayedMasks: 17,6,9,5
+  MaskedWords: P___L, _LM___, V__B_, C_K_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: HTWOIRRREHAUEBNA
+  ActiveWords: BEER,BARE,THREE
+  DisplayedMasks: 9,5,3
+  MaskedWords: B__R, B_R_, TH___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: DNPEEIPAPLKSUBIC
+  ActiveWords: DINE,APPLE,PUBLIC
+  DisplayedMasks: 5,6,7
+  MaskedWords: D_N_, _PP__, PUB___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: SDOCELFOCNDGOIYR
+  ActiveWords: COOLED,SECOND,DRY
+  DisplayedMasks: 41,36,4
+  MaskedWords: C__L_D, __C__D, __Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: OGIDOUNFREMROBAG
+  ActiveWords: NUMBER,FINER,FIGURE
+  DisplayedMasks: 12,5,5
+  MaskedWords: __MB__, F_N__, F_G___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: MPIRRETESANDKIGE
+  ActiveWords: EMPIRE,TAKING,RAGED
+  DisplayedMasks: 6,37,20
+  MaskedWords: _MP___, T_K__G, __G_D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: EIAPCIRTDNRHKEAE
+  ActiveWords: PRICE,THANK,PAID,NICE
+  DisplayedMasks: 9,18,9,5
+  MaskedWords: P__C_, _H__K, P__D, N_C_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: JBNEOFSRRIYUBNGO
+  ActiveWords: YOUR,FIGURE,BORING
+  DisplayedMasks: 5,5,1
+  MaskedWords: Y_U_, F_G___, B_____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: ARKIRELYOELSPPAC
+  ActiveWords: LIKE,CALL,PEOPLE
+  DisplayedMasks: 5,5,9
+  MaskedWords: L_K_, C_L_, P__P__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: TYEPICAAMENSKALT
+  ActiveWords: CITY,MAKE,SNAKE,PANEL
+  DisplayedMasks: 9,5,10,17
+  MaskedWords: C__Y, M_K_, _N_K_, P___L
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: UOYEKSRBVEGAAAWP
+  ActiveWords: VERY,AWARE,BROKE
+  DisplayedMasks: 9,10,8
+  MaskedWords: V__Y, _W_R_, ___K_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: TIMLNELCBITOGNES
+  ActiveWords: ENGINE,TIME,BITES
+  DisplayedMasks: 4,5,5
+  MaskedWords: __G___, T_M_, B_T__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: BNEDSLTZLEAIRTOP
+  ActiveWords: LEAP,BLAZED,PATIO
+  DisplayedMasks: 9,9,17
+  MaskedWords: L__P, B__Z__, P___O
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: WESITELTELUCBWAF
+  ActiveWords: FUTILE,WE,WALLET,FACTS
+  DisplayedMasks: 3,1,1,5
+  MaskedWords: FU____, W_, W_____, F_C__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: MTEROSHEWNMYEALL
+  ActiveWords: SMALL,MOTHER,THEY
+  DisplayedMasks: 10,9,10
+  MaskedWords: _M_L_, M__H__, _H_Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: PSSPKYETAMEHWARN
+  ActiveWords: STEEP,THEY,SYSTEM,AWARE
+  DisplayedMasks: 16,10,2,2
+  MaskedWords: ____P, _H_Y, _Y____, _W___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: FENAWHNCSODBTULL
+  ActiveWords: WOULD,CANNOT,BLOW,WHEN
+  DisplayedMasks: 5,17,9,3
+  MaskedWords: W_U__, C___O_, B__W, WH__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: KCEKTAGEHSIVEMTI
+  ActiveWords: GIVE,STAGE,TIMES
+  DisplayedMasks: 4,10,4
+  MaskedWords: __V_, _T_G_, __M__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: IDLEAESBDHUPTOAR
+  ActiveWords: DOUBLE,AHEAD,SHARP
+  DisplayedMasks: 8,18,18
+  MaskedWords: ___B__, _H__D, _H__P
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: LKYCMNEAOLFSEGYS
+  ActiveWords: MONKEY,EASY,EGO,FACE
+  DisplayedMasks: 8,10,2,5
+  MaskedWords: ___K__, _A_Y, _G_, F_C_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 17/17
+
+Board: IFNAURMRTAEPNSCO
+  ActiveWords: OPERA,CAMERA,OCEANS
+  DisplayedMasks: 2,21,19
+  MaskedWords: _P___, C_M_R_, OC__N_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: CALOKEBUASROTYAM
+  ActiveWords: MARY,CAKE,LABOUR
+  DisplayedMasks: 9,5,21
+  MaskedWords: M__Y, C_K_, L_B_U_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: OKAWODRETISBNEVO
+  ActiveWords: ENTIRE,WEARS,BREAK,DRIVE,TOOK
+  DisplayedMasks: 6,9,17,8,10
+  MaskedWords: _NT___, W__R_, B___K, ___V_, _O_K
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 25/25
+
+Board: XEADTHLURALYNEPA
+  ActiveWords: EXTRA,YAP,LEARN
+  DisplayedMasks: 2,1,17
+  MaskedWords: _X___, Y__, L___N
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: LLISEVDKERINMPOW
+  ActiveWords: EVER,KILLER,EMPIRE
+  DisplayedMasks: 10,5,2
+  MaskedWords: _V_R, K_L___, _M____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: BRHOSEACVNKEYLIE
+  ActiveWords: CHEVY,LIKE,BEARS
+  DisplayedMasks: 24,5,9
+  MaskedWords: ___VY, L_K_, B__R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: ACUREPOBSEEKHWNI
+  ActiveWords: CUPS,BROKEN,SPACE
+  DisplayedMasks: 6,9,10
+  MaskedWords: _UP_, B__K__, _P_C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: ULOBEDOFKBFCIREE
+  ActiveWords: DUE,BIKE,COOLED
+  DisplayedMasks: 2,4,41
+  MaskedWords: _U_, __K_, C__L_D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: OFHINURFREWUVAHO
+  ActiveWords: WHEN,HAVE,NEAR,FIRE,FOUR
+  DisplayedMasks: 3,5,1,5,5
+  MaskedWords: WH__, H_V_, N___, F_R_, F_U_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 20/20
+
+Board: OUNDITSALAEYTLCD
+  ActiveWords: SUNDAY,TOIL,TASTE,CALLED
+  DisplayedMasks: 32,10,9,33
+  MaskedWords: _____Y, _O_L, T__T_, C____D
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: ENLSTHBAJEZMIDLP
+  ActiveWords: SAMPLE,HE,BLAZED,JEDI
+  DisplayedMasks: 12,1,8,5
+  MaskedWords: __MP__, H_, ___Z__, J_D_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: OSDFGEELEULRDSTH
+  ActiveWords: GOES,THREE,DEED
+  DisplayedMasks: 3,2,9
+  MaskedWords: GO__, _H___, D__D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: LTSLELOKAUPSBDIR
+  ActiveWords: ADULT,RISK,BULLET
+  DisplayedMasks: 6,9,3
+  MaskedWords: _DU__, R__K, BU____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: POMWWIRNSDEOTSBT
+  ActiveWords: MISSED,WORDS,WROTE,POWDER
+  DisplayedMasks: 33,9,5,4
+  MaskedWords: M____D, W__D_, W_O__, __W___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: SRULLWESEIAMJMPY
+  ActiveWords: JEWELS,RULES,EMAIL
+  DisplayedMasks: 1,6,18
+  MaskedWords: J_____, _UL__, _M__L
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: RBEMPEHOAYTUKSOR
+  ActiveWords: BEER,STEP,MOTHER,YOUR,BREAKS
+  DisplayedMasks: 9,10,8,5,16
+  MaskedWords: B__R, _T_P, ___H__, Y_U_, ____K_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 24/24
+
+Board: YOSWTERRLASIHGND
+  ActiveWords: WROTE,HAND,YEARS,LATER
+  DisplayedMasks: 5,9,9,5
+  MaskedWords: W_O__, H__D, Y__R_, L_T__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: YDNPALOUASESFTGR
+  ActiveWords: LOSERS,POSTAL,SUNDAY,AFTER
+  DisplayedMasks: 19,33,32,2
+  MaskedWords: LO__R_, P____L, _____Y, _F___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 23/23
+
+Board: MUENJPTDAIISZZML
+  ActiveWords: STUPID,LIMIT,LISTEN,JUMPED,PIZZA
+  DisplayedMasks: 12,5,41,1,12
+  MaskedWords: __UP__, L_M__, L__T_N, J_____, __ZZ_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 28/28
+
+Board: VIEEMODNASTCTPAE
+  ActiveWords: TASTE,NEEDS,MOVIE
+  DisplayedMasks: 9,9,5
+  MaskedWords: T__T_, N__D_, M_V__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: DSDIOMAEOULTGDNI
+  ActiveWords: DATE,GOOD,UNTIL
+  DisplayedMasks: 5,9,17
+  MaskedWords: D_T_, G__D, U___L
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: YOMRRUNCFVACMOER
+  ActiveWords: CARE,YOUR,FROM
+  DisplayedMasks: 5,5,9
+  MaskedWords: C_R_, Y_U_, F__M
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 12/12
+
+Board: ARDSISTIEOCKYTEB
+  ActiveWords: SOCKET,KIDS,RAISE
+  DisplayedMasks: 14,5,3
+  MaskedWords: _OCK__, K_D_, RA___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: OJTNFINSSREKEDNE
+  ActiveWords: ENTIRE,FRIEND,JOIN
+  DisplayedMasks: 4,49,3
+  MaskedWords: __T___, F___ND, JO__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: PNSLCAEDFEDPTYIP
+  ActiveWords: FACE,PANEL,SAFETY
+  DisplayedMasks: 5,17,52
+  MaskedWords: F_C_, P___L, __F_TY
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: BRNGVEINGOSIYLLW
+  ActiveWords: LOVE,BENIGN,WINNER
+  DisplayedMasks: 5,21,13
+  MaskedWords: L_V_, B_N_G_, W_NN__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: TNKIOHEYMATLOOON
+  ActiveWords: MONKEY,ONLY,HATE
+  DisplayedMasks: 41,12,5
+  MaskedWords: M__K_Y, __LY, H_T_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: VNNRYIIEASTOPFPR
+  ActiveWords: VISIT,SPORT,AFTER
+  DisplayedMasks: 1,6,6
+  MaskedWords: V____, _PO__, _FT__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: AFUIWRSTIAEODVRE
+  ActiveWords: AFRAID,USER,STORE
+  DisplayedMasks: 2,9,6
+  MaskedWords: _F____, U__R, _TO__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: PBITTLSENETNORFD
+  ActiveWords: LEFT,END,BITES,ENTER
+  DisplayedMasks: 5,4,5,6
+  MaskedWords: L_F_, __D, B_T__, _NT__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 17/17
+
+Board: URIOOATPYIELLDKW
+  ActiveWords: TRIPLE,DEPOT,YOUR,LIKE,WEAR
+  DisplayedMasks: 8,5,1,5,9
+  MaskedWords: ___P__, D_P__, Y___, L_K_, W__R
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 23/23
+
+Board: DLRDSOEPHIRTLANS
+  ActiveWords: PERIOD,SHARP,TRAINS,ORDER
+  DisplayedMasks: 33,18,17,5
+  MaskedWords: P____D, _H__P, T___N_, O_D__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: ZEDURACEEOLTSUOB
+  ActiveWords: RESULT,BLAZED,RACE
+  DisplayedMasks: 24,41,5
+  MaskedWords: ___UL_, B__Z_D, R_C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: NWLCEJORDKSUQEAQ
+  ActiveWords: JOKE,OWNED,COURSE
+  DisplayedMasks: 5,2,7
+  MaskedWords: J_K_, _W___, COU___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: SIZNMHEJAEDOLGAY
+  ActiveWords: NEED,ENJOY,SIZE
+  DisplayedMasks: 9,4,4
+  MaskedWords: N__D, __J__, __Z_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: HORMTCUDEOXEYEDR
+  ActiveWords: EXCEED,DOCTOR,MURDER
+  DisplayedMasks: 38,5,1
+  MaskedWords: _XC__D, D_C___, M_____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 18/18
+
+Board: FORBKLDWESOTNCHR
+  ActiveWords: BROKE,LENS,WORTH
+  DisplayedMasks: 9,5,17
+  MaskedWords: B__K_, L_N_, W___H
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: DSKOTELOMSTCFORE
+  ActiveWords: COOLED,TESTS,FORCE
+  DisplayedMasks: 41,9,9
+  MaskedWords: C__L_D, T__T_, F__C_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: RTFGIPUOCLRSLUEV
+  ActiveWords: CURVE,FUTILE,TRIPLE
+  DisplayedMasks: 8,3,24
+  MaskedWords: ___V_, FU____, ___PL_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: OTONPMCADEENRTBS
+  ActiveWords: BEER,DEPOT,OCEANS
+  DisplayedMasks: 9,5,2
+  MaskedWords: B__R, D_P__, _C____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: RSISTANGLEPURDYO
+  ActiveWords: YOUNG,SISTER,YEARS,DENIAL
+  DisplayedMasks: 17,42,9,33
+  MaskedWords: Y___G, _I_T_R, Y__R_, D____L
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: RINNATSUKEOMYRVA
+  ActiveWords: AMOUNT,TRAINS,TAKE,VERY
+  DisplayedMasks: 10,17,5,9
+  MaskedWords: _M_U__, T___N_, T_K_, V__Y
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: LMYJILOEYSNKEEHT
+  ActiveWords: SILLY,MONTHS,JOKE
+  DisplayedMasks: 20,16,5
+  MaskedWords: __L_Y, ____H_, J_K_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: EERPDIWETMOEELPK
+  ActiveWords: PEOPLE,PEEK,WIDER
+  DisplayedMasks: 9,9,5
+  MaskedWords: P__P__, P__K, W_D__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: UNAKITENLRISAMNO
+  ActiveWords: NATION,UNTIL,ANIMAL
+  DisplayedMasks: 21,17,42
+  MaskedWords: N_T_O_, U___L, _N_M_L
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: SANVOTSILIODFNFL
+  ActiveWords: FOLDS,VISIT,NATION
+  DisplayedMasks: 9,17,21
+  MaskedWords: F__D_, V___T, N_T_O_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: KEYCARCOTNAASILI
+  ActiveWords: OCEANS,LIAR,SNAKE
+  DisplayedMasks: 2,9,10
+  MaskedWords: _C____, L__R, _N_K_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: DNPELEAOEFTHRASY
+  ActiveWords: SAFETY,HANDLE,DEPOT
+  DisplayedMasks: 36,9,5
+  MaskedWords: __F__Y, H__D__, D_P__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: SLRSMATPIKYENAER
+  ActiveWords: KEEP,ANIMAL,PRAYER
+  DisplayedMasks: 9,40,9
+  MaskedWords: K__P, ___M_L, P__Y__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: EILLGTSNAHETIYBO
+  ActiveWords: STAGE,LISTEN,OBEY
+  DisplayedMasks: 8,9,10
+  MaskedWords: ___G_, L__T__, _B_Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: PEMUROTSANOSCGAL
+  ActiveWords: TUMOR,LAGOON,CARPET
+  DisplayedMasks: 4,4,9
+  MaskedWords: __M__, __G___, C__P__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: YTEYAMEALTSRPSFI
+  ActiveWords: FIRST,PLAY,YEAR
+  DisplayedMasks: 17,9,9
+  MaskedWords: F___T, P__Y, Y__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: FSCAHITESRFRPENI
+  ActiveWords: SHIRTS,PREFER,FINE,PRICE
+  DisplayedMasks: 26,9,5,9
+  MaskedWords: _H_RT_, P__F__, F_N_, P__C_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: LEIFSNPGSOJUYTER
+  ActiveWords: LESSON,ENJOY,FIGURE
+  DisplayedMasks: 1,4,1
+  MaskedWords: L_____, __J__, F_____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: DSTSREHROTAIWGNV
+  ActiveWords: SHEDS,WORDS,HAVING
+  DisplayedMasks: 10,9,37
+  MaskedWords: _H_D_, W__D_, H_V__G
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: SPLLCHIMTRANSLED
+  ActiveWords: DENIAL,CREAM,SPILL
+  DisplayedMasks: 37,17,10
+  MaskedWords: D_N__L, C___M, _P_L_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: ZIFLREYDPAIMDCTE
+  ActiveWords: RIFE,PRIZE,TIME,LYDIA,CAPE
+  DisplayedMasks: 4,8,5,2,5
+  MaskedWords: __F_, ___Z_, T_M_, _Y___, C_P_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 22/22
+
+Board: FTSDAGEHHGRSBLAT
+  ActiveWords: AFTER,STAGE,SHEDS
+  DisplayedMasks: 2,10,10
+  MaskedWords: _F___, _T_G_, _H_D_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: PEEKOHYPSTEAERAL
+  ActiveWords: POSTAL,PEEK,YEARS
+  DisplayedMasks: 33,8,1
+  MaskedWords: P____L, ___K, Y____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: OSYLSNTEPEKMEILS
+  ActiveWords: ME,KEEPS,PILE,LESSON,STYLE
+  DisplayedMasks: 1,9,5,17,4
+  MaskedWords: M_, K__P_, P_L_, L___O_, __Y__
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 22/22
+
+Board: MOKOISTCSHETDERY
+  ActiveWords: STOCK,MOTHER,MISSED
+  DisplayedMasks: 16,9,35
+  MaskedWords: ____K, M__H__, MI___D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: FSWLUOLONEPGDSOT
+  ActiveWords: FOLLOW,DEPOT,GOSPEL
+  DisplayedMasks: 32,5,1
+  MaskedWords: _____W, D_P__, G_____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: APNEFIPDETLBREUL
+  ActiveWords: AFTER,LINE,APPLE,BULLET
+  DisplayedMasks: 2,5,2,7
+  MaskedWords: _F___, L_N_, _P___, BUL___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: ENYLKCETRISYTTXM
+  ActiveWords: RISEN,MY,SIX,STRIKE,STYLE
+  DisplayedMasks: 16,2,4,16,4
+  MaskedWords: ____N, _Y, __X, ____K_, __Y__
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 21/21
+
+Board: OUSFOCRTLKEIBEDN
+  ActiveWords: BEER,COURTS,FRIEND,COOLED
+  DisplayedMasks: 9,5,1,41
+  MaskedWords: B__R, C_U___, F_____, C__L_D
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: STBHLEREWAPACEMB
+  ActiveWords: CARPET,LAMB,HEAR
+  DisplayedMasks: 41,12,9
+  MaskedWords: C__P_T, __MB, H__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: GNIAILHRYUTEFLSA
+  ActiveWords: LIAR,RESULT,FLYING
+  DisplayedMasks: 9,8,5
+  MaskedWords: L__R, ___U__, F_Y___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: OHTEBSEPURKNECEL
+  ActiveWords: STEEP,KNEE,THOSE
+  DisplayedMasks: 18,3,6
+  MaskedWords: _T__P, KN__, _HO__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: ECHSNTNMASOGBWIL
+  ActiveWords: BATH,WATCH,SIGN,MONTHS,LISTEN
+  DisplayedMasks: 9,17,4,17,1
+  MaskedWords: B__H, W___H, __G_, M___H_, L_____
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 25/25
+
+Board: PEASNHTIDEIRHCUB
+  ActiveWords: BURIED,STEP,RICH
+  DisplayedMasks: 3,8,12
+  MaskedWords: BU____, ___P, __CH
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: CITYROMEUSLDTRAU
+  ActiveWords: ALMOST,CITY,CRIME
+  DisplayedMasks: 6,9,9
+  MaskedWords: _LM___, C__Y, C__M_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: YAEETSLWKSLMIDON
+  ActiveWords: WELL,EASY,KIDS,ALMOST,LESSON
+  DisplayedMasks: 5,10,5,4,17
+  MaskedWords: W_L_, _A_Y, K_D_, __M___, L___O_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 24/24
+
+Board: BASESYPCESUOEFFH
+  ActiveWords: COFFEE,HOUSE,HOPES,BYPASS
+  DisplayedMasks: 12,5,5,2
+  MaskedWords: __FF__, H_U__, H_P__, _Y____
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: WVSSBAEPLHTRLSSD
+  ActiveWords: STEP,SHALL,DRESS
+  DisplayedMasks: 10,10,1
+  MaskedWords: _T_P, _H_L_, D____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: SEFFREHIDISTGHNK
+  ActiveWords: DRINK,THIGH,STIFF
+  DisplayedMasks: 17,18,24
+  MaskedWords: D___K, _H__H, ___FF
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: RCEPADTEESRLBFOO
+  ActiveWords: STEP,CARDS,TREE
+  DisplayedMasks: 10,9,3
+  MaskedWords: _T_P, C__D_, TR__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: ROFEPERCLHELNUSL
+  ActiveWords: CELLS,PREFER,FORCE,HELP
+  DisplayedMasks: 5,8,9,9
+  MaskedWords: C_L__, ___F__, F__C_, H__P
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: NRTIGEDBOIANNTLE
+  ActiveWords: EGO,NATION,BITE
+  DisplayedMasks: 2,20,5
+  MaskedWords: _G_, __T_O_, B_T_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: GECTTESNVILABGWI
+  ActiveWords: WANTS,BITES,GLANCE,GIVES
+  DisplayedMasks: 9,5,17,5
+  MaskedWords: W__T_, B_T__, G___C_, G_V__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: BOOSLEEFKLISDANP
+  ActiveWords: FIELD,LOOSES,SNAKE
+  DisplayedMasks: 17,1,8
+  MaskedWords: F___D, L_____, ___K_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: PDAHMNLIPESICATO
+  ActiveWords: CAPE,HANDLE,LISTEN
+  DisplayedMasks: 5,9,9
+  MaskedWords: C_P_, H__D__, L__T__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: HCAMWRREWEAKROLC
+  ActiveWords: MARCH,CAKE,WEAR,WORE,CAMERA
+  DisplayedMasks: 17,5,9,3,4
+  MaskedWords: M___H, C_K_, W__R, WO__, __M___
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 23/23
+
+Board: MALUSINLWLTDCORS
+  ActiveWords: SMALL,MIND,SWIM,UNTIL
+  DisplayedMasks: 2,9,10,17
+  MaskedWords: _M___, M__D, _W_M, U___L
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: INDNAMEEOLBZWPRI
+  ActiveWords: BLOW,DENIAL,BEEN,PRIZE
+  DisplayedMasks: 9,1,9,8
+  MaskedWords: B__W, D_____, B__N, ___Z_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: ESATTERUFCONDFDW
+  ActiveWords: OFFER,DOWN,COURSE
+  DisplayedMasks: 2,4,5
+  MaskedWords: _F___, __W_, C_U___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: MRLIUDSESREPETOF
+  ActiveWords: DEPOT,MURDER,ELSE
+  DisplayedMasks: 5,11,6
+  MaskedWords: D_P__, MU_D__, _LS_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: AEOIGRVCEDHAELIR
+  ActiveWords: HAIR,AGREE,CHILD,OVER
+  DisplayedMasks: 9,2,18,3
+  MaskedWords: H__R, _G___, _H__D, OV__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: XNIVEDRETHISAEMP
+  ActiveWords: DRIVE,EMPIRE,HATE,INDEX
+  DisplayedMasks: 8,6,5,20
+  MaskedWords: ___V_, _MP___, H_T_, __D_X
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: YIDOLTUFSEOWAFRK
+  ActiveWords: WORK,FUTILE,SAFETY,FOREST
+  DisplayedMasks: 9,3,52,35
+  MaskedWords: W__K, FU____, __F_TY, FO___T
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: SWVERHASOEITPWLR
+  ActiveWords: SHIRTS,WAVES,HAVE
+  DisplayedMasks: 26,5,5
+  MaskedWords: _H_RT_, W_V__, H_V_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: LGCHRLANFESONSWY
+  ActiveWords: GREASY,FELL,LESSON
+  DisplayedMasks: 32,5,49
+  MaskedWords: _____Y, F_L_, L___ON
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: MLNRELUETDTAHASL
+  ActiveWords: ME,THAT,SATURN
+  DisplayedMasks: 1,2,8
+  MaskedWords: M_, _H__, ___U__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 12/12
+
+Board: BNASALDUTLCTHANH
+  ActiveWords: THAN,SUCH,BATH,CALL
+  DisplayedMasks: 2,10,9,5
+  MaskedWords: _H__, _U_H, B__H, C_L_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 16/16
+
+Board: LIAOMYDTIOOWTORM
+  ActiveWords: LYDIA,WORM,LIMIT,TODAY,DO
+  DisplayedMasks: 2,9,5,20,1
+  MaskedWords: _Y___, W__M, L_M__, __D_Y, D_
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 21/21
+
+Board: IDKTORSENSEOUPML
+  ActiveWords: PERIOD,STEEP,LESSON,KEEP
+  DisplayedMasks: 33,16,49,9
+  MaskedWords: P____D, ____P, L___ON, K__P
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: EATVMRIOSYETHOPA
+  ActiveWords: PATIO,MARY,SHOP,VOTE
+  DisplayedMasks: 17,9,10,3
+  MaskedWords: P___O, M__Y, _H_P, VO__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 17/17
+
+Board: THBMELASYENTERIY
+  ActiveWords: THEY,LAMB,ENTIRE
+  DisplayedMasks: 10,12,6
+  MaskedWords: _H_Y, __MB, _NT___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: OANCCPEGDRATRHES
+  ActiveWords: HEAR,OPERA,CANCER
+  DisplayedMasks: 9,3,9
+  MaskedWords: H__R, OP___, C__C__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: GMINAAAYRDFNTXES
+  ActiveWords: EXTRA,AM,AGAIN
+  DisplayedMasks: 2,2,18
+  MaskedWords: _X___, _M, _G__N
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 12/12
+
+Board: SPSYUANGCERNWOME
+  ActiveWords: WOMEN,OCEANS,GREASY,ANY
+  DisplayedMasks: 5,3,33,4
+  MaskedWords: W_M__, OC____, G____Y, __Y
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: CCATALEPYDRVNUSB
+  ActiveWords: LATE,SUNDAY,VERBS,ACCEPT
+  DisplayedMasks: 5,42,9,16
+  MaskedWords: L_T_, _U_D_Y, V__B_, ____P_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: EOWKVMNOYEITERHM
+  ActiveWords: THEY,TIME,ENTIRE,KNOW
+  DisplayedMasks: 10,5,6,9
+  MaskedWords: _H_Y, T_M_, _NT___, K__W
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 18/18
+
+Board: YIRHEEAKOMVLHSIG
+  ActiveWords: SILVER,YEAR,GIVE
+  DisplayedMasks: 44,9,5
+  MaskedWords: __LV_R, Y__R, G_V_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: HELDKASEIBVSRMIG
+  ActiveWords: MISSED,LEAVE,GIVE,HAIR
+  DisplayedMasks: 33,9,5,9
+  MaskedWords: M____D, L__V_, G_V_, H__R
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: UCTTKTSSIENORLLE
+  ActiveWords: LESSON,STUCK,ENTIRE,TESTS
+  DisplayedMasks: 17,16,6,9
+  MaskedWords: L___O_, ____K, _NT___, T__T_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: LACESLIMDREPEAOV
+  ActiveWords: OVER,CALL,EMPIRE
+  DisplayedMasks: 2,5,22
+  MaskedWords: _V__, C_L_, _MP_R_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: GSUWDTINOAENPMRL
+  ActiveWords: WISDOM,LEAP,SUITE
+  DisplayedMasks: 33,9,10
+  MaskedWords: W____M, L__P, _U_T_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: PWOHESTKAOCELRPL
+  ActiveWords: STOCK,PEOPLE,WEAR
+  DisplayedMasks: 16,9,9
+  MaskedWords: ____K, P__P__, W__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: PCSUERITVTANOWUR
+  ActiveWords: VOTERS,PRICE,OVER
+  DisplayedMasks: 3,9,2
+  MaskedWords: VO____, P__C_, _V__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: OWKLDRIAAENUSOSA
+  ActiveWords: DENIAL,WORK,USER
+  DisplayedMasks: 33,9,9
+  MaskedWords: D____L, W__K, U__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: ECLVMIABUNRACCED
+  ActiveWords: RAIN,VALIUM,CANCER
+  DisplayedMasks: 9,49,9
+  MaskedWords: R__N, V___UM, C__C__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: MEPTPEEAUBLNCIOG
+  ActiveWords: LATE,PUBLIC,MEET
+  DisplayedMasks: 5,5,9
+  MaskedWords: L_T_, P_B___, M__T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: RECASTPFISEIDKNL
+  ActiveWords: PILE,SISTER,KIDS
+  DisplayedMasks: 5,42,5
+  MaskedWords: P_L_, _I_T_R, K_D_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: SPYSEHEATNSRNIOM
+  ActiveWords: PERSON,MONTHS,YEAR
+  DisplayedMasks: 49,17,9
+  MaskedWords: P___ON, M___H_, Y__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: RUOHMDWCPRESENLA
+  ActiveWords: MURDER,HOUR,LASER,WERE
+  DisplayedMasks: 1,5,17,5
+  MaskedWords: M_____, H_U_, L___R, W_R_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: DRFUNITTLHSJBENO
+  ActiveWords: JONES,FUTILE,FISH,BEHIND,RISEN
+  DisplayedMasks: 1,3,9,5,16
+  MaskedWords: J____, FU____, F__H, B_H___, ____N
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 26/26
+
+Board: BILLAPYNLAOSWGTE
+  ActiveWords: POSTAL,ALWAYS,BILL
+  DisplayedMasks: 33,4,5
+  MaskedWords: P____L, __W___, B_L_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: EDSTLNRHDAAIOBMP
+  ActiveWords: PARTS,ABOARD,HANDLE
+  DisplayedMasks: 9,34,25
+  MaskedWords: P__T_, _B___D, H__DL_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: EOLEWLONSEOIMJSF
+  ActiveWords: LOOSES,ME,FOLLOW,JEWELS
+  DisplayedMasks: 7,1,33,1
+  MaskedWords: LOO___, M_, F____W, J_____
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 20/20
+
+Board: WOLWTDILISOFEMNE
+  ActiveWords: FOLLOW,WISDOM,TIMES
+  DisplayedMasks: 33,33,5
+  MaskedWords: F____W, W____M, T_M__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: UPOTESYNTEIUAMOV
+  ActiveWords: STEEP,MOVIE,AMOUNT
+  DisplayedMasks: 16,4,2
+  MaskedWords: ____P, __V__, _M____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: SOKAUTIEOARFPBFO
+  ActiveWords: EFFORT,ABOUT,PATIO,STRIKE
+  DisplayedMasks: 6,2,17,16
+  MaskedWords: _FF___, _B___, P___O, ____K_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: GTTLOEILLSEACSNK
+  ActiveWords: EGO,SNAKE,LITTLE
+  DisplayedMasks: 2,10,17
+  MaskedWords: _G_, _N_K_, L___L_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: AICOGHNAAOERBLPT
+  ActiveWords: AGAIN,OPERA,CARPET
+  DisplayedMasks: 18,2,41
+  MaskedWords: _G__N, _P___, C__P_T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: SSEYSLOVCTALUKSU
+  ActiveWords: STUCK,YES,CLAUS
+  DisplayedMasks: 20,1,9
+  MaskedWords: __U_K, Y__, C__U_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: DNORSUAMLHCKOISE
+  ActiveWords: MAKES,AROUND,SNAKE
+  DisplayedMasks: 5,44,10
+  MaskedWords: M_K__, __OU_D, _N_K_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: REDPGAAEHTRKSOCA
+  ActiveWords: RAGED,STAGE,CAKE
+  DisplayedMasks: 20,10,5
+  MaskedWords: __G_D, _T_G_, C_K_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: SOOFEKLRCSSEAFIT
+  ActiveWords: FOREST,LOOSES,FACE,SISTER
+  DisplayedMasks: 3,1,5,8
+  MaskedWords: FO____, L_____, F_C_, ___T__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: TSLBRAJURSIDBZEG
+  ActiveWords: JUDGES,IDES,SIZE
+  DisplayedMasks: 1,2,6
+  MaskedWords: J_____, _D__, _IZ_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: HMTHWOERKRBGOESO
+  ActiveWords: MOTHER,EGO,BROKE,WORK,OK
+  DisplayedMasks: 9,2,8,9,2
+  MaskedWords: M__H__, _G_, ___K_, W__K, _K
+  AltScore: 0, AltCounts: 0,0,0,0,0
+  Coverage: 20/20
+
+Board: WUNDOELIARATEEHT
+  ActiveWords: RAIN,HEAR,RATTLE
+  DisplayedMasks: 9,9,20
+  MaskedWords: R__N, H__R, __T_L_
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: BHTLAAEYAITSNMMU
+  ActiveWords: BATMAN,SUMMIT,STYLE,THEY
+  DisplayedMasks: 9,4,4,10
+  MaskedWords: B__M__, __M___, __Y__, _H_Y
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 21/21
+
+Board: WTMAAAEXTNRHEIOU
+  ActiveWords: ENTIRE,EXAM,AWARE,HOUR
+  DisplayedMasks: 6,2,2,5
+  MaskedWords: _NT___, _X__, _W___, H_U_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: AYNKMLTEPISETSDH
+  ActiveWords: LISTEN,SHEDS,KNEE
+  DisplayedMasks: 41,10,3
+  MaskedWords: L__T_N, _H_D_, KN__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 15/15
+
+Board: TOEYESBNVGOHIOJN
+  ActiveWords: JOBS,HONEST,OBEY
+  DisplayedMasks: 5,35,10
+  MaskedWords: J_B_, HO___T, _B_Y
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: ASTLLTEIOERWCUNK
+  ActiveWords: LITTLE,WE,COURTS
+  DisplayedMasks: 17,1,7
+  MaskedWords: L___L_, W_, COU___
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: WBAEDHRTSNALRIPY
+  ActiveWords: HANDS,LATER,HAIR
+  DisplayedMasks: 9,5,9
+  MaskedWords: H__D_, L_T__, H__R
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: EDAERFMIEUOVUCDL
+  ActiveWords: FREUD,MADE,MOVIE
+  DisplayedMasks: 9,5,4
+  MaskedWords: F__U_, M_D_, __V__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: TNETJEWTEOLAKALH
+  ActiveWords: JOKE,HATE,WALLET
+  DisplayedMasks: 5,5,1
+  MaskedWords: J_K_, H_T_, W_____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: GSAMANKETSODFALN
+  ActiveWords: SNAKE,LONG,FAST
+  DisplayedMasks: 10,9,9
+  MaskedWords: _N_K_, L__G, F__T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 13/13
+
+Board: LAVEIWSGNDATLEMY
+  ActiveWords: STAY,DENIAL,AGES,WAVES
+  DisplayedMasks: 10,33,3,5
+  MaskedWords: _T_Y, D____L, AG__, W_V__
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: APTTEDOWOOELCRTA
+  ActiveWords: DEPOT,POWER,COOLED
+  DisplayedMasks: 5,5,41
+  MaskedWords: D_P__, P_W__, C__L_D
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: JNCSOIEHOEATHRPS
+  ActiveWords: HEROIC,JONES,SPEECH
+  DisplayedMasks: 33,1,34
+  MaskedWords: H____C, J____, _P___H
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 17/17
+
+Board: YDISELTILSEKCAOS
+  ActiveWords: OK,CALLED,YES
+  DisplayedMasks: 2,33,1
+  MaskedWords: _K, C____D, Y__
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 11/11
+
+Board: TRMJNMOADEKHPUWS
+  ActiveWords: NEWS,MAKEUP,JAMMED
+  DisplayedMasks: 5,4,1
+  MaskedWords: N_W_, __K___, J_____
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 16/16
+
+Board: ZRTSPEROFEAHWMKS
+  ActiveWords: PREFER,MASK,WEARS,ZERO
+  DisplayedMasks: 8,9,9,1
+  MaskedWords: ___F__, M__K, W__R_, Z___
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 19/19
+
+Board: SUCHROGPASNMYEWA
+  ActiveWords: YEARS,ENOUGH,COURSE,SWAMP
+  DisplayedMasks: 1,32,4,10
+  MaskedWords: Y____, _____H, __U___, _W_M_
+  AltScore: 0, AltCounts: 0,0,0,0
+  Coverage: 22/22
+
+Board: FRBPAEYAESSMNLAB
+  ActiveWords: BYPASS,NEAR,LAMB
+  DisplayedMasks: 3,9,12
+  MaskedWords: BY____, N__R, __MB
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 14/14
+
+Board: BTRKHAOFMOEFEFFF
+  ActiveWords: OK,EFFORT,AT
+  DisplayedMasks: 2,2,2
+  MaskedWords: _K, _F____, _T
+  AltScore: 0, AltCounts: 0,0,0
+  Coverage: 10/10
+
+Valid boards (all active words found): 1000/1000
